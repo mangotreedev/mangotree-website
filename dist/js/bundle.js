@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/test_component.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/test_component.js ***!
+  \*********************************************/
+/*! exports provided: testFunction */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"testFunction\", function() { return testFunction; });\nvar testFunction = function testFunction() {\n  console.log(\"You should see a alert with your favorite phrase.\");\n  alert(\"Sweet Tits\");\n};\n\n\n\n//# sourceURL=webpack:///./src/js/components/test_component.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(\"Javascript loaded!\");\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_test_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/test_component */ \"./src/js/components/test_component.js\");\n\n_components_test_component__WEBPACK_IMPORTED_MODULE_0__[\"testFunction\"]();\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
