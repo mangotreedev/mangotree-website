@@ -1,0 +1,11 @@
+@import 'themeColors';
+
+$theme-font: 'Lato', sans-serif;
+
+body {
+  font-family: $theme-font;
+  background-color: white;
+  h1, h2 {
+      color: $charcoal
+  }
+}
