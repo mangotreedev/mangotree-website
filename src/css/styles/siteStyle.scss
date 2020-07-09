@@ -1,11 +1,32 @@
 @import 'themeColors';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 
 $theme-font: 'Lato', sans-serif;
+$base-size: 16px;
+
+$body-margin: 0px;
+$body-bg: $white;
+$body-color: $charcoal;
 
 body {
   font-family: $theme-font;
-  background-color: white;
-  h1, h2 {
-      color: $charcoal
+  background-color: $body-bg;
+  color: $body-color;
+  margin: $body-margin
+}
+
+h1 { font-size: $base-size * 4.575 }
+
+h2 { font-size: $base-size * 2.34375 }
+
+h3 { font-size: $base-size * 1.875 }
+
+p {
+  font-size: $base-size * 1.5;
+  line-height: 144.2%;
+
+  &.p_size_s {
+    font-size: $base-size;
+    line-height: 105.2%;
   }
 }
