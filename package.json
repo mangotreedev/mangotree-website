@@ -35,12 +35,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.5",
-    "breakpoint-sass": "^2.7.1",
     "core-js": "^3.6.5",
-    "cssnano": "^4.1.10",
-    "postcss-cli": "^7.1.1",
-    "postcss-loader": "^3.0.0",
     "regenerator-runtime": "^0.13.5"
   }
 }
