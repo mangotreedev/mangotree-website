@@ -15,7 +15,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
-    })
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+    }),
   ],
   module: {
     rules: [
@@ -27,9 +32,14 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      }
-    ]
-  }
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
+      },
+    ],
+  },
 };
