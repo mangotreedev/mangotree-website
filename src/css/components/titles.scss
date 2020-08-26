@@ -6,7 +6,8 @@
   i {
     font-size: $base-size * 1.5;
     margin-left: 0.5em;
-    display: none;
+    opacity: 0;
+    transition: opacity 1500ms ease-in-out;
   }
 
   .primary-title__piece--underline {
@@ -28,6 +29,7 @@
 
 .primary-title.expanded {
   .primary-title__piece--with-dot {
+    transition: margin 700ms ease-in-out;
     margin-right: 0.5em;
 
     &::after {
@@ -36,8 +38,16 @@
       bottom: 20%;
       margin-left: 0.15em;
       color: $yellow;
+      animation: appear 1.5s normal ease-in-out;
     }
   }
 
-  i { display: inline-block; }
+  i {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% { opacity: 0 ;}
+  100% { opacity: 1;}
 }
