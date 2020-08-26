@@ -1,5 +1,5 @@
 export const initSoundIcons = () => {
-  const soundIcon = document.querySelector('.primary-title i');
+  const soundIcon = document.querySelector('.js-volume-icon');
 
   soundIcon.addEventListener('click', (event) => {
     var audio = new Audio('https://www.kozco.com/tech/piano2.wav');

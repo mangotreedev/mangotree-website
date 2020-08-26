@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.initSoundIcons = void 0;
 
 var initSoundIcons = function initSoundIcons() {
-  var soundIcon = document.querySelector('.primary-title i');
+  var soundIcon = document.querySelector('.js-volume-icon');
   soundIcon.addEventListener('click', function (event) {
     var audio = new Audio('https://www.kozco.com/tech/piano2.wav');
     audio.play();
