@@ -1,0 +1,12 @@
+.primary-title {
+  display: flex;
+  position: relative;
+}
+.primary-title.expanded .primary-title__piece--with-dot {
+  margin-right: 0.5em;
+}
+.primary-title.expanded .primary-title__piece--with-dot::after {
+  content: ".";
+  position: absolute;
+  bottom: 20%;
+}

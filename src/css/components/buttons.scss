@@ -1,0 +1,26 @@
+.define-btn {
+  text-align: right;
+  margin: 0 28vw 0 auto;
+  font-size: $base-size * 1.5;
+  font-weight: lighter;
+
+  span {
+    display: inline-block;
+    animation: slide 2s ease-in-out infinite;
+  }
+}
+
+// TODO: Try to make it transform to bolder
+@keyframes slide {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(10px, 0);
+  }
+}

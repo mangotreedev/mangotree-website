@@ -1,0 +1,43 @@
+.primary-title {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  i {
+    font-size: $base-size * 1.5;
+    margin-left: 0.5em;
+    display: none;
+  }
+
+  .primary-title__piece--underline {
+    position: relative;
+    font-weight: lighter;
+
+    &::before {
+      content: "";
+      border-bottom: 0.4em solid $yellow;
+      position: absolute;
+      width: 100%;
+      bottom: 0.05em;
+      left: 0.03em;
+      z-index: -1;
+    }
+
+  }
+}
+
+.primary-title.expanded {
+  .primary-title__piece--with-dot {
+    margin-right: 0.5em;
+
+    &::after {
+      content: ".";
+      position: absolute;
+      bottom: 20%;
+      margin-left: 0.15em;
+      color: $yellow;
+    }
+  }
+
+  i { display: inline-block; }
+}

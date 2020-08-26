@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #F9F9F9;
+  color: #414042;
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 73.2px;
+}
+
+h2 {
+  font-size: 37.5px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 144.2%;
+}
+p.p_size_s {
+  font-size: 16px;
+  line-height: 105.2%;
+}
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4vw;
+}
+
+.primary-title {
+  display: flex;
+  position: relative;
+}
+.primary-title .primary-title__piece--underline {
+  position: relative;
+  font-weight: lighter;
+}
+.primary-title .primary-title__piece--underline::before {
+  content: "";
+  border-bottom: 0.4em solid #f6c32c;
+  position: absolute;
+  width: 100%;
+  bottom: 0.05em;
+  left: 0.03em;
+  z-index: -1;
+}
+
+.primary-title.expanded .primary-title__piece--with-dot {
+  margin-right: 0.5em;
+}
+.primary-title.expanded .primary-title__piece--with-dot::after {
+  content: ".";
+  position: absolute;
+  bottom: 20%;
+  margin-left: 0.15em;
+  color: #f6c32c;
+}
+
+.define-btn {
+  text-align: right;
+  margin: 0 28vw 0 auto;
+  font-size: 24px;
+  font-weight: lighter;
+}
+.define-btn span {
+  display: inline-block;
+  animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 0);
+  }
+}
