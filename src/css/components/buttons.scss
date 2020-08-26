@@ -3,10 +3,21 @@
   margin: 0 28vw 0 auto;
   font-size: $base-size * 1.5;
   font-weight: lighter;
+  transition: opacity 700ms ease-in-out;
+  z-index: 1;
 
   span {
     display: inline-block;
     animation: slide 2s ease-in-out infinite;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.define-btn--disabled {
+    pointer-events: none;
+    opacity: 0;
   }
 }
 
