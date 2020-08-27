@@ -24,3 +24,36 @@
     transform: translate(10px, 0);
   }
 }
+
+.schedule-btn {
+ i {
+   transition: 0.5s;
+ }
+}
+
+.schedule-btn:hover {
+  cursor: pointer;
+  i {
+    color: $yellow;
+  }
+}
+
+.schedule-btn__text--underline {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: "";
+    border-bottom: 0.4em solid $yellow;
+    position: absolute;
+    width: 0%;
+    bottom: 0.12em;
+    left: 0.03em;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
