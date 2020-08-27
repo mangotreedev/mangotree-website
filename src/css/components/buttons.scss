@@ -3,17 +3,19 @@
   margin: 0 28vw 0 auto;
   font-size: $base-size * 1.5;
   font-weight: lighter;
-  transition: opacity 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
   z-index: 1;
+  position: relative;
 
-  span {
+  &::after {
+    position: absolute;
+    content: '→';
+    margin-left: 0.3em;
     display: inline-block;
     animation: slide 2s ease-in-out infinite;
   }
 
-  &:hover {
-    cursor: pointer;
-  }
+  &:hover { cursor: pointer; }
 
   &.define-btn--disabled {
     pointer-events: none;

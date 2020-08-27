@@ -1,0 +1,50 @@
+.burger-icon {
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  z-index: 3;
+
+  &.burger-icon--active .burger-icon__middle {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  &.burger-icon--active .burger-icon__middle::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &.burger-icon--active .burger-icon__middle::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+}
+
+.burger-icon__middle {
+  width: $base-size * 2.5;
+  height: 0.2rem;
+  background-color: $black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $base-size * 2.5;
+    height: 0.2rem;
+    background: $black;
+    transition: 0.5s;
+  }
+
+  &::before { top: -$base-size; }
+
+  &::after { top: $base-size; }
+}
+
+

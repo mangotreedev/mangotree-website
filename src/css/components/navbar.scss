@@ -1,49 +1,70 @@
-.burger-icon {
-  position: absolute;
-  top: 0vh;
-  right: 0vh;
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
+.navbar-menu {
+  position: fixed;
+  width: 100vw;
+  height: 0vh;
+  background-color: $white;
+  z-index: 2;
+  transition: all 1s ease;
+  opacity: 0;
 
-  &.burger-icon--active .burger-icon__middle {
-    background: rgba(0, 0, 0, 0);
+
+  &.navbar-menu--active {
+    opacity: 1;
+    height: 100vh;
+    padding-top: 30vh;
   }
 
-  &.burger-icon--active .burger-icon__middle::before {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  &.burger-icon--active .burger-icon__middle::after {
-    top: 0;
-    transform: rotate(135deg);
-  }
-}
-
-.burger-icon__middle {
-  width: $base-size * 2.5;
-  height: 0.2rem;
-  background-color: $gray;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
-
-  &::before,
-  &::after {
-    content: '';
+  .navbar-menu__logo {
+    opacity: 0;
+    height: 3rem;
     position: absolute;
-    width: $base-size * 2.5;
-    height: 0.2rem;
-    background: $gray;
-    transition: 0.5s;
+    top: 2vh;
+    left: 4vw;
+    transition: opacity 0.5s ease-in-out;
+  }
+  &.navbar-menu--active .navbar-menu__logo {
+    opacity: 1;
   }
 
-  &::before { top: -$base-size; }
+  .navbar-menu__links-list {
+    width: 80vw;
+    opacity: 0;
+    list-style: none;
+    padding-left: 1.5em;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
 
-  &::after { top: $base-size; }
+    // TODO: What are we doing with the underline that doesn't work in mobile?
+    li {
+      margin-bottom: 1em;
+      font-size: $base-size * 2.34375;
+      font-weight: bolder;
+      pointer-events: none;
+    }
+
+    li:last-child { margin-bottom: 0; }
+  }
+
+  &.navbar-menu--active .navbar-menu__links-list {
+    opacity: 1;
+
+    li { pointer-events: all; }
+  }
+
+  .navbar-menu__contact {
+    font-size: $base-size * 1.5;
+    margin: 0;
+    position: absolute;
+    top: 94vh;
+    width: 100vw;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.7s;
+    color: $gray;
+  }
+
+  &.navbar-menu--active .navbar-menu__contact {
+    opacity: 1;
+  }
 }
-
-
