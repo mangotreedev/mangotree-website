@@ -1,0 +1,19 @@
+.contacts-bar {
+  display: flex;
+  margin-top: 10vh;
+  h2 {
+    margin-right: 0.4em;
+  }
+
+  .contacts-bar__link {
+    font-size: $base-size * 2.34375;
+    color: $body-color;
+    text-decoration: none;
+    margin-right: 0.3em;
+  }
+
+  .contacts-bar__link:hover {
+    color: $yellow;
+  }
+}
+
