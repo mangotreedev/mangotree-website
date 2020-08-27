@@ -1,5 +1,22 @@
 svg {
-  margin-top: 5vh;
+  margin-top: 3vh;
   width: 95vw;
   height: auto;
+}
+
+path {
+  stroke-dasharray: 88947;
+  stroke-dashoffset: 88947;
+  stroke-width: 70;
+  stroke: $black;
+  animation: dash 7s ease-in forwards;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 88947;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
