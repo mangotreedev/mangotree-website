@@ -18,13 +18,11 @@ export const initDrawingTrigger = () => {
     const drawing = document.querySelector('.js-drawing');
     const path = document.querySelector('.js-path');
 
-    const startDrawAt = (window.scrollY + window.innerHeight) - drawing.scrollHeight / 2;
-    const drawingBottom = drawing.offsetTop + drawing.scrollHeight;
+    const startDrawAt = (window.scrollY + window.innerHeight);
 
     const isHalfShown = startDrawAt > drawing.offsetTop;
-    const isNotScrolledPast = window.scrollY < drawingBottom;
 
-    if (isHalfShown && isNotScrolledPast) {
+    if (isHalfShown) {
       path.classList.add('drawing--animate');
     } else {
       path.classList.remove('drawing--animate');
