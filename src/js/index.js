@@ -7,7 +7,9 @@ import "regenerator-runtime/runtime";
 
 import { initDefineBtn } from "./components/init_define_btn";
 import { initScheduleBtn } from "./components/init_schedule_btn";
+import { initDrawingTrigger } from "./components/init_drawing_trigger";
 
 //testComp.testFunction();
 initDefineBtn();
 initScheduleBtn();
+initDrawingTrigger();

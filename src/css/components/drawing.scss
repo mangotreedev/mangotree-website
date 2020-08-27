@@ -4,15 +4,18 @@ svg {
   height: auto;
 }
 
-path {
+.drawing {
   stroke-dasharray: 88947;
   stroke-dashoffset: 88947;
   stroke-width: 70;
   stroke: $black;
-  animation: dash 7s ease-in forwards;
 }
 
-@keyframes dash {
+.drawing--animate {
+  animation: draw 7s ease-in forwards;
+}
+
+@keyframes draw {
   from {
     stroke-dashoffset: 88947;
   }
