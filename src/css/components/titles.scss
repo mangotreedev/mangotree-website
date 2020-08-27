@@ -5,9 +5,17 @@
   flex-wrap: wrap;
 
   i {
+    cursor: pointer;
+    transition: clip-path 3s;
     font-size: $base-size * 1.5;
     margin-left: 0.5em;
-    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    clip-path: ellipse(100% 100% at 50% 50%); // Three lines
+
+    &.sound-icon--active {
+      animation: volume-efect 4s linear infinite;
+    }
   }
 
   .primary-title__piece--underline {
@@ -29,6 +37,7 @@
 
 .primary-title.expanded {
   .primary-title__piece--with-dot {
+    transition: margin 700ms ease-in-out;
     margin-right: 0.5em;
 
     &::after {
@@ -37,8 +46,38 @@
       bottom: 20%;
       margin-left: 0.15em;
       color: $yellow;
+      animation: appear 1.5s normal ease-in-out;
     }
   }
 
-  i { display: inline-block; }
+  i { opacity: 1; }
+}
+
+@keyframes appear {
+  0% { opacity: 0 ;}
+  100% { opacity: 1;}
+}
+
+@keyframes volume-efect {
+  0% {
+    clip-path: ellipse(100% 100% at 50% 50%); // Three lines
+  }
+  17% {
+    clip-path: ellipse(59% 41% at 32% 50%); // Two lines
+  }
+  34% {
+    clip-path: ellipse(46% 41% at 26% 50%); // One line
+  }
+  49% {
+    clip-path: ellipse(49% 71% at 0% 51%);
+  }
+  68% {
+    clip-path: ellipse(46% 41% at 26% 50%); // One line
+  }
+  85% {
+    clip-path: ellipse(59% 41% at 32% 50%); // Two lines
+  }
+  100% {
+    clip-path: ellipse(100% 100% at 50% 50%); // Three lines
+  }
 }
