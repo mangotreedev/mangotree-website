@@ -3,13 +3,14 @@
   width: 100vw;
   height: 0vh;
   background-color: $white;
-  z-index: 2;
+  z-index: -1;
   transition: all 1s ease;
   opacity: 0;
 
 
   &.navbar-menu--active {
     opacity: 1;
+    z-index: 2;
     height: 100vh;
     padding-top: 30vh;
   }
