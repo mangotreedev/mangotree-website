@@ -1,0 +1,16 @@
+.partner-page {
+  display: grid;
+  grid-template-columns: 4vw 1fr 4vw;
+  align-content: start;
+}
+
+.partner-page > * {
+  grid-column: 2 / -2;
+}
+.partner-page > .full {
+  grid-column: 1 / -1;
+}
+
+.hide-scroll {
+
+}
