@@ -62,9 +62,11 @@
     transition: opacity 0.5s ease-in-out;
     transition-delay: 0.7s;
     color: $gray;
+    pointer-events: none;
   }
 
   &.navbar-menu--active .navbar-menu__contact {
     opacity: 1;
+    pointer-events: all;
   }
 }
