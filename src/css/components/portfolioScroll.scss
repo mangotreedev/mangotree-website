@@ -1,0 +1,127 @@
+.portfolio-scroll-wrapper {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-gap: 6vw;
+  grid-template-columns: 6vw 12vw 70vw 88vw 20vw 6vw;
+  grid-template-rows: minmax(300px, auto);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+
+  &::-webkit-scrollbar { display: none; }
+
+  .portfolio-scroll-wrapper__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+
+  .portfolio-scroll-wrapper__item-preview {
+    transform: scaleX(-1);
+  }
+
+  img.item-preview--rotated {
+    position: absolute;
+    transform: rotate(12deg);
+    height: 30vh;
+  }
+
+  .portfolio-scroll-wrapper__item--portfolio {
+    margin-top: auto;
+    height: 92%;
+    width: 80vw;
+    text-align: left;
+    padding-left: 18vw;
+    p {
+      font-size: $base-size;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+.portfolio-page__project--left {
+  h2 { text-align: right; }
+
+  ul { justify-content: flex-end; }
+
+  img {
+    position: absolute;
+    transform: rotate(30deg) translate(0, 7px);
+    height: 25vh;
+  }
+
+  .portfolio-scroll-wrapper__item-preview {
+    padding-right: 20vw;
+  }
+
+  .portfolio-scroll-wrapper__item--portfolio {
+    padding-left: 0;
+    transform: translateX(-12vw);
+  }
+}
+.portfolio-scroll-wrapper:before,
+.portfolio-scroll-wrapper:after {
+  content: '';
+}
+
+.portfolio-scroll-wrapper__item:first-child {
+  font-size: $base-size * 1.5;
+  animation: slide-left 2s ease-in-out infinite;
+  margin-top: auto;
+
+  p { margin: 0; }
+}
+
+.portfolio-scroll-wrapper__item:last-child {
+  align-items: start;
+  font-size: $base-size * 1.5;
+  animation: slide-right 2s ease-in-out infinite;
+  margin-top: auto;
+  p { margin: 0; }
+}
+
+.portfolio-scroll-wrapper__background {
+  // Needs to be the same as the portfolio-scroll-wrapper__item--portfolio
+  height: 92%;
+  background: #1f1f1f;
+  position: absolute;
+  bottom: 0;
+  left: 9vw;
+  // This is the result of adding all the template column widths
+  width: 202vw;
+  z-index: -2;
+}
+
+@keyframes slide-right {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes slide-left {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-10px, 0);
+  }
+}
