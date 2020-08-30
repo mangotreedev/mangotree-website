@@ -9,6 +9,7 @@ import { initFadeEffect } from "./components/init_fade_effect";
 import { initNavbar } from "./components/init_navbar";
 import { initScheduleBtn } from "./components/init_schedule_btn";
 import { initDrawingTrigger } from "./components/init_drawing_trigger";
+import { initLeftScroll } from "./components/init_left_scroll";
 
 initScheduleBtn();
 initDrawingTrigger();
@@ -16,4 +17,5 @@ initDefineBtn();
 initSoundIcons();
 initFadeEffect();
 initNavbar();
+initLeftScroll();
 

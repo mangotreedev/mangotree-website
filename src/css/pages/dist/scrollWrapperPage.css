@@ -1,0 +1,13 @@
+.scroll-wrapper-page {
+  display: grid;
+  grid-template-columns: 4vw 1fr 4vw;
+  align-content: start;
+}
+
+.scroll-wrapper-page > * {
+  grid-column: 2/-2;
+}
+
+.scroll-wrapper-page > .full {
+  grid-column: 1/-1;
+}
