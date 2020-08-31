@@ -55,6 +55,13 @@
   }
 }
 
+.skills-scroll-wrapper--dynamic {
+  grid-template-columns: 6vw 205vw 64vw 12vw 6vw;
+  .skills-scroll-wrapper__background {
+    width: 288vw;
+  }
+}
+
 .skills-scroll-wrapper__item-summary {
   i {
     font-size: $base-size * 1.8;
@@ -75,14 +82,34 @@
   content: '';
 }
 
-.skills-scroll-wrapper__item:first-child {
+.skills-scroll-wrapper__item--left-arrow {
   font-size: $base-size * 1.5;
   animation: slide-left 2s ease-in-out infinite;
 
   p { margin: 0; }
 }
 
+.skills-scroll-wrapper__item--right-arrow {
+  font-size: $base-size * 1.5;
+  animation: slide-right 2s ease-in-out infinite;
 
+  p { margin: 0; }
+}
+
+@keyframes slide-right {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(10px, 0);
+  }
+}
 
 
 
