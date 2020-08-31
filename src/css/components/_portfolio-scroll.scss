@@ -44,7 +44,7 @@
 }
 
 .portfolio-page__project--left {
-  h2 { text-align: right; }
+  h3 { text-align: right; }
 
   ul { justify-content: flex-end; }
 
@@ -85,15 +85,16 @@
 }
 
 .portfolio-scroll-wrapper__background {
-  // Needs to be the same as the portfolio-scroll-wrapper__item--portfolio
   height: 92%;
-  background: #1f1f1f;
+  background: $black;
   position: absolute;
   bottom: 0;
   left: 9vw;
-  // This is the result of adding all the template column widths
+
   width: 202vw;
   z-index: -2;
+
+  border-radius: 2px;
 }
 
 @keyframes slide-right {

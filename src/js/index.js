@@ -10,6 +10,7 @@ import { initNavbar } from "./components/init_navbar";
 import { initScheduleBtn } from "./components/init_schedule_btn";
 import { initDrawingTrigger } from "./components/init_drawing_trigger";
 import { initLeftScroll } from "./components/init_left_scroll";
+import { initKonamiCode } from "./components/init_konami_code"
 
 initScheduleBtn();
 initDrawingTrigger();
@@ -18,4 +19,4 @@ initSoundIcons();
 initFadeEffect();
 initNavbar();
 initLeftScroll();
-
+initKonamiCode();

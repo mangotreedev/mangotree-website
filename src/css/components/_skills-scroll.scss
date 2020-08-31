@@ -1,0 +1,137 @@
+.skills-scroll-wrapper {
+  position: relative;
+  margin: 8vh 0 0 0;
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-gap: 6vw;
+  grid-template-columns: 6vw 12vw 64vw 340vw 6vw;
+  grid-template-rows: minmax(92px, auto);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+
+  &::-webkit-scrollbar { display: none; }
+
+  .skills-scroll-wrapper__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+
+  .skills-scroll-wrapper__item-summary {
+    flex-direction: row;
+    margin-left: 4vw;
+    width: 100%;
+  }
+
+  .skills-scroll-wrapper__item--extended {
+    align-items: flex-start;
+    margin-left: 10vw;
+  }
+
+  .skills-scroll-wrapper__item--icons {
+    flex-direction: row;
+  }
+
+  .skills-scroll-wrapper__background {
+    height: 71%;
+    background: $black;
+    position: absolute;
+    bottom: 2vh;
+    left: 9vw;
+    border-radius: 2px;
+    width: 423vw;
+    z-index: -2;
+  }
+}
+
+.skills-scroll-wrapper--custom {
+  grid-template-columns: 6vw 12vw 64vw 290vw 6vw;
+  .skills-scroll-wrapper__background {
+    width: 373vw;
+  }
+}
+
+
+
+.skills-scroll-wrapper__item-summary {
+  i {
+    font-size: $base-size * 1.8;
+  }
+  p {
+    text-align: right;
+    margin-right: 8vw;
+  }
+}
+
+.skills-scroll-wrapper--dynamic {
+  grid-template-columns: 6vw 706vw 56vw 33vw 6vw;
+  .skills-scroll-wrapper__background {
+    width: 803vw;
+  }
+  .skills-scroll-wrapper__item-summary p {
+    text-align: left;
+    margin-right: 0;
+    margin-left: 4vw;
+  }
+}
+
+.skills-scroll-wrapper__item--icons img {
+  margin-right: 1.5em;
+}
+
+
+.skills-scroll-wrapper:before,
+.skills-scroll-wrapper:after {
+  content: '';
+}
+
+.skills-scroll-wrapper__item--left-arrow {
+  font-size: $base-size * 1.5;
+  animation: slide-left 2s ease-in-out infinite;
+
+  p { margin: 0; }
+}
+
+.skills-scroll-wrapper__item--right-arrow {
+  font-size: $base-size * 1.5;
+  animation: slide-right 2s ease-in-out infinite;
+
+  p { margin: 0; }
+}
+
+@keyframes slide-right {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(10px, 0);
+  }
+}
+
+
+
+@keyframes slide-left {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-10px, 0);
+  }
+}
+

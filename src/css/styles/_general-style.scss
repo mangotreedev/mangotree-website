@@ -8,14 +8,19 @@ $body-margin: 0px;
 $body-bg: $white;
 $body-color: $charcoal;
 
+:root {
+  --primary: #414042;
+  --background: #F9F9F9;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: $theme-font;
-  background-color: $body-bg;
-  color: $body-color;
+  background-color: var(--background);
+  color: var(--primary);
   margin: $body-margin;
 }
 
@@ -52,4 +57,6 @@ a {
   display: block !important;
 }
 
-
+.yellow {
+  color: $yellow;
+}

@@ -8,7 +8,7 @@ svg {
   stroke-dasharray: 88947;
   stroke-dashoffset: 88947;
   stroke-width: 70;
-  stroke: $black;
+  stroke: var(--primary);
 }
 
 .drawing--animate {

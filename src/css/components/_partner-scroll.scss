@@ -11,6 +11,8 @@
 
   overflow-x: scroll;
   scroll-snap-type: x proximity;
+
+  &::-webkit-scrollbar { display: none; }
 }
 
 .partner-scroll-wrapper:before {
