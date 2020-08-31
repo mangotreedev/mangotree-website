@@ -8,6 +8,13 @@ $body-margin: 0px;
 $body-bg: $white;
 $body-color: $charcoal;
 
+:root {
+  --yellow: $yellow;
+  --black: $black;
+  --white: $white;
+  --darkblack: $darkblack;
+}
+
 html {
   scroll-behavior: smooth;
 }
