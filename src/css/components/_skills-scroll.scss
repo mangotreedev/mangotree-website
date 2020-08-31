@@ -5,7 +5,7 @@
   align-items: center;
   display: grid;
   grid-gap: 6vw;
-  grid-template-columns: 6vw 12vw 64vw 335vw 6vw;
+  grid-template-columns: 6vw 12vw 64vw 340vw 6vw;
   grid-template-rows: minmax(92px, auto);
 
   overflow-x: scroll;
@@ -35,10 +35,24 @@
   .skills-scroll-wrapper__item--icons {
     flex-direction: row;
   }
+
+  .skills-scroll-wrapper__background {
+    height: 71%;
+    background: $black;
+    position: absolute;
+    bottom: 2vh;
+    left: 9vw;
+    border-radius: 2px;
+    width: 423vw;
+    z-index: -2;
+  }
 }
 
 .skills-scroll-wrapper--custom {
-  grid-template-columns: 6vw 12vw 64vw 335vw 6vw;
+  grid-template-columns: 6vw 12vw 64vw 205vw 6vw;
+  .skills-scroll-wrapper__background {
+    width: 288vw;
+  }
 }
 
 .skills-scroll-wrapper__item-summary {
@@ -68,16 +82,7 @@
   p { margin: 0; }
 }
 
-.skills-scroll-wrapper__background {
-  height: 71%;
-  background: $black;
-  position: absolute;
-  bottom: 2vh;
-  left: 9vw;
-  border-radius: 2px;
-  width: 417vw;
-  z-index: -2;
-}
+
 
 
 
