@@ -6,10 +6,13 @@ export const initKonamiCode = () => {
 
   window.addEventListener('keyup', (e) => {
     keysPressed.push(e.key);
-    console.log(keysPressed)
+    console.log(keysPressed);
     keysPressed.splice(-secretCode.length - 1, keysPressed.length - secretCode.length);
     if (keysPressed.join('').includes(secretCode)) {
-       console.log('Ding Ding');
-     }
+      console.log('🔦 Dark Mode All Day All Night 🌌');
+      // Select root variables and swap background and primary colors
+      document.documentElement.style.setProperty("--background", "#101010");
+      document.documentElement.style.setProperty("--primary", "#F9F9F9");
+    }
   })
 }

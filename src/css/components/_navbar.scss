@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 0vh;
-  background-color: $white;
+  background-color: var(--background);
   z-index: -1;
   transition: all 1s ease;
   opacity: 0;

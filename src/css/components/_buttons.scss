@@ -38,11 +38,11 @@
 }
 
 .schedule-btn {
-  color: $charcoal;
+  color: var(--primary);
   text-decoration: none;
  i {
    transition: 0.5s;
-   color: $charcoal;
+   color: var(--primary);
  }
 }
 
