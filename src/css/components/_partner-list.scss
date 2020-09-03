@@ -1,0 +1,27 @@
+.partner-list {
+  margin: 6vh 0;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  display: flex;
+}
+
+.partner-list__item img {
+  height: auto;
+  width: $base-size * 15;
+}
+.partner-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2vw;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop if needed: */
+}
