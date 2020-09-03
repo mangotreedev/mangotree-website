@@ -23,3 +23,16 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop if needed: */
+
+}

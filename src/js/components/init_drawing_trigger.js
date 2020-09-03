@@ -15,11 +15,12 @@ export const initDrawingTrigger = () => {
   }
 
   const checkDraw = (e) => {
-    const drawing = document.querySelector('.js-drawing');
-    const path = document.querySelector('.js-path');
+
+    let drawing = document.querySelector('.js-drawing');
+    if (drawing.offsetTop === 0) drawing = document.querySelector('.js-drawing-browser');
+    const path = drawing.querySelector('.js-path');
 
     const startDrawAt = (window.scrollY + window.innerHeight);
-
     const isHalfShown = startDrawAt > drawing.offsetTop;
 
     if (isHalfShown) {

@@ -6,9 +6,22 @@
 }
 
 .browser-contact-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 
 .browser-contact-page__body {
   display: flex;
+  align-items: flex-end;
+  margin-bottom: 10vh;
+  padding: 0 3vw;
+  .browser-contact-page__body--left {
+    padding-bottom: 6vh;
+  }
+  .browser-contact-page__body--right {
+    flex-grow: 1;
+  }
 }
