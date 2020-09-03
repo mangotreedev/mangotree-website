@@ -89,8 +89,11 @@
   }
 
   .primary-title.expanded {
-    justify-content: flex-end;
     margin-top: 10vh;
+  }
+
+  .primary-title--right {
+    justify-content: flex-end;
   }
 }
 
