@@ -10,11 +10,57 @@
 
 .team-transition--part-one {
   display: flex;
+  // Comment me out later
+  display: none;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 0 6vw;
+
   .team-transition_nico--part-one {
     transform: scaleX(-1);
   }
+}
+
+.team-transition--part-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 6vw;
+  font-size: $base-size * 1.5;
+
+  p {
+    font-size: $base-size * 1.875;
+  }
+
+  a {
+    margin: 4vh auto;
+  }
+
+  .team-transition_nico--part-two, .team-transition_sy--part-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .team-transition_nico--part-two p {
+    padding-left: 2vw;
+    width: 30vw;
+    margin-right: 18vw;
+
+  }
+
+  .team-transition_sy--part-two div {
+    width: 30vw;
+  }
+
+  .team-transition_sy--part-two div h3 {
+    padding-left: 3vw;
+  }
+  .team-transition_sy--part-two div ul {
+    padding-left: 6vw;
+    list-style-type: "→ ";
+  }
+
 }
