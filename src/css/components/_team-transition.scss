@@ -24,6 +24,8 @@
 
 .team-transition--part-two {
   display: flex;
+  // Comment me out later
+  display: none;
   flex-direction: column;
   align-items: center;
   padding: 4vh 6vw;
@@ -62,5 +64,35 @@
     padding-left: 6vw;
     list-style-type: "→ ";
   }
+
+}
+
+.team-transition--part-three {
+  padding: 0 6vw;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  p {
+    font-size: $base-size;
+    margin-bottom: 0;
+  }
+  p.quote {
+    font-size: $base-size * 1.5;
+    margin: 0;
+  }
+  .team-transition_sy--part-three,
+  .team-transition_nico--part-three {
+    display: flex;
+  }
+}
+
+
+.team-transition_sy--part-three div,
+.team-transition_nico--part-three div {
+  padding-left: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
