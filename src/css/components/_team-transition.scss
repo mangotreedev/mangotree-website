@@ -63,14 +63,17 @@
 
 .team-transition--part-three {
   padding: 0 6vw;
-  opacity: 0;
   height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
   p {
     font-size: $base-size;
     margin-bottom: 0;
+  }
+  a {
+    opacity: 0;
   }
   p.quote {
     font-size: $base-size * 1.5;
@@ -79,6 +82,7 @@
   .team-transition_sy--part-three,
   .team-transition_nico--part-three {
     display: flex;
+    opacity: 0;
   }
 }
 
