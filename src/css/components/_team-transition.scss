@@ -1,7 +1,5 @@
 .team-transition {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   a {
     font-size: $base-size * 1.5;
   }
@@ -13,22 +11,18 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 0 6vw;
-
-  .team-transition_nico--part-one {
-    transform: scaleX(-1);
-  }
+  position: absolute;
+  top: 25%;
+  z-index: 10;
 }
 
 .team-transition--part-two {
   display: flex;
-  // Comment me out later
-  display: none;
   flex-direction: column;
   align-items: center;
   padding: 4vh 6vw;
   font-size: $base-size * 1.5;
-
+  position: absolute;
   p {
     font-size: $base-size * 1.875;
   }
@@ -67,12 +61,11 @@
 
 .team-transition--part-three {
   padding: 0 6vw;
-  display: flex;
-  // Comment me out later
-  display: none;
+  opacity: 0;
   height: 100%;
   flex-direction: column;
   justify-content: space-around;
+  position: absolute;
   p {
     font-size: $base-size;
     margin-bottom: 0;
