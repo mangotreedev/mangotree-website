@@ -1,0 +1,96 @@
+.team-transition {
+  position: relative;
+  a {
+    font-size: $base-size * 1.5;
+  }
+}
+
+
+.team-transition--part-one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+}
+
+.team-transition--part-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 6vw;
+  font-size: $base-size * 1.5;
+  position: absolute;
+  p {
+    font-size: $base-size * 1.875;
+  }
+
+  a {
+    margin: 4vh auto;
+    opacity: 0;
+  }
+
+  .team-transition_nico--part-two, .team-transition_sy--part-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .team-transition_nico--part-two p {
+    padding-left: 2vw;
+    width: 30vw;
+    margin-right: 18vw;
+
+  }
+
+  .team-transition_sy--part-two div {
+    width: 30vw;
+  }
+
+  .team-transition_sy--part-two div h3 {
+    padding-left: 3vw;
+  }
+  .team-transition_sy--part-two div ul {
+    padding-left: 6vw;
+    list-style-type: "→ ";
+  }
+
+}
+
+.team-transition--part-three {
+  padding: 0 6vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  p {
+    font-size: $base-size;
+    margin-bottom: 0;
+  }
+  a {
+    opacity: 0;
+  }
+  p.quote {
+    font-size: $base-size * 1.5;
+    margin: 0;
+  }
+  .team-transition_sy--part-three,
+  .team-transition_nico--part-three {
+    display: flex;
+    opacity: 0;
+  }
+}
+
+
+.team-transition_sy--part-three div,
+.team-transition_nico--part-three div {
+  padding-left: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
