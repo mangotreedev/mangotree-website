@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   flex-wrap: wrap;
-
+  letter-spacing: 0.5em;
   i {
     cursor: pointer;
     transition: clip-path 3s;
@@ -89,7 +89,7 @@
   }
 
   .primary-title.expanded {
-    margin-top: 10vh;
+    margin-top: 6vh;
   }
 
   .primary-title--right {
