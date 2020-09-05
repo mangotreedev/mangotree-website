@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 4vw;
+  position: relative;
 
   .angle-down {
     position: absolute;
@@ -52,4 +53,46 @@
   60% {
     transform: translateY(-$base-size * 0.25) rotate(-135deg);
   }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .definition-list {
+    margin-left: 35vh;
+    top: 55%;
+    width: 30vw;
+  }
+
+  .landing-page hr {
+    position: absolute;
+    bottom: -1vh;
+    left: 0;
+    right: 0;
+  }
+
+  .landing-page__left, .landing-page__right {
+    width: 50%;
+  }
+
+  .landing-page__right img {
+    opacity: 0;
+    transition: opacity 1500ms ease-in;
+    margin-top: 35vh;
+    margin-left: 5vw;
+
+    &.logo--active {
+      opacity: 1;
+    }
+  }
+
+  .landing-page {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop if needed: */
+
 }

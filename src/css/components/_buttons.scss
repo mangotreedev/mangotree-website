@@ -72,3 +72,11 @@
     width: 100%;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .define-btn {
+    text-align: left;
+    margin: 1vh auto 0 32vw;
+  }
+}
