@@ -57,8 +57,8 @@ export const initSkillsFloat = () => {
       })
     } else {
       document.querySelector('.skills-display').classList.add('design');
-      gsap.to('.skills-display p', 0.01, { display: "block" })
-        .to('.skills-display p', 1.5, { opacity: 1, ease: Sine.easeInOut } );
+      gsap.to('.skills-display p', 0.01, { display: "block" });
+      gsap.to('.skills-display p', 1, { opacity: 1, ease: Sine.easeInOut } );
     }
   }
 
@@ -71,7 +71,7 @@ export const initSkillsFloat = () => {
     } else {
       document.querySelector('.skills-display').classList.remove('design');
       gsap.to('.skills-display p', 0.01, { display: "none" })
-        .to('.skills-display p', 0.01, { opacity: 0, ease: Sine.easeInOut });
+      gsap.to('.skills-display p', 0.01, { opacity: 0, ease: Sine.easeInOut });
     }
   }
 
