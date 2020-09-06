@@ -41,28 +41,27 @@ export const initSkillsFloat = () => {
 
 
   function displaySkills() {
-    const icon = document.querySelector('.skill-icon--custom');
+    const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
+    if (icons) {
+      icons.forEach(icon => {
+        gsap.to(icon, 0.5, { display: "block" });
+        gsap.set(icon, {
+          x: randomX(-1),
+          y: randomY(1),
+          rotation: randomAngle(-1)
+        });
 
-    gsap.set(icon, {
-      x: randomX(-1),
-      y: randomY(1),
-      rotation: randomAngle(-1)
-    });
-
-    moveX(icon, 1);
-    moveY(icon, -1);
-    rotate(icon, 1);
-
-
-
-
-
-
+        moveX(icon, 1);
+        moveY(icon, -1);
+        rotate(icon, 1);
+      })
+    }
   }
 
   const skillsBtns = document.querySelectorAll('.js-skills-btn');
 
   skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseenter', displaySkills));
 
+  skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseleave', hideSkills));
 
 };
