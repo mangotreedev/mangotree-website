@@ -56,17 +56,23 @@ export const initSkillsFloat = () => {
         rotate(icon, 1);
       })
     } else {
-      console.log("Sweet Tits")
+      document.querySelector('.skills-display').classList.add('design');
+      gsap.to('.skills-display p', 0.01, { display: "block" })
+        .to('.skills-display p', 1.5, { opacity: 1, ease: Sine.easeInOut } );
     }
   }
 
   function hideSkills () {
     const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
-    if (icons) {
+    if (icons.length > 0) {
       icons.forEach(icon => {
         gsap.to(icon, 0.01, { display: "none" });
       });
-    };
+    } else {
+      document.querySelector('.skills-display').classList.remove('design');
+      gsap.to('.skills-display p', 0.01, { display: "none" })
+        .to('.skills-display p', 0.01, { opacity: 0, ease: Sine.easeInOut });
+    }
   }
 
   const skillsBtns = document.querySelectorAll('.js-skills-btn');
