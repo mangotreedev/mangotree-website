@@ -72,3 +72,44 @@
     width: 100%;
   }
 }
+
+.skills-btns {
+  display: flex;
+
+}
+
+.skills-btn {
+  display: flex;
+  width: 14vw;
+  height: 14vw;
+  align-items: flex-end;
+  background-color: $black;
+  color: $white;
+  padding: 1em;
+  margin-right: 2em;
+  border-radius: 2px;
+  &:hover {
+    background-color: $yellow;
+  }
+  .skills-btn__main {
+    display: flex;
+    align-items: center;
+    line-height: 105.2%;
+    margin-right: 1em;
+    padding-bottom: 0.8em;
+  }
+
+  .skills-btn__main i {
+    font-size: $base-size * 2;
+    margin-right: 0.4em;
+  }
+
+  .skills-btn__main p {
+    line-height: 105.2%;
+    font-size: $base-size;
+  }
+
+  .skills-btn__arrow p {
+    margin: 0;
+  }
+}

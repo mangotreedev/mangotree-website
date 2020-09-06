@@ -6,5 +6,12 @@
 
 .browser-skills-page {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
+  .browser-skills-page__body {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
 }
