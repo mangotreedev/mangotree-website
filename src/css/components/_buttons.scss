@@ -88,8 +88,13 @@
   padding: 1em;
   margin-right: 2em;
   border-radius: 2px;
+  transition: 0.3s all ease-in-out;
+  transform: scale(0.99);
   &:hover {
     background-color: $yellow;
+    color: $black;
+    transform: scale(1.02);
+    box-shadow: 0px 3px 6px rgba(0,0,0, 0.2);
   }
   .skills-btn__main {
     display: flex;
