@@ -58,6 +58,15 @@ export const initSkillsFloat = () => {
     }
   }
 
+  function hideSkills () {
+    const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
+    if (icons) {
+      icons.forEach(icon => {
+        gsap.to(icon, 0.01, { display: "none" });
+      });
+    };
+  }
+
   const skillsBtns = document.querySelectorAll('.js-skills-btn');
 
   skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseenter', displaySkills));
