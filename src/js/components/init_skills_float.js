@@ -32,9 +32,8 @@ export const initSkillsFloat = () => {
     });
   }
 
-  const randomX = random(10, 20);
-  const randomY = random(20, 30);
-  const randomDelay = random(0, 1);
+  const randomX = random(20, 20);
+  const randomY = random(20, 20);
   const randomTime = random(3, 5);
   const randomTime2 = random(5, 10);
   const randomAngle = random(8, 12);
@@ -42,9 +41,10 @@ export const initSkillsFloat = () => {
 
   function displaySkills() {
     const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
-    if (icons) {
+    if (icons.length > 0) {
+      gsap.to(icons, 0.01, { display: "block", opacity: 0 });
+      gsap.to(icons, { opacity: 1, stagger: 0.05 });
       icons.forEach(icon => {
-        gsap.to(icon, 0.5, { display: "block" });
         gsap.set(icon, {
           x: randomX(-1),
           y: randomY(1),
@@ -55,6 +55,8 @@ export const initSkillsFloat = () => {
         moveY(icon, -1);
         rotate(icon, 1);
       })
+    } else {
+      console.log("Sweet Tits")
     }
   }
 

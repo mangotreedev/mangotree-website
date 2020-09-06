@@ -91,6 +91,7 @@
   transition: 0.3s all ease-in-out;
   transform: scale(0.99);
   &:hover {
+    cursor: pointer;
     background-color: $yellow;
     color: $black;
     transform: scale(1.02);
