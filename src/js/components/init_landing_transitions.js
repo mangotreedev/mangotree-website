@@ -4,7 +4,7 @@ export const initLandingTransitions = () => {
 
   const gsapTransition = () => {
     const tl = gsap.timeline();
-    TweenLite.set(logo, { y: '-100vh' });
+    tl.set(logo, { y: '-100vh' });
 
     tl.to(logo, 0.25, {
         css: {
