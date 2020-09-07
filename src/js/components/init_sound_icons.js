@@ -16,7 +16,7 @@ export const initSoundIcons = () => {
       function Tween() {
         if (++count > limit) return;
 
-        TweenLite.to(logo, 0.15, {
+        gsap.to(logo, 0.15, {
           x: randomNum(-10, 10),
           y: randomNum(-10, 10),
           scale: randomNum(1.1, 0.9),
