@@ -12,6 +12,7 @@ import { initDrawingTrigger } from "./components/init_drawing_trigger";
 import { initLeftScroll } from "./components/init_left_scroll";
 import { initKonamiCode } from "./components/init_konami_code"
 import * as teamTransition from "./components/init_team_transitions";
+import { initSkillsFloat } from "./components/init_skills_float";
 
 initScheduleBtn();
 initDrawingTrigger();
@@ -26,3 +27,5 @@ initKonamiCode();
 teamTransition.oneToTwo();
 teamTransition.twoToThree();
 teamTransition.threeToOne();
+
+initSkillsFloat();

@@ -1,0 +1,26 @@
+.skills-display {
+  flex-grow: 1;
+  width: auto;
+  height: 50% ;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: 1rem;
+  img {
+    display: none;
+    max-width: 60px;
+    height: auto;
+  }
+  p {
+    display: none;
+    opacity: 1;
+  }
+}
+
+.skills-display.design {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3vw;
+}
