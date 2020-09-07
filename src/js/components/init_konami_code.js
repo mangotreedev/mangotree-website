@@ -13,6 +13,8 @@ export const initKonamiCode = () => {
       // Select root variables and swap background and primary colors
       document.documentElement.style.setProperty("--background", "#101010");
       document.documentElement.style.setProperty("--primary", "#F9F9F9");
+      document.querySelector(".landing-page__right img").src = "https://res.cloudinary.com/nico1711/image/upload/c_scale,h_350/v1599485051/__White_Outline_Full_Colour_-_Icon_Only_rzmtlr.png"
     }
   })
 }
+
