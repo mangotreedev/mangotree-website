@@ -1,6 +1,6 @@
 export const initHideNavbar = () => {
   let prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
+  window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.querySelector(".browser-navbar").style.top = "0";
