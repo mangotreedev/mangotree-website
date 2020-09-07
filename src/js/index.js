@@ -12,6 +12,7 @@ import { initDrawingTrigger } from "./components/init_drawing_trigger";
 import { initLeftScroll } from "./components/init_left_scroll";
 import { initKonamiCode } from "./components/init_konami_code"
 import * as teamTransition from "./components/init_team_transitions";
+import { initLandingTransitions } from "./components/init_landing_transitions"
 import { initSkillsFloat } from "./components/init_skills_float";
 
 initScheduleBtn();
@@ -22,6 +23,7 @@ initFadeEffect();
 initNavbar();
 initLeftScroll();
 initKonamiCode();
+initLandingTransitions();
 
 //Bundled team transitions for browser
 teamTransition.oneToTwo();

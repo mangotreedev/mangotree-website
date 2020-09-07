@@ -31,7 +31,6 @@
       left: 0.03em;
       z-index: -1;
     }
-
   }
 }
 
@@ -90,6 +89,14 @@
 
   .primary-title.expanded {
     margin-top: 6vh;
+  }
+
+  .landing-page {
+    padding: 0;
+
+    .primary-title.expanded {
+      margin-top: 0;
+    }
   }
 
   .primary-title--right {
