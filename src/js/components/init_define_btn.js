@@ -21,7 +21,7 @@ export const initDefineBtn = () => {
     var logoY = -logo.getBoundingClientRect().y + logo.getBoundingClientRect().height / 2
 
     if (logo.classList.contains('js-logo-background')) {
-      TweenLite.set(logo, {y: logoY});
+      tl.set(logo, {y: logoY});
       // Falling out of the screen and falling back from the top
       tl.to(logo, 1.25, {y:'100vh'})
         .to(logo, 0.01, {x:'100vh'})
@@ -33,7 +33,7 @@ export const initDefineBtn = () => {
         .to(logo, 0.25, {css: {position: 'relative'}}, 0)
     } else {
       // Falling from the top
-      TweenLite.set(logo, {y:'-100vh'});
+      tl.set(logo, {y:'-100vh'});
 
       tl.to(logo, 0.25, { opacity: 1 }, 0)
         .to(logo, 1.25, {y:'-100vh'})
