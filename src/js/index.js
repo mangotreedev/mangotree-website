@@ -14,6 +14,7 @@ import { initKonamiCode } from "./components/init_konami_code"
 import * as teamTransition from "./components/init_team_transitions";
 import { initLandingTransitions } from "./components/init_landing_transitions"
 import { initSkillsFloat } from "./components/init_skills_float";
+import { initHideNavbar } from "./components/init_hide_navbar";
 
 initScheduleBtn();
 initDrawingTrigger();
@@ -24,6 +25,7 @@ initNavbar();
 initLeftScroll();
 initKonamiCode();
 initLandingTransitions();
+initHideNavbar();
 
 //Bundled team transitions for browser
 teamTransition.oneToTwo();
