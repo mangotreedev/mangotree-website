@@ -8,9 +8,9 @@ export const initPortfolioParallax = (controller) => {
     const background = card.querySelector('.js-background');
 
     const tl = gsap.timeline();
-    tl.to(child, 1, { rotation: 3}, 0);
-    tl.to(child, 1, { y: -100, ease: Linear.easeNone }, 0);
-    tl.to(background, 1, { y: -50, ease: Linear.easeNone }, 0);
+    tl.to(child, 1, { rotation: -3}, 0);
+    tl.to(child, 1, { y: 100, ease: Linear.easeNone }, 0);
+    tl.to(background, 1, { y: 50, ease: Linear.easeNone }, 0);
 
     const scene = new ScrollMagic.Scene({
       triggerElement: card,

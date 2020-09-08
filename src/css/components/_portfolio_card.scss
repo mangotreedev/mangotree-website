@@ -47,11 +47,20 @@
 .portfolio-card-display__image {
   width: 580px;
   right: -50px;
-  bottom: 10px;
-  transform: rotate(-3deg);
+  bottom: 120px;
+  transform: rotate(3deg);
   .portfolio-card-display__image--baybe {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+  }
+  .portfolio-card-display__image--mangotree {
+    margin-top: 80px;
+    margin-left: 40px;
+    transform: rotate(30deg);
+  }
+  .portfolio-card-display__image--gate-zero {
+    margin-top: 40px;
+    margin-left: 60px;
   }
 }
 
