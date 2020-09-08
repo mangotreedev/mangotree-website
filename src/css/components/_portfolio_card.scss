@@ -1,8 +1,31 @@
 
+.portfolio-card {
+  display: flex;
+  margin-top: 20vh;
+  align-items: center;
+}
+
+.portfolio-card-info {
+  padding-right: 3vw;
+  .portfolio-card-info__tags {
+    display: flex;
+  }
+  .portfolio-card-info__context {
+    color: var(--secondary);
+  }
+}
+
+.portfolio-card-info__tags {
+  p {
+    margin-right: 1em;
+  }
+}
+
 .portfolio-card-display {
-  width: 580px;
   height: 400px;
   position: relative;
+  flex-grow: 1;
+
   .portfolio-card-display__background,
   .portfolio-card-display__image {
     position: relative;
@@ -17,8 +40,13 @@
 }
 
 .portfolio-card-display__image {
-  right: 0px;
-  bottom: 0px;
+  width: 580px;
+  right: -50px;
+  bottom: 20px;
+  .portfolio-card-display__image--baybe {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 
 
