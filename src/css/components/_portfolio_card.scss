@@ -1,0 +1,24 @@
+
+.portfolio-card-display {
+  width: 580px;
+  height: 400px;
+  position: relative;
+  .portfolio-card-display__background,
+  .portfolio-card-display__image {
+    position: relative;
+  }
+}
+
+.portfolio-card-display__background {
+  width: 100%;
+  height: 100%;
+  background:$black;
+  border-radius: 2px;
+}
+
+.portfolio-card-display__image {
+  right: 0px;
+  bottom: 0px;
+}
+
+
