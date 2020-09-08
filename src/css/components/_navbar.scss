@@ -71,3 +71,47 @@
     pointer-events: all;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .browser-navbar {
+    text-align: end;
+    position: fixed;
+    right: 2vw;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+    z-index: 15;
+  }
+
+  .browser-navbar__links-list {
+    list-style: none;
+    display: flex;
+
+
+    li {
+      font-size: $base-size * 1.5;
+      margin-left: 3vw;
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: "";
+        border-bottom: 0.2em solid $yellow;
+        position: absolute;
+        width: 0%;
+        bottom: 0.12em;
+        left: -5%;
+        z-index: -1;
+        transition: 0.5s;
+      }
+
+      &:hover:before {
+        width: 110%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop if needed: */
+}
