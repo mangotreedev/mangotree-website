@@ -1,24 +1,29 @@
 export const initPortfolioParallax = (controller) => {
-  var tl = gsap.timeline();
+  const cards = document.querySelectorAll('.js-portfolio-card');
 
+  cards.forEach(card => setParallax(card));
 
-  var child = document.querySelector('.portfolio-card-display__image');
-  var background = document.querySelector('.portfolio-card-display__background');
+  function setParallax(card) {
+    var child = card.querySelector('.js-image');
+    var background = card.querySelector('.js-background');
 
-  tl.to(child, 1, { y: -120, ease: Linear.easeNone }, 0);
-  tl.to(background, 1, { y: -60, ease: Linear.easeNone }, 0);
+    var tl = gsap.timeline();
+    tl.to(child, 1, { y: -120, ease: Linear.easeNone }, 0);
+    tl.to(background, 1, { y: -60, ease: Linear.easeNone }, 0);
 
-  var scene = new ScrollMagic.Scene({
-    triggerElement: document.querySelector('.portfolio-card'),
-    triggerHook: 0.8,
-    duration: "80%"
-  })
-  scene.setTween(tl)
-    .addIndicators({
-      colorTrigger: "black",
-      colorStart: "black",
-      colorEnd: "black",
-      indent: 10
+    var scene = new ScrollMagic.Scene({
+      triggerElement: card,
+      triggerHook: 0.8,
+      duration: "80%"
     })
-    .addTo(controller);
+    scene.setTween(tl)
+      .addIndicators({
+        colorTrigger: "black",
+        colorStart: "black",
+        colorEnd: "black",
+        indent: 10
+      })
+      .addTo(controller);
+  }
+
 }

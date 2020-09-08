@@ -1,16 +1,22 @@
 .portfolio-card {
   display: flex;
-  margin-top: 20vh;
+  margin-top: 25vh;
   align-items: center;
 }
 
 .portfolio-card-info {
-  padding-right: 3vw;
+  padding-right: 4vw;
   .portfolio-card-info__tags {
     display: flex;
   }
   .portfolio-card-info__context {
     color: var(--secondary);
+  }
+}
+
+.portfolio-card--inverse {
+  .portfolio-card-info {
+    padding-left: 4vw;
   }
 }
 
