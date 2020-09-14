@@ -19,7 +19,7 @@ const oneToTwo = () => {
     // Move photos across page, make button disappear
     tl.to(nicoOne, 1.7, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 0);
     tl.to(syOne, 1.7, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 0);
-    tl.to(this, 0.8, { opacity: 0 }, 0)
+    tl.to(this, 0.4, { opacity: 0 }, 0)
 
     // Shake photos
     tl.to(nicoOne, 0.15, { x: nicoCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(nicoOne, 0.3, { opacity: 0 }).to(nicoTwoFull, 0.7, { opacity: 1 });
@@ -68,7 +68,7 @@ const twoToThree = () => {
     // Move photos across page, make button disappear
     tl.to(nicoTwo, 1.5, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 1);
     tl.to(syTwo, 1.5, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 1);
-    tl.to(this, 0.8, { opacity: 0 }, 1);
+    tl.to(this, 0.4, { opacity: 0 }, 1);
 
     // Shake photos, and show part three
     tl.to(nicoTwo, 0.15, { x: nicoCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(nicoTwo, 0.3, { opacity: 0 }).to(nicoThreeFull, 0.7, { opacity: 1 });
@@ -116,17 +116,17 @@ const threeToOne = () => {
     // Build GSAP Timeline
     const tl = gsap.timeline();
     // Make text dissappear
-    tl.to('.team-transition_nico--part-three div', 0.8, { opacity: 0 }, 0);
-    tl.to('.team-transition_sy--part-three div', 0.8, { opacity: 0 }, 0);
+    tl.to('.team-transition_nico--part-three div', 0.4, { opacity: 0 }, 0);
+    tl.to('.team-transition_sy--part-three div', 0.4, { opacity: 0 }, 0);
 
     // Move photos across page, make button disappear
-    tl.to(nicoThree, 2, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 1);
-    tl.to(syThree, 2, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 1);
-    tl.to(this, 0.8, { opacity: 0 }, 1);
+    tl.to(nicoThree, 1.7, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 1);
+    tl.to(syThree, 1.7, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 1);
+    tl.to(this, 0.4, { opacity: 0 }, 1);
 
     // Shake photos, and make part three disappear, and photos from part 1 reappear
-    tl.to(nicoThree, 0.15, { x: nicoCoords.x + 20, repeat: 5, yoyo: true, ease: Sine.easeInOut }).to(nicoThreeFull, 0.3, { opacity: 0 }).to(nicoOne, 0.7, { opacity: 1 });
-    tl.to(syThree, 0.15, { x: syCoords.x + 20, repeat: 5, yoyo: true, ease: Sine.easeInOut }).to(syThreeFull, 0.3, { opacity: 0 }).to(syOne, 0.7, { opacity: 1 });
+    tl.to(nicoThree, 0.15, { x: nicoCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(nicoThreeFull, 0.3, { opacity: 0 }).to(nicoOne, 0.7, { opacity: 1 });
+    tl.to(syThree, 0.15, { x: syCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(syThreeFull, 0.3, { opacity: 0 }).to(syOne, 0.7, { opacity: 1 });
 
     // Flip the z-index for the team transitions
     tl.set(('.team-transition--part-three'), { css: { zIndex: 0 } }).set(('.team-transition--part-one'), { css: { zIndex: 10 } });
