@@ -17,13 +17,13 @@ const oneToTwo = () => {
     const tl = gsap.timeline();
 
     // Move photos across page, make button disappear
-    tl.to(nicoOne, 2, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 0);
-    tl.to(syOne, 2, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 0);
+    tl.to(nicoOne, 1.7, { x: nicoCoords.x, y: nicoCoords.y, ease: "back.inOut(1.7)" }, 0);
+    tl.to(syOne, 1.7, { x: syCoords.x, y: syCoords.y, ease: "back.inOut(1.7)" }, 0);
     tl.to(this, 0.8, { opacity: 0 }, 0)
 
     // Shake photos
-    tl.to(nicoOne, 0.15, { x: nicoCoords.x + 20, repeat: 5, yoyo: true, ease: Sine.easeInOut }).to(nicoOne, 0.3, { opacity: 0 }).to(nicoTwoFull, 0.7, { opacity: 1 });
-    tl.to(syOne, 0.15, { x: syCoords.x + 20, repeat: 5, yoyo: true, ease: Sine.easeInOut }).to(syOne, 0.3, { opacity: 0 }).to(syTwoFull, 0.7, { opacity: 1 });
+    tl.to(nicoOne, 0.15, { x: nicoCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(nicoOne, 0.3, { opacity: 0 }).to(nicoTwoFull, 0.7, { opacity: 1 });
+    tl.to(syOne, 0.15, { x: syCoords.x + 20, repeat: 2, yoyo: true, ease: Sine.easeInOut }).to(syOne, 0.3, { opacity: 0 }).to(syTwoFull, 0.7, { opacity: 1 });
 
     // Flip the z-index for the team transitions
     tl.set(('.team-transition--part-one'), { css: { zIndex: 0 } }).set(('.team-transition--part-two'), { css: { zIndex: 10 } });
