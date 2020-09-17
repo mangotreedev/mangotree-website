@@ -1,33 +1,18 @@
 export const initLandingTransitions = () => {
-  var neverRunned = true;
-  var logo = document.querySelector(".js-background-logo");
+  const logo = document.querySelector(".js-background-logo");
+  const title = document.querySelector(".js-primary-title");
 
   const gsapTransition = () => {
     const tl = gsap.timeline();
-    tl.set(logo, { y: '-100vh' });
 
-    tl.to(logo, 0.25, {
-        css: {
-          position: 'fixed',
-          top: '0vh',
-          zIndex: -10,
-          opacity: 0.05
-        }
-      }, 0)
-      .to(logo, 1.25, { y: '-100vh' })
-      .to(logo, 3, { y: 0 })
+    tl.to(logo, 0, {css: { zIndex: 100 }})
+      .to(logo, 3, { y: '200vh' })
   };
 
   document.addEventListener('scroll', () => {
-    if (window.scrollY >= window.innerHeight) {
-      if (neverRunned) {
-        gsapTransition();
-        logo.classList.remove('js-logo-active');
-        logo.classList.add('js-logo-background');
-        neverRunned = false;
-      } else if (logo.classList.contains('js-logo-active')) {
-        neverRunned = true;
-      }
+    if (window.scrollY >= title.getBoundingClientRect().top && logo.classList.contains('js-logo-active')) {
+      gsapTransition();
+      console.log("DOING SOMETHING")
     }
   });
 }
