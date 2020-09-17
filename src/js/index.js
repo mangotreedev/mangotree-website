@@ -16,6 +16,7 @@ import { initLandingTransitions } from "./components/init_landing_transitions"
 import { initSkillsFloat } from "./components/init_skills_float";
 import { initHideNavbar } from "./components/init_hide_navbar";
 import { initPortfolioParallax } from "./components/init_portfolio_parallax";
+import { initDesignText } from "./components/init_design_text";
 
 // Set up of singular scroll magic controller
 var scrollMagicController = new ScrollMagic.Controller();
@@ -37,5 +38,8 @@ teamTransition.twoToThree();
 teamTransition.threeToOne();
 
 initSkillsFloat();
+initDesignText();
 
 initPortfolioParallax(scrollMagicController);
+
+
