@@ -25,7 +25,7 @@ export const initDesignText = () => {
     const tl = gsap.timeline();
     tl
       .to('.skills-display p', 0.01, { display: "block" })
-      .to('.skills-display p', 0.3, { opacity: 1, ease: Sine.easeInOut })
+      .to('.skills-display p', 0.5, { opacity: 1, ease: Sine.easeInOut })
       .to(firstBg, 0.2, { scaleX: 1 })
       .to(secBg, 0.2, { scaleX: 1 })
       .to(thirdBg, 0.2, { scaleX: 1 })
