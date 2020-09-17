@@ -20,25 +20,11 @@ export const initDefineBtn = () => {
     const tl = gsap.timeline();
     var logoY = -logo.getBoundingClientRect().y + logo.getBoundingClientRect().height / 2
 
-    if (logo.classList.contains('js-logo-background')) {
-      tl.set(logo, {y: logoY});
-      // Falling out of the screen and falling back from the top
-      tl.to(logo, 1.25, {y:'100vh'})
-        .to(logo, 0.01, {x:'100vh'})
-        .to(logo, 0.01, {y:'-100vh'})
-        .to(logo, 0.01, {x:0})
-        .to(logo, 0.25, { opacity: 1 }, 0)
-        .to(logo, 1.25, {y:'-100vh'})
-        .to(logo, 1.25, {y:0, ease:Bounce.easeOut})
-        .to(logo, 0.25, {css: {position: 'relative'}}, 0)
-    } else {
-      // Falling from the top
-      tl.set(logo, {y:'-100vh'});
+    tl.set(logo, {y:'-100vh'});
 
-      tl.to(logo, 0.25, { opacity: 1 }, 0)
-        .to(logo, 1.25, {y:'-100vh'})
-        .to(logo, 1.25, {y:0, ease:Bounce.easeOut})
-    }
+    tl.to(logo, 0, { opacity: 1 }, 0)
+      .to(logo, 1.25, {y:'-100vh'})
+      .to(logo, 1.5, {y:0, ease:Bounce.easeOut})
   };
 
   const addListener = (button) => {
