@@ -55,10 +55,6 @@ export const initSkillsFloat = () => {
         moveY(icon, -1);
         rotate(icon, 1);
       })
-    } else {
-      document.querySelector('.skills-display').classList.add('design');
-      gsap.to('.skills-display p', 0.01, { display: "block" });
-      gsap.to('.skills-display p', 1, { opacity: 1, ease: Sine.easeInOut } );
     }
   }
 
@@ -68,10 +64,6 @@ export const initSkillsFloat = () => {
       icons.forEach(icon => {
         gsap.to(icon, 0.01, { display: "none" });
       });
-    } else {
-      document.querySelector('.skills-display').classList.remove('design');
-      gsap.to('.skills-display p', 0.01, { display: "none" })
-      gsap.to('.skills-display p', 0.01, { opacity: 0, ease: Sine.easeInOut });
     }
   }
 
