@@ -13,11 +13,8 @@ export const initDesignText = () => {
 
   function hideText() {
     document.querySelector('.skills-display').classList.remove('design');
-    const tl = gsap.timeline();
-    tl
-      .to('.skills-display p', 0.01, { display: "none" })
-      .to('.skills-display p', 0.01, { opacity: 0, ease: Sine.easeInOut })
-      .to(words, 0.1, { opacity: 0 });
+    gsap.to('.skills-display p', 0, { display: "none", opacity: 0 });
+    gsap.to(words, 0, { opacity: 0 });
   }
 
   function displayText() {
