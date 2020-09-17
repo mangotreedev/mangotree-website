@@ -26,13 +26,13 @@ export const initDesignText = () => {
     tl
       .to('.skills-display p', 0.01, { display: "block" })
       .to('.skills-display p', 0.3, { opacity: 1, ease: Sine.easeInOut })
-      .to(firstBg, 0.15, { scaleX: 1 })
-      .to(secBg, 0.15, { scaleX: 1 })
-      .to(thirdBg, 0.15, { scaleX: 1 })
-      .to(words, 0.1, { opacity: 1 }, "-=0.1")
-      .to(firstBg, 0.15, { scaleX: 0 })
-      .to(secBg, 0.15, { scaleX: 0 })
-      .to(thirdBg, 0.15, { scaleX: 0 });
+      .to(firstBg, 0.2, { scaleX: 1 })
+      .to(secBg, 0.2, { scaleX: 1 })
+      .to(thirdBg, 0.2, { scaleX: 1 })
+      .to(words, 0.15, { opacity: 1 }, "-=0.1")
+      .to(firstBg, 0.2, { scaleX: 0 })
+      .to(secBg, 0.2, { scaleX: 0 })
+      .to(thirdBg, 0.2, { scaleX: 0 });
   }
 
   designBtn.addEventListener('mouseenter', displayText);
