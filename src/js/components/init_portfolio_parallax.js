@@ -15,7 +15,7 @@ export const initPortfolioParallax = (controller) => {
     const scene = new ScrollMagic.Scene({
       triggerElement: card,
       triggerHook: 0.9,
-      duration: "100%"
+      duration: "150%"
     });
 
     scene.setTween(tl).addTo(controller);
