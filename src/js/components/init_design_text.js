@@ -8,9 +8,6 @@ export const initDesignText = () => {
 
   const words = document.querySelectorAll('.js-text__word');
 
-
-
-
   function hideText() {
     document.querySelector('.skills-display').classList.remove('design');
     gsap.to('.skills-display p', 0, { display: "none", opacity: 0 });
@@ -34,5 +31,4 @@ export const initDesignText = () => {
 
   designBtn.addEventListener('mouseenter', displayText);
   designBtn.addEventListener('mouseleave', hideText);
-
 }
