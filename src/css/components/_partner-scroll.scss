@@ -31,6 +31,16 @@
   align-items: center;
 }
 
+.partner-scroll-wrapper__item img {
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: all 0.3s linear;
+  &:hover {
+    opacity: 1;
+    filter: none;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets or larger: */
 }
