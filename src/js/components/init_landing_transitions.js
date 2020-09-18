@@ -1,32 +1,17 @@
 export const initLandingTransitions = () => {
-  var neverRunned = true;
-  var logo = document.querySelector(".js-background-logo");
-
-  const gsapTransition = () => {
-    const tl = gsap.timeline();
-    tl.set(logo, { y: '-100vh' });
-
-    tl.to(logo, 0.25, {
-        css: {
-          position: 'fixed',
-          top: '0vh',
-          zIndex: -10,
-          opacity: 0.05
-        }
-      }, 0)
-      .to(logo, 1.25, { y: '-100vh' })
-      .to(logo, 3, { y: 0 })
-  };
+  const logo = document.querySelector(".js-background-logo");
+  const title = document.querySelector(".js-primary-title");
+  let fallenMango = false;
 
   document.addEventListener('scroll', () => {
-    if (window.scrollY >= window.innerHeight) {
-      if (neverRunned) {
-        gsapTransition();
-        logo.classList.remove('js-logo-active');
-        logo.classList.add('js-logo-background');
-        neverRunned = false;
-      } else if (logo.classList.contains('js-logo-active')) {
-        neverRunned = true;
+    if (window.scrollY >= title.getBoundingClientRect().bottom && logo.classList.contains('js-logo-active')) {
+      if (!fallenMango) {
+        const tl = gsap.timeline();
+
+        tl.to(logo, 0, { css: { zIndex: 100 } })
+          .to(logo, 10, { y: '600vh', opacity: 0, ease: "power1.inOut" })
+          .set(logo, { y: '-100vh' });
+        fallenMango = true;
       }
     }
   });

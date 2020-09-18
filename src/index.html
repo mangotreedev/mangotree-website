@@ -439,15 +439,11 @@
       </ul>
     </div>
 
-    <!-- TODO: Adjust mango sitting in background, super distracting for all other portions.  perhaps a parallax of it falling and tumbling down the page but much smaller as you scroll -->
     <!-- TODO: Add a flashlight to the navbar that prompts you about the konami code, have the flashlight turn on when the konammi code is put in correctly -->
-    <!-- TODO: Change up the mango animation for when you click the speaker -->
-    <!-- TODO: Play with the physics of the mango drop to make it a bit more realistic -->
-    <!-- TODO: Change this to browser naming convention -->
 
     <div class="landing-page">
       <div class="landing-page__left">
-        <div class="primary-title">
+        <div class="primary-title js-primary-title">
           <h1 class="primary-title__piece--with-dot">MAN</h1>
           <h1 class="primary-title__piece--with-dot">GO</h1>
           <h1 class="primary-title__piece--underline">TREE</h1>
@@ -469,9 +465,7 @@
       </div>
     </div>
 
-    <!-- TODO: Fix flashing of background container with parallax effect -->
-    <!-- TODO: Keep the item falling until you can no longer see it on the page, don't stop it prematurely -->
-    <div class="browser-portfolio-page">
+    <div id="browser-portfolio" class="browser-portfolio-page">
       <div class="browser-portfolio-page__head">
         <hr>
 
@@ -567,9 +561,6 @@
       </div>
     </div>
 
-    <!-- TODO: Fix spacing of icons, they look silly they way they are now -->
-    <!-- TODO: Make these clickable so they can stay open and people can hover over the skills to see more info -->
-    <!-- TODO: Make the design text bigger and bolder -->
     <div id="browser-skills" class="browser-skills-page">
       <div class="browser-skills-page__head">
         <div class="primary-title expanded primary-title">
@@ -600,7 +591,7 @@
               <p>→</p>
             </div>
           </div>
-          <div class="js-skills-btn skills-btn" data-type="design">
+          <div class="js-skills-btn--design skills-btn" data-type="design">
             <div class="skills-btn__main">
               <i class="fas fa-magic"></i>
               <p>Lean Design Development</p>
@@ -611,8 +602,28 @@
           </div>
         </div>
         <div class="skills-display">
-          <!-- TODO: Add a much cooler animation to this -->
-          <p>We blend <br><span class="yellow">Design Thinking</span> & <br><span class="yellow">Lean Startup Methodologies</span><br>to deliver the right product <br>thru <span class="yellow">Agile Development</span></p>
+          <p class="js-skills-display--text">
+            We blend
+            <br>
+            <span class="text__first">
+              <span class="yellow text__word js-text__word">Design Thinking</span>
+              <span class="text__first--bg js-text__first--bg"></span>
+            </span>
+            &
+            <br>
+            <span class="text__second">
+              <span class="yellow text__word js-text__word">Lean Startup Methodologies</span>
+              <span class="text__second--bg js-text__second--bg"></span>
+            </span>
+            <br>
+            to deliver the right product
+            <br>
+            thru
+            <span class="text__third">
+              <span class="yellow text__word js-text__word">Agile Development</span>
+              <span class="text__third--bg js-text__third--bg"></span>
+            </span>
+          </p>
 
           <img src="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_50/v1598850235/html_1_whl9rj.png" alt="html-logo" class="skill-icon--custom">
           <img src="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_50/v1598849662/javascript_eniubp.png"
@@ -685,7 +696,6 @@
       </div>
     </div>
 
-    <!-- TODO: Make these animations way smoother and way more subtle, it's way to overdone right now -->
     <div id="browser-team" class="browser-team-page">
       <div class="browser-team-page__head">
         <hr>

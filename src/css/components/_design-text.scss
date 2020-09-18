@@ -1,0 +1,21 @@
+.text__first, .text__second, .text__third {
+  position: relative;
+}
+
+.text__word {
+  opacity: 0;
+  font-weight: 900;
+}
+
+.text__first--bg, .text__second--bg, .text__third--bg{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transform-origin: left;
+  transform: scaleX(0);
+  background-color: $yellow;
+}
