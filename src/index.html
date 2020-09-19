@@ -140,7 +140,6 @@
             </div>
           </div>
 
-    <!-- TODO: Probably should add on hover or click tooltips for each one of the icons -->
     <!-- TODO: Make skill section fixed px as opposed to vw or vh -->
     <div id="skills" class="skills-page">
       <div class="primary-title expanded">
@@ -295,38 +294,18 @@
         <i class="fas fa-volume-up"></i>
       </div>
 
-      <!-- TODO: BUILDING SECTION FOR NOW, WILL IMPLEMENT LOGOS ONCE WE HAVE MORE CLIENTS -->
-      <!-- TODO: SHOULD WE ADD AN ARROW TO INDICIATE DRAGGING? -->
       <ul class="partner-scroll-wrapper full">
         <li class="partner-scroll-wrapper__item">
           <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
           id="radiocarbon-logo">
         </li>
         <li class="partner-scroll-wrapper__item">
-          <img src="https://lh3.googleusercontent.com/proxy/oql8l8mwBLv57UNCYNsoSiIZkO6Y8nHA_Mwpp399TJeVymE3PX_ROAzODDFgAsbVVGminoYcveSoYf1BIpG6V4rxCz2bR8hUG9J4ldAOGYneqHuN46E" alt="Google Test"
-          id="google-logo">
-        </li>
-        <li class="partner-scroll-wrapper__item">
-          <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-          id="radiocarbon-logo">
-        </li>
-        <li class="partner-scroll-wrapper__item">
-          <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-          id="radiocarbon-logo">
-        </li>
-        <li class="partner-scroll-wrapper__item">
-          <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-          id="radiocarbon-logo">
-        </li>
-        <li class="partner-scroll-wrapper__item">
-          <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-          id="radiocarbon-logo">
+          <img src="https://carinspect.herokuapp.com/assets/carinspectlogoblack-1e24c05b4a37dfc8cd07f43ecd3a5f371a671925f80e37ac26fd22e3311639c6.png" alt="Carinspect"
+            id="carinspect-logo">
         </li>
       </ul>
     </div>
-    <!-- TODO: Add a little padding at the bottom of this to raise the contact bar off the bottom -->
-    <!-- TODO: Make sure typeform doesn't cover over any part of the contact page -->
-    <!-- TODO: Can't click to start typeform -->
+
     <div id="contact" class="contact-page">
         <div class="primary-title expanded">
           <h2 class="primary-title__piece--with-dot">LET'S</h2>
@@ -338,7 +317,7 @@
           <i class="fas fa-volume-up"></i>
         </div>
         <p class="basic-text">Looking to get your next whatever built, let's bring it to life, first session is on us,
-          <a class="schedule-btn js-schedule-btn" href="#typeform-full">
+          <a class="schedule-btn js-schedule-btn" href="https://shyradishdev.typeform.com/to/fgx8tQhE" target="_blank">
             <span class="schedule-btn__text--underline">schedule now </span>
             <i class="schedule-btn__icon far fa-calendar-plus"></i>
           </a>
@@ -416,19 +395,9 @@
         </a>
       </div>
     </div>
-
-    <div class="typeform-container">
-      <iframe id="typeform-full" width="100%" height="100%" frameborder="0"
-      allow="camera; microphone; autoplay; encrypted-media;" src="https://form.typeform.com/to/fgx8tQhE"></iframe>
-    </div>
   </div>
 
   <div class="nonmobile-body">
-
-    <!-- TODO: Adjust mango sitting in background, super distracting for all other portions.  perhaps a parallax of it falling and tumbling down the page but much smaller as you scroll -->
-    <!-- TODO: Add a flashlight to the navbar that prompts you about the konami code, have the flashlight turn on when the konammi code is put in correctly -->
-    <!-- TODO: Change up the mango animation for when you click the speaker -->
-    <!-- TODO: Play with the physics of the mango drop to make it a bit more realistic -->
 
     <div class="browser-navbar">
       <ul class="browser-navbar__links-list">
@@ -436,10 +405,27 @@
         <li><a href="#browser-skills">SKILLS</a></li>
         <li><a href="#browser-team">OUR TEAM</a></li>
         <li><a href="#browser-contact">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight">🔦</li>
       </ul>
     </div>
 
-    <!-- TODO: Add a flashlight to the navbar that prompts you about the konami code, have the flashlight turn on when the konammi code is put in correctly -->
+    <div class="browser-konami-code js-browser-konami-code">
+      <p>
+        <span>PRESS</span>
+        <span>↑</span>
+        <span>↑</span>
+        <span>↓</span>
+        <span>↓</span>
+        <span>←</span>
+        <span>→</span>
+        <span>b</span>
+        <span>a</span>
+        <span>FOR</span>
+        <span>A</span>
+        <span>SURPRISE</span>
+        <span>!</span>
+      </p>
+    </div>
 
     <div class="landing-page">
       <div class="landing-page__left">
@@ -771,21 +757,14 @@
       <div class="browser-partner-page__body">
         <hr>
         <ul class="partner-list">
-          <li class="partner-list__item">
+          <li class="partner-scroll-wrapper__item">
             <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-            id="radiocarbon-logo">
+              id="radiocarbon-logo">
           </li>
-          <li class="partner-list__item">
-            <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-            id="radiocarbon-logo">
-          </li>
-          <li class="partner-list__item">
-            <img src="https://lh3.googleusercontent.com/proxy/oql8l8mwBLv57UNCYNsoSiIZkO6Y8nHA_Mwpp399TJeVymE3PX_ROAzODDFgAsbVVGminoYcveSoYf1BIpG6V4rxCz2bR8hUG9J4ldAOGYneqHuN46E" alt="Google Test"
-            id="google-logo">
-          </li>
-          <li class="partner-list__item">
-            <img src="https://radiocarbon.co/wp-content/uploads/2020/07/Radiocarbon-logo-black.png" alt="Radiocarbon Consultancy"
-            id="radiocarbon-logo">
+          <li class="partner-scroll-wrapper__item">
+            <img
+              src="https://carinspect.herokuapp.com/assets/carinspectlogoblack-1e24c05b4a37dfc8cd07f43ecd3a5f371a671925f80e37ac26fd22e3311639c6.png"
+              alt="Carinspect" id="carinspect-logo">
           </li>
         </ul>
         <hr>
@@ -806,7 +785,7 @@
         <div class="browser-contact-page__body">
           <div class="browser-contact-page__body--left">
             <p class="basic-text">Looking to get your next whatever built? Let's bring it to life, first session is on us,
-              <a class="schedule-btn js-schedule-btn-browser" href="#typeform-full-browser">
+              <a class="schedule-btn js-schedule-btn-browser" href="https://shyradishdev.typeform.com/to/fgx8tQhE" target="_blank">
                 <span class="schedule-btn__text--underline">schedule now </span>
                 <i class="schedule-btn__icon far fa-calendar-plus"></i>
               </a>
@@ -884,11 +863,6 @@
           </svg>
         </div>
       </div>
-    </div>
-
-    <div class="typeform-container-browser">
-      <iframe id="typeform-full-browser" width="100%" height="100%" frameborder="0"
-      allow="camera; microphone; autoplay; encrypted-media;" src="https://form.typeform.com/to/fgx8tQhE"></iframe>
     </div>
   </div>
 
