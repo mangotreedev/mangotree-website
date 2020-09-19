@@ -8,7 +8,10 @@ export const initLandingTransitions = () => {
       if (!fallenMango) {
         const tl = gsap.timeline();
 
-        tl.to(logo, 0, { css: { zIndex: 100 } })
+        tl.to(logo, .3, { css: { zIndex: 100, rotation: 8 } })
+          .to(logo, .3, { css: { zIndex: 100, rotation: -8 } })
+          .to(logo, .3, { css: { zIndex: 100, rotation: 8 } })
+          .to(logo, .2, { css: { zIndex: 100, rotation: 0 } })
           .to(logo, 10, { y: '600vh', opacity: 0, ease: "power1.inOut" })
           .set(logo, { y: '-100vh' });
         fallenMango = true;
