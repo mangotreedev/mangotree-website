@@ -32,7 +32,7 @@
   li {
     opacity: 0;
     margin-bottom: 1em;
-    font-size: $base-size * 1.5;
+    font-size: $base-size;
     counter-increment: list-counter;
     &:last-child { margin-bottom: 0;}
   }
@@ -71,6 +71,10 @@ li::marker {
     margin-left: 35vh;
     top: 55%;
     width: 30vw;
+
+    li {
+      font-size: $base-size * 1.5;
+    }
   }
 
   .landing-page hr {
