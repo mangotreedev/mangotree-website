@@ -6,6 +6,7 @@
   height: 4rem;
   cursor: pointer;
   z-index: 3;
+  transition: top 0.5s ease-in-out;
 
   &.burger-icon--active .burger-icon__middle {
     background: rgba(0, 0, 0, 0);
