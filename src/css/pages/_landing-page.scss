@@ -23,19 +23,31 @@
 .definition-list {
   position: absolute;
   top: 52vh;
-  width: 90%;
-  opacity: 0;
-  transition: opacity 1500ms ease-in;
+  width: 82%;
   padding-left: 1.5em;
+  margin-left: 1.5em;
+  list-style: none;
+  counter-reset: li;
 
   li {
+    opacity: 0;
     margin-bottom: 1em;
-    font-size: $base-size * 1.5;
-
+    font-size: $base-size;
+    counter-increment: list-counter;
     &:last-child { margin-bottom: 0;}
   }
 
-  &.definition-list--active { opacity: 1; }
+  li::before {
+    content: counter(list-counter)".";
+    font-weight: bolder;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+  }
+}
+
+li::marker {
+  color: red;
 }
 
 @keyframes bounce {
@@ -59,6 +71,10 @@
     margin-left: 35vh;
     top: 55%;
     width: 30vw;
+
+    li {
+      font-size: $base-size * 1.5;
+    }
   }
 
   .landing-page hr {
@@ -68,13 +84,14 @@
     right: 0;
   }
 
-  .landing-page__left { width: 60%; }
+  .landing-page__left { width: 75%; }
 
-  .landing-page__right { width: 40%; }
+  .landing-page__right { width: 25%; }
 
   .landing-page__right img {
     opacity: 0;
     margin-top: 30vh;
+    width: 100%;
   }
 
   .landing-page {
@@ -84,6 +101,15 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   /* For desktop if needed: */
+  .landing-page__left { width: 60%; }
+
+  .landing-page__right { width: 40%; }
+
+  .landing-page__right img {
+    opacity: 0;
+    margin-top: 30vh;
+    width: auto;
+  }
 }
