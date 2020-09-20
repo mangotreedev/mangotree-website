@@ -84,13 +84,14 @@ li::marker {
     right: 0;
   }
 
-  .landing-page__left { width: 60%; }
+  .landing-page__left { width: 75%; }
 
-  .landing-page__right { width: 40%; }
+  .landing-page__right { width: 25%; }
 
   .landing-page__right img {
     opacity: 0;
     margin-top: 30vh;
+    width: 100%;
   }
 
   .landing-page {
@@ -100,6 +101,15 @@ li::marker {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   /* For desktop if needed: */
+  .landing-page__left { width: 60%; }
+
+  .landing-page__right { width: 40%; }
+
+  .landing-page__right img {
+    opacity: 0;
+    margin-top: 30vh;
+    width: auto;
+  }
 }
