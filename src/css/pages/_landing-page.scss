@@ -26,14 +26,28 @@
   width: 82%;
   padding-left: 1.5em;
   margin-left: 1.5em;
+  list-style: none;
+  counter-reset: li;
 
   li {
     opacity: 0;
     margin-bottom: 1em;
     font-size: $base-size * 1.5;
-
+    counter-increment: list-counter;
     &:last-child { margin-bottom: 0;}
   }
+
+  li::before {
+    content: counter(list-counter)".";
+    font-weight: bolder;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+  }
+}
+
+li::marker {
+  color: red;
 }
 
 @keyframes bounce {
