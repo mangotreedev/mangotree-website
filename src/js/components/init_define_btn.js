@@ -7,8 +7,8 @@ export const initDefineBtn = () => {
   }
 
   const showDefinition = (list) => {
-    list.classList.add('expanded');
-    list.classList.add('definition-list--active');
+    const listItems = list.querySelectorAll('li');
+    gsap.to(listItems, { opacity: 1, stagger: 0.5, delay: 1 });
   }
 
   // For init_landing_transition usage
@@ -18,7 +18,6 @@ export const initDefineBtn = () => {
 
   const gsapTransition = () => {
     const tl = gsap.timeline();
-    var logoY = -logo.getBoundingClientRect().y + logo.getBoundingClientRect().height / 2
 
     tl.set(logo, {y:'-100vh'});
 

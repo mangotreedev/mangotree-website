@@ -23,19 +23,17 @@
 .definition-list {
   position: absolute;
   top: 52vh;
-  width: 90%;
-  opacity: 0;
-  transition: opacity 1500ms ease-in;
+  width: 82%;
   padding-left: 1.5em;
+  margin-left: 1.5em;
 
   li {
+    opacity: 0;
     margin-bottom: 1em;
     font-size: $base-size * 1.5;
 
     &:last-child { margin-bottom: 0;}
   }
-
-  &.definition-list--active { opacity: 1; }
 }
 
 @keyframes bounce {
