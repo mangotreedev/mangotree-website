@@ -5,7 +5,7 @@
   align-items: center;
   display: grid;
   grid-gap: 6vw;
-  grid-template-columns: 6vw 12vw 64vw 340vw 6vw;
+  grid-template-columns: 20px 50px 240px 1600px 20px;
   grid-template-rows: minmax(92px, auto);
 
   overflow-x: scroll;
@@ -37,21 +37,21 @@
   }
 
   .skills-scroll-wrapper__background {
-    height: 71%;
+    height: 75%;
     background: $black;
     position: absolute;
     bottom: 2vh;
     left: 9vw;
     border-radius: 2px;
-    width: 423vw;
+    width: 1850px;
     z-index: -2;
   }
 }
 
 .skills-scroll-wrapper--custom {
-  grid-template-columns: 6vw 12vw 64vw 290vw 6vw;
+  grid-template-columns: 20px 50px 240px 1080px 20px;
   .skills-scroll-wrapper__background {
-    width: 373vw;
+    width: 1400px;
   }
 }
 
@@ -68,9 +68,9 @@
 }
 
 .skills-scroll-wrapper--dynamic {
-  grid-template-columns: 6vw 706vw 56vw 33vw 6vw;
+  grid-template-columns: 32px 2650px 210px 125px 20px;
   .skills-scroll-wrapper__background {
-    width: 803vw;
+    width: 3024px;
   }
   .skills-scroll-wrapper__item-summary p {
     text-align: left;
