@@ -26,7 +26,7 @@
 .burger-icon__middle {
   width: $base-size * 2.5;
   height: 0.2rem;
-  background-color: $black;
+  background-color: var(--primary);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +39,7 @@
     position: absolute;
     width: $base-size * 2.5;
     height: 0.2rem;
-    background: $black;
+    background: var(--primary);
     transition: 0.5s;
   }
 
