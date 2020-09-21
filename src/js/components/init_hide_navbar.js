@@ -4,7 +4,7 @@ export const initHideNavbar = () => {
   }
 
   const showNavbar = (navbar) => {
-    navbar.style.top = "-3em";
+    navbar.style.top = "-5em";
   }
 
   let prevScrollpos = window.pageYOffset;

@@ -1,8 +1,9 @@
 .browser-team-page {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   .browser-team-page__body {
+    min-height: 90vh;
     flex-grow: 1;
   }
 }

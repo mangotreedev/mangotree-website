@@ -13,8 +13,15 @@
   &::-webkit-scrollbar { display: none; }
 
   ul {
-    list-style-type: "→ ";
+    list-style-type: none;
     padding-right: 6vw;
+  }
+  ul li::before {
+    content: "→";
+    font-weight: bolder;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -1.2em
   }
 
   .team-scroll-wrapper__item {
