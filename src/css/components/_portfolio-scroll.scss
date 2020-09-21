@@ -6,7 +6,7 @@
   grid-gap: 6vw;
   grid-template-columns: 6vw 12vw 70vw 88vw 20vw 6vw;
   grid-template-rows: minmax(300px, auto);
-
+  overflow-y: hidden;
   overflow-x: scroll;
   scroll-snap-type: x proximity;
 
