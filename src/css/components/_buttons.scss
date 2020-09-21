@@ -61,15 +61,11 @@
     content: "";
     border-bottom: 0.4em solid $yellow;
     position: absolute;
-    width: 0%;
+    width: 100%;
     bottom: 0.12em;
     left: 0.03em;
     z-index: -1;
     transition: 0.5s;
-  }
-
-  &:hover:before {
-    width: 100%;
   }
 }
 
@@ -120,6 +116,15 @@
 
     .skills-btn__arrow p {
       margin: 0;
+    }
+  }
+
+  .schedule-btn__text--underline {
+    &:before {
+      width: 0%;
+    }
+    &:hover:before {
+      width: 100%;
     }
   }
 }
