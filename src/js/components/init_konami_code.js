@@ -24,6 +24,8 @@ export const initKonamiCode = () => {
         flashlight.classList.toggle('lit');
         if (flickers>=5) clearInterval(interval);
       }, 300);
+      // Disable the flashlight
+      flashlight.style.pointerEvents = 'none';
     }
   })
 
