@@ -26,8 +26,8 @@
 
   img.item-preview--rotated {
     position: absolute;
-    transform: rotate(12deg);
-    height: 58vw;
+    transform: rotate(22deg);
+    height: 70vw;
   }
 
   .portfolio-scroll-wrapper__item--portfolio {
@@ -51,11 +51,12 @@
   img {
     position: absolute;
     transform: rotate(24deg) translate(9vw, -1vw);
-    height: 50vw;
+    height: 62vw;
   }
 
   &.project__mangotree img {
-    transform: rotate(15deg) translateX(55px);
+    transform: rotate(-7deg) translate(20vw, 3vw);
+    height: 68vw;
   }
 
   .portfolio-scroll-wrapper__item-preview {
