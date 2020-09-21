@@ -49,24 +49,65 @@
   right: -50px;
   bottom: 120px;
   transform: rotate(3deg);
+
   .portfolio-card-display__image--baybe {
     margin-top: 60px;
-    margin-left: -80px;
   }
   .portfolio-card-display__image--mangotree {
     margin-top: 80px;
-    margin-left: 40px;
   }
   .portfolio-card-display__image--gate-zero {
     margin-top: 40px;
-    margin-left: 60px;
   }
   .portfolio-card-display__image--carinspect {
     margin-top: 60px;
-    margin-left: -70px;
     transform: rotate(3deg);
   }
 
 }
 
 
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .portfolio-card-display__image--baybe {
+    width: 50vw;
+  }
+
+  .portfolio-card-display__image--mangotree {
+    width: 40vw;
+  }
+
+  .portfolio-card-display__image--gate-zero {
+    width: 35vw;
+  }
+
+  .portfolio-card-display__image--carinspect {
+    width: 48vw;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* For desktop if needed: */
+   .portfolio-card-display__image--baybe {
+     margin-left: -80px;
+     width: auto;
+     right: 80px;
+   }
+
+   .portfolio-card-display__image--mangotree {
+     margin-left: 40px;
+     width: auto;
+   }
+
+   .portfolio-card-display__image--gate-zero {
+     margin-left: 60px;
+     width: auto;
+     right: -10px;
+   }
+
+   .portfolio-card-display__image--carinspect {
+     margin-left: -70px;
+     transform: rotate(3deg);
+     width: auto;
+   }
+}

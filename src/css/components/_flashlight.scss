@@ -9,3 +9,11 @@
     0 0 100px $yellow,
     0 0 150px $yellow;
 }
+
+.browser-navbar__flashlight:hover {
+  cursor: pointer;
+
+  &:hover:before {
+    width: 0%;
+  }
+}
