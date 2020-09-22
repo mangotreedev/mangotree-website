@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   <meta charset="UTF-8">
   <title>MANGOTREE DEV</title>
 </head>
 <body>
+  <div class="responsive-overlay">
+    <div class="responsive-overlay__phone-container">
+      <div class="phone-container__phone-item">
+        <i class="fa fa-repeat"></i>
+      </div>
+      <p>Rotate your device!</p>
+    </div>
+  </div>
   <!-- TODO: Tweak css to make it render properly across all screen sizes -->
   <div class="mobile-body">
     <div class="burger-icon js-navbar-icon">
@@ -19,6 +28,7 @@
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#team">OUR TEAM</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#" class="js-navbar-dark">DARK MODE</a></li>
       </ul>
       <a href="mailto:hello@mangotree.dev" class="navbar-menu__contact">
         <i class="far fa-envelope"></i>
@@ -127,7 +137,7 @@
           </span>
         </h3>
         <ul>
-          <li><strong>#</strong> ecomme</li>
+          <li><strong>#</strong> ecomm</li>
           <li><strong>#</strong> responsive</li>
           <li><strong>#</strong> stripe_integration</li>
         </ul>
@@ -490,6 +500,7 @@
     </div>
 
     <div class="browser-konami-code js-browser-konami-code">
+      <!-- TODO: Check why the font is not lading on all span elements -->
       <p>
         <span>PRESS</span>
         <span>↑</span>

@@ -6,27 +6,30 @@ export const initKonamiCode = () => {
   const secretCode = secretSeq.join("");
   const flashlight = document.querySelector('.js-flashlight');
 
+  const konamiMode = () => {
+    console.log('🔦 Dark Mode All Day All Night 🌌');
+    // Select root variables and swap background and primary colors
+    document.documentElement.style.setProperty("--background", "#101010");
+    document.documentElement.style.setProperty("--primary", "#F9F9F9");
+    // Swap the mango
+    document.querySelector(".landing-page__right img").src = "https://res.cloudinary.com/nico1711/image/upload/c_scale,h_350/v1599485051/__White_Outline_Full_Colour_-_Icon_Only_rzmtlr.png"
+    document.querySelector(".navbar-menu__logo").src = "https://res.cloudinary.com/nico1711/image/upload/v1600699086/__White_Outline_-_Icon_Only_zd9scc.png"
+    // Add glow to flashlight
+    let flickers = 0;
+    let interval = setInterval(() => {
+      flickers++;
+      flashlight.classList.toggle('lit');
+      if (flickers >= 5) clearInterval(interval);
+    }, 300);
+    // Disable the flashlight
+    flashlight.style.pointerEvents = 'none';
+  }
+
   window.addEventListener('keyup', (e) => {
     keysPressed.push(e.key);
     console.log(keysPressed);
     keysPressed.splice(-secretSeq.length - 1, keysPressed.length - secretSeq.length);
-    if (keysPressed.join('').includes(secretCode)) {
-      console.log('🔦 Dark Mode All Day All Night 🌌');
-      // Select root variables and swap background and primary colors
-      document.documentElement.style.setProperty("--background", "#101010");
-      document.documentElement.style.setProperty("--primary", "#F9F9F9");
-      // Swap the mango
-      document.querySelector(".landing-page__right img").src = "https://res.cloudinary.com/nico1711/image/upload/c_scale,h_350/v1599485051/__White_Outline_Full_Colour_-_Icon_Only_rzmtlr.png"
-      // Add glow to flashlight
-      let flickers = 0;
-      let interval = setInterval(() => {
-        flickers++;
-        flashlight.classList.toggle('lit');
-        if (flickers>=5) clearInterval(interval);
-      }, 300);
-      // Disable the flashlight
-      flashlight.style.pointerEvents = 'none';
-    }
+    if (keysPressed.join('').includes(secretCode)) { konamiMode() }
   })
 
   flashlight.addEventListener('click', () => {
@@ -39,5 +42,8 @@ export const initKonamiCode = () => {
       flashlight.style.pointerEvents = 'all'
     })
   });
+
+  const mobileNavbarBtn = document.querySelector('.js-navbar-dark');
+  mobileNavbarBtn.addEventListener('click', () => konamiMode());
 }
 

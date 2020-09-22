@@ -1,0 +1,115 @@
+.responsive-overlay {
+  display:none;
+  background-color:var(--background);
+  position:fixed;
+  top:0;
+  width:100vw;
+  height:100vh;
+  z-index: 1000;
+
+  .responsive-overlay__phone-container {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+
+    p {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      font-size: $base-size * 1.5;
+      opacity: 0;
+      color: var(--primary);
+    }
+  }
+
+  .phone-container__phone-item {
+    transform: rotate(90deg);
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border: 0 solid var(--primary);
+    background: var(--background);
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    i {
+      text-align: center;
+      width: 100%;
+      line-height: 120px;
+      font-size: $base-size * 3.125;
+      color: var(--primary);
+      opacity: 0;
+      transform: scaleX(-1);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .responsive-overlay { display: block; }
+
+  .responsive-overlay .phone-container__phone-item {
+    animation:
+      sizeIncrease .5s forwards ease,
+      borderIncrease .5s .5s forwards ease,
+      rotateRight .7s 1s forwards ease;
+  }
+
+  .responsive-overlay .phone-container__phone-item i {
+    animation: fadeIn .5s .8s forwards ease;
+  }
+
+  .responsive-overlay .responsive-overlay__phone-container p {
+    animation: fadeIn .5s 1.3s forwards ease;
+  }
+}
+
+/* Animate width + height */
+@keyframes sizeIncrease {
+  0% {
+    width: 0;
+    height: 10px;
+  }
+
+  50% {
+    width: 100px;
+    height: 10px;
+  }
+
+  100% {
+    width: 100px;
+    height: 160px;
+  }
+}
+
+/* Add borders */
+@keyframes borderIncrease {
+  100% {
+    border-width: 20px 10px;
+  }
+}
+
+/* fade-in  */
+@keyframes fadeIn {
+  100% {
+    color: var(--primary);
+    opacity: 1;
+  }
+}
+
+/* Rotate device */
+@keyframes rotateRight {
+  100% {
+    transform: rotate(0deg);
+  }
+}
