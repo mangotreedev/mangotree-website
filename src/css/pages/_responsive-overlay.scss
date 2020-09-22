@@ -3,8 +3,8 @@
   background-color:var(--background);
   position:fixed;
   top:0;
-  width:100vw;
-  height:100vh;
+  width: calc(100vw);
+  height:calc(100vh);
   z-index: 1000;
 
   .responsive-overlay__phone-container {
@@ -56,6 +56,11 @@
     overflow-y: hidden;
     overflow-x: hidden;
   }
+
+  .mobile-body { opacity: 0;}
+
+  .nonmobile-body { opacity: 0;}
+
   .responsive-overlay { display: block; }
 
   .responsive-overlay .phone-container__phone-item {
