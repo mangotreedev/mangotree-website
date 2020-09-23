@@ -28,7 +28,6 @@
   }
 
   .phone-container__phone-item {
-    transform: rotate(90deg);
     position: relative;
     left: 50%;
     margin-left: -50px;
@@ -46,12 +45,49 @@
       font-size: $base-size * 3.125;
       color: var(--primary);
       opacity: 0;
-      transform: scaleX(-1);
+
     }
   }
 }
+// Iphone query
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape) {
+  .phone-container__phone-item {
+    transform: rotate(90deg);
 
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+    i {
+      transform: scaleX(-1);
+    }
+  }
+
+  .responsive-overlay .phone-container__phone-item {
+    animation:
+      sizeIncrease .5s forwards ease,
+      borderIncrease .5s .5s forwards ease,
+      rotateLeft .7s 1s forwards ease;
+  }
+}
+
+// IPad query
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .phone-container__phone-item {
+    transform: rotate(0deg);
+    i {
+      transform: scaleX(1);
+    }
+  }
+
+  .responsive-overlay .phone-container__phone-item {
+    animation:
+      sizeIncrease .5s forwards ease,
+      borderIncrease .5s .5s forwards ease,
+      rotateRight .7s 1s forwards ease;
+  }
+}
+
+@media
+  only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape),
+  only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+  {
   body {
     overflow-y: hidden;
     overflow-x: hidden;
@@ -62,13 +98,6 @@
   .nonmobile-body { opacity: 0;}
 
   .responsive-overlay { display: block; }
-
-  .responsive-overlay .phone-container__phone-item {
-    animation:
-      sizeIncrease .5s forwards ease,
-      borderIncrease .5s .5s forwards ease,
-      rotateRight .7s 1s forwards ease;
-  }
 
   .responsive-overlay .phone-container__phone-item i {
     animation: fadeIn .5s .8s forwards ease;
@@ -113,8 +142,15 @@
 }
 
 /* Rotate device */
-@keyframes rotateRight {
+@keyframes rotateLeft {
   100% {
     transform: rotate(0deg);
+  }
+}
+
+/* Rotate device */
+@keyframes rotateRight {
+  100% {
+    transform: rotate(90deg);
   }
 }
