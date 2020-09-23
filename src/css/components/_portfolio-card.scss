@@ -13,6 +13,10 @@
   .portfolio-card-info__context {
     color: var(--secondary);
   }
+
+  .portfolio-card-info__title i {
+    cursor: pointer;
+  }
 }
 
 .portfolio-card--inverse {
