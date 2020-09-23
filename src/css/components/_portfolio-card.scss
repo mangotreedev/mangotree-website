@@ -6,11 +6,16 @@
 
 .portfolio-card-info {
   padding-right: 4vw;
+  width: 50%;
   .portfolio-card-info__tags {
     display: flex;
   }
   .portfolio-card-info__context {
     color: var(--secondary);
+  }
+
+  .portfolio-card-info__title i {
+    cursor: pointer;
   }
 }
 
@@ -21,8 +26,10 @@
 }
 
 .portfolio-card-info__tags {
+  flex-wrap: wrap;
   p {
-    margin-right: 1em;
+
+    margin: 0 1em 0 0;
   }
 }
 
@@ -69,6 +76,10 @@
 
 @media only screen and (min-width: 600px) {
   /* For tablets or larger: */
+
+  .portfolio-card-display__image__tablet {
+    right: 0px;
+  }
   .portfolio-card-display__image--baybe {
     width: 50vw;
   }

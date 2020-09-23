@@ -3,8 +3,8 @@
   background-color:var(--background);
   position:fixed;
   top:0;
-  width:100vw;
-  height:100vh;
+  width: calc(100vw);
+  height:calc(100vh);
   z-index: 1000;
 
   .responsive-overlay__phone-container {
@@ -28,7 +28,6 @@
   }
 
   .phone-container__phone-item {
-    transform: rotate(90deg);
     position: relative;
     left: 50%;
     margin-left: -50px;
@@ -46,17 +45,36 @@
       font-size: $base-size * 3.125;
       color: var(--primary);
       opacity: 0;
-      transform: scaleX(-1);
+
     }
   }
 }
+// Iphone query
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape) {
+  .phone-container__phone-item {
+    transform: rotate(90deg);
 
-@media only screen and (max-width: 900px) and (orientation: landscape) {
-  body {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    i {
+      transform: scaleX(-1);
+    }
   }
-  .responsive-overlay { display: block; }
+
+  .responsive-overlay .phone-container__phone-item {
+    animation:
+      sizeIncrease .5s forwards ease,
+      borderIncrease .5s .5s forwards ease,
+      rotateLeft .7s 1s forwards ease;
+  }
+}
+
+// IPad query
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .phone-container__phone-item {
+    transform: rotate(0deg);
+    i {
+      transform: scaleX(1);
+    }
+  }
 
   .responsive-overlay .phone-container__phone-item {
     animation:
@@ -64,6 +82,22 @@
       borderIncrease .5s .5s forwards ease,
       rotateRight .7s 1s forwards ease;
   }
+}
+
+@media
+  only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio : 3),
+  only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)
+  {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .mobile-body { opacity: 0;}
+
+  .nonmobile-body { opacity: 0;}
+
+  .responsive-overlay { display: block; }
 
   .responsive-overlay .phone-container__phone-item i {
     animation: fadeIn .5s .8s forwards ease;
@@ -108,8 +142,15 @@
 }
 
 /* Rotate device */
-@keyframes rotateRight {
+@keyframes rotateLeft {
   100% {
     transform: rotate(0deg);
+  }
+}
+
+/* Rotate device */
+@keyframes rotateRight {
+  100% {
+    transform: rotate(90deg);
   }
 }

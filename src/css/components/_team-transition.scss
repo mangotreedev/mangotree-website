@@ -6,9 +6,9 @@
   img {
     box-shadow: 0px 3px 6px rgba(0,0,0, 0.2);
     border-radius: 2px;
+    width: 28vw;
   }
 }
-
 
 .team-transition--part-one {
   display: flex;
@@ -46,13 +46,8 @@
 
   .team-transition_nico--part-two p {
     padding-left: 2vw;
-    width: 30vw;
     margin-right: 18vw;
 
-  }
-
-  .team-transition_sy--part-two div {
-    width: 30vw;
   }
 
   .team-transition_sy--part-two div h3 {
@@ -90,11 +85,42 @@
   }
 }
 
-
 .team-transition_sy--part-three div,
 .team-transition_nico--part-three div {
   padding-left: 6vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .team-transition_nico--part-two p {
+    width: 40vw;
+  }
+  .team-transition_sy--part-two div {
+    width: 35vw;
+  }
+
+  .team-transition img {
+    width: 28vw;
+    height: 22vw;
+    margin-top: 5vh;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+  /* For tablets or larger: */
+  .team-transition_nico--part-two p {
+    width: 30vw;
+  }
+
+  .team-transition_sy--part-two div {
+    width: 30vw;
+  }
+  .team-transition img {
+    width: 28vw;
+    height: auto;
+    margin-top: 0;
+  }
 }
