@@ -3,7 +3,7 @@ export const initSoundIcons = () => {
 
   const addIconsListener = (icon) => {
     icon.addEventListener('click', (event) => {
-      var audio = new Audio('https://www.kozco.com/tech/piano2.wav');
+      var audio = new Audio('../assets/defineaudio.m4a');
       audio.play();
       event.currentTarget.classList.add("sound-icon--active");
 
