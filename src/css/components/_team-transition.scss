@@ -55,7 +55,15 @@
   }
   .team-transition_sy--part-two div ul {
     padding-left: 6vw;
-    list-style-type: "→ ";
+    list-style-type: none;
+
+    li::before {
+      content: "→";
+      font-weight: bolder;
+      display: inline-block;
+      width: 1.2em;
+      margin-left: -1.2em
+    }
   }
 
 }
