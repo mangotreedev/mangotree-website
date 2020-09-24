@@ -129,3 +129,29 @@
     }
   }
 }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .skills-btns {
+    display: block;
+  }
+
+  .skills-btn {
+    margin-top: 1vh;
+    margin-left: 5vh;
+    position: relative;
+
+    .skills-btn__arrow {
+      position: absolute;
+      right: 2vh;
+      bottom: 0;
+    }
+  }
+
+  .skills-btn:nth-child(2) {
+    margin-left: 10vh;
+  }
+
+  .skills-btn:nth-child(3) {
+    margin-left: 15vh;
+  }
+}

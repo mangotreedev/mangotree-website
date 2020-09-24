@@ -78,7 +78,7 @@
   /* For tablets or larger: */
 
   .portfolio-card-display__image__tablet {
-    right: 0px;
+    right: 6vw;
   }
   .portfolio-card-display__image--baybe {
     width: 50vw;
@@ -99,6 +99,9 @@
 
 @media only screen and (min-width: 1025px) {
   /* For desktop if needed: */
+  .portfolio-card-display__image__tablet {
+    right: -3vw;
+  }
    .portfolio-card-display__image--baybe {
      margin-left: -80px;
      width: auto;

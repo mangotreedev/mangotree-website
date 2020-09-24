@@ -5,5 +5,7 @@
   .browser-team-page__body {
     min-height: 90vh;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
   }
 }
