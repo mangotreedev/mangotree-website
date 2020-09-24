@@ -103,8 +103,12 @@
 
   .team-transition img {
     width: 28vw;
-    height: 22vw;
+    // height: 22vw;
     margin-top: 5vh;
+  }
+
+  .team-transition--part-three img {
+    height: 22vw;
   }
 }
 
@@ -118,6 +122,7 @@
   .team-transition_sy--part-two div {
     width: 30vw;
   }
+
   .team-transition img {
     width: 26vw;
     height: auto;

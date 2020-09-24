@@ -1,4 +1,6 @@
-export const initSkillsFloat = () => {
+import { hideText } from "./init_design_text";
+
+const initSkillsFloat = () => {
 
   function random(min, max) {
     const delta = max - min;
@@ -38,8 +40,12 @@ export const initSkillsFloat = () => {
   const randomTime2 = random(5, 10);
   const randomAngle = random(8, 12);
 
+  const skillsBtns = document.querySelectorAll('.js-skills-btn')
 
   function displaySkills() {
+    skillsBtns.forEach((btn) => { hideSkills.call(btn) });
+    hideText();
+
     const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
     if (icons.length > 0) {
       gsap.to(icons, 0.01, { display: "block", opacity: 0 });
@@ -58,19 +64,23 @@ export const initSkillsFloat = () => {
     }
   }
 
-  function hideSkills () {
-    const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
-    if (icons.length > 0) {
-      icons.forEach(icon => {
-        gsap.to(icon, 0.01, { display: "none" });
-      });
-    }
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    skillsBtns.forEach(skillBtn => skillBtn.addEventListener('click', displaySkills));
+  } else {
+    skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseenter', displaySkills));
+    skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseleave', hideSkills));
   }
-
-  const skillsBtns = document.querySelectorAll('.js-skills-btn');
-
-  skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseenter', displaySkills));
-
-  skillsBtns.forEach(skillBtn => skillBtn.addEventListener('mouseleave', hideSkills));
-
 };
+
+function hideSkills() {
+  const icons = document.querySelectorAll(`.skill-icon--${this.dataset.type}`);
+  if (icons.length > 0) {
+    icons.forEach(icon => {
+      gsap.to(icon, 0.01, {
+        display: "none"
+      });
+    });
+  }
+}
+
+export { initSkillsFloat, hideSkills };
