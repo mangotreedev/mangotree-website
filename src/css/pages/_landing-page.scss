@@ -70,7 +70,7 @@ li::marker {
   .definition-list {
     margin-left: 35vh;
     top: 55%;
-    width: 30vw;
+    width: 40vw;
 
     li {
       font-size: $base-size * 1.5;
@@ -101,7 +101,10 @@ li::marker {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1200px) {
+  .definition-list {
+    width: 30vw;
+  }
   /* For desktop if needed: */
   .landing-page__left { width: 60%; }
 
