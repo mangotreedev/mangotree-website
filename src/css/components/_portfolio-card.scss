@@ -100,28 +100,44 @@
 @media only screen and (min-width: 1025px) {
   /* For desktop if needed: */
   .portfolio-card-display__image__tablet {
-    right: -3vw;
+    right: -1vw;
   }
    .portfolio-card-display__image--baybe {
      margin-left: -80px;
-     width: auto;
      right: 80px;
    }
 
    .portfolio-card-display__image--mangotree {
-     margin-left: 40px;
-     width: auto;
+     margin-left: 0;
    }
 
    .portfolio-card-display__image--gate-zero {
-     margin-left: 60px;
-     width: auto;
+     margin-left: 3vh;
      right: -10px;
    }
 
    .portfolio-card-display__image--carinspect {
      margin-left: -70px;
      transform: rotate(3deg);
-     width: auto;
    }
+}
+
+@media only screen and (min-width: 1125px) {
+  .portfolio-card-display__image--gate-zero {
+    width: auto;
+    margin-left: 5vh;
+  }
+
+  .portfolio-card-display__image--mangotree {
+    width: auto;
+    margin-left: 5vh;
+  }
+
+  .portfolio-card-display__image--baybe {
+    width: auto;
+  }
+
+  .portfolio-card-display__image--carinspect {
+    width: auto;
+  }
 }
