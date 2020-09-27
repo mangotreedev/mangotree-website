@@ -1,5 +1,4 @@
 export const initNavbar = () => {
-  // TODO: Disable scrolling when navbar is open
   const navbarIcon = document.querySelector('.js-navbar-icon');
   navbarIcon.addEventListener('click', (event) => {
     event.currentTarget.classList.toggle('burger-icon--active');
