@@ -29,13 +29,14 @@ const initDesignText = () => {
       .to(secBg, 0.2, { scaleX: 0 })
       .to(thirdBg, 0.2, { scaleX: 0 });
   }
-
+if (designBtn) {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     designBtn.addEventListener('click', displayText);
   } else {
     designBtn.addEventListener('mouseenter', displayText);
     designBtn.addEventListener('mouseleave', hideText);
   }
+}
 }
 
 function hideText() {
