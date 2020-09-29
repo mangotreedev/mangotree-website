@@ -28,7 +28,6 @@ export const initDefineBtn = () => {
 
   const addListener = (button) => {
     button.addEventListener('click', (event) => {
-      console.log("Anything happening")
       gsapTransition();
 
       document.querySelectorAll('.primary-title').forEach(expandTitle);
