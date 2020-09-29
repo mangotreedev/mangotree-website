@@ -1,6 +1,4 @@
 export const initKonamiCode = () => {
-  console.log("🎉 Enter the Konami Code to see something cool 🎉")
-
   const keysPressed = [];
   const secretSeq = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
   const secretCode = secretSeq.join("");
@@ -32,18 +30,22 @@ export const initKonamiCode = () => {
     if (keysPressed.join('').includes(secretCode)) { konamiMode() }
   })
 
-  flashlight.addEventListener('click', () => {
-    flashlight.style.pointerEvents = 'none'
-    const konamiNodes = document.querySelectorAll('.js-browser-konami-code span');
-    const tl = gsap.timeline();
-    tl.to(konamiNodes, { autoAlpha: 1, display: 'inline', stagger: 0.3 });
-    tl.to(konamiNodes, 3, { autoAlpha: 1, display: 'none'});
-    tl.eventCallback("onComplete", () => {
-      flashlight.style.pointerEvents = 'all'
-    })
-  });
+  if (flashlight) {
+    console.log("🎉 Enter the Konami Code to see something cool 🎉")
+    flashlight.addEventListener('click', () => {
+      flashlight.style.pointerEvents = 'none';
+      const konamiNodes = document.querySelectorAll('.js-browser-konami-code span');
+      const tl = gsap.timeline();
+      tl.to(konamiNodes, { autoAlpha: 1, display: 'inline', stagger: 0.3 });
+      tl.to(konamiNodes, 3, { autoAlpha: 1, display: 'none'});
+      tl.eventCallback("onComplete", () => {
+        flashlight.style.pointerEvents = 'all';
+      })
+    });
 
-  const mobileNavbarBtn = document.querySelector('.js-navbar-dark');
-  mobileNavbarBtn.addEventListener('click', () => konamiMode());
+    const mobileNavbarBtn = document.querySelector('.js-navbar-dark');
+    mobileNavbarBtn.addEventListener('click', () => konamiMode());
+  }
+
 }
 
