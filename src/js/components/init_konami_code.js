@@ -33,13 +33,13 @@ export const initKonamiCode = () => {
   })
 
   flashlight.addEventListener('click', () => {
-    flashlight.style.pointerEvents = 'none'
+    flashlight.style.pointerEvents = 'none';
     const konamiNodes = document.querySelectorAll('.js-browser-konami-code span');
     const tl = gsap.timeline();
     tl.to(konamiNodes, { autoAlpha: 1, display: 'inline', stagger: 0.3 });
     tl.to(konamiNodes, 3, { autoAlpha: 1, display: 'none'});
     tl.eventCallback("onComplete", () => {
-      flashlight.style.pointerEvents = 'all'
+      flashlight.style.pointerEvents = 'all';
     })
   });
 
