@@ -1,5 +1,5 @@
 export const initVideoModal = () => {
-  const videoBtns = document.querySelectorAll('.fa-video');
+  const videoBtns = document.querySelectorAll('.fa-play-circle');
   const videoModal = document.querySelector('.js-video-modal');
   const videoCloseBtn = document.querySelector('.js-modal-close');
 
