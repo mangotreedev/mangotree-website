@@ -98,6 +98,7 @@ li::marker {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 105vh;
   }
 }
 
@@ -112,5 +113,9 @@ li::marker {
 
   .landing-page__right img {
     width: 50%;
+  }
+
+  .landing-page {
+    height: 100vh;
   }
 }
