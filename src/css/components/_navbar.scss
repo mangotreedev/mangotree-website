@@ -81,6 +81,9 @@
     transition: top 0.5s ease-in-out;
     z-index: 15;
     background-color: var(--background);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .browser-navbar__links-list {
