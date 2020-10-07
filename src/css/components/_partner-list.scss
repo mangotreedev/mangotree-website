@@ -1,10 +1,12 @@
 .partner-list {
-  margin: 6vh 0;
+  margin: 6vh 0 4vh 0;
   list-style: none;
   padding: 0;
   align-items: center;
   display: flex;
-  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
   overflow-x: scroll;
 
   &::-webkit-scrollbar { display: none; }
@@ -14,12 +16,12 @@
 .partner-list__item img {
   height: auto;
   width: $base-size * 15;
-  opacity: 0.7;
-  filter: grayscale(100%);
+  opacity: 0.6;
   transition: all 0.3s linear;
+  transform: scale(0.98);
   &:hover {
     opacity: 1;
-    filter: none;
+    transform: scale(1.02);
   }
 }
 .partner-list__item {

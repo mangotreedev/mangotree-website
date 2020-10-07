@@ -32,12 +32,12 @@
 }
 
 .partner-scroll-wrapper__item img {
-  opacity: 0.7;
-  filter: grayscale(100%);
+  opacity: 0.6;
   transition: all 0.3s linear;
+  transform: scale(0.98);
   &:hover {
     opacity: 1;
-    filter: none;
+    transform: scale(1.02);
   }
 }
 
