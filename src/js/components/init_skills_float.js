@@ -50,17 +50,17 @@ const initSkillsFloat = () => {
     if (icons.length > 0) {
       gsap.to(icons, 0.01, { display: "block", opacity: 0 });
       gsap.to(icons, { opacity: 1, stagger: 0.05 });
-      icons.forEach(icon => {
-        gsap.set(icon, {
-          x: randomX(-1),
-          y: randomY(1),
-          rotation: randomAngle(-1)
-        });
+      // icons.forEach(icon => {
+      //   gsap.set(icon, {
+      //     x: randomX(-1),
+      //     y: randomY(1),
+      //     rotation: randomAngle(-1)
+      //   });
 
-        moveX(icon, 1);
-        moveY(icon, -1);
-        rotate(icon, 1);
-      })
+      //   moveX(icon, 1);
+      //   moveY(icon, -1);
+      //   rotate(icon, 1);
+      // })
     }
   }
 
