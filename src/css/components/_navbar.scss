@@ -55,14 +55,14 @@
     font-size: $base-size * 1.5;
     margin: 0;
     position: absolute;
-    top: 94vh;
+    top: 85vh;
     width: 100vw;
-    text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     transition-delay: 0.7s;
     color: $gray;
     pointer-events: none;
+    padding-left: 1.1em;
   }
 
   &.navbar-menu--active .navbar-menu__contact {
