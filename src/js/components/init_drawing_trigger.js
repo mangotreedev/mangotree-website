@@ -1,4 +1,7 @@
 export const initDrawingTrigger = () => {
+
+  const contactBtns = document.querySelectorAll('.js-contact-btn');
+
   function debounce(func, wait = 20, immediate = true) {
     var timeout;
     return function () {
@@ -15,7 +18,6 @@ export const initDrawingTrigger = () => {
   }
 
   const checkDraw = (e) => {
-
     let drawing = document.querySelector('.js-drawing');
     if (drawing.offsetTop === 0) drawing = document.querySelector('.js-drawing-browser');
     const path = drawing.querySelector('.js-path');
@@ -29,6 +31,15 @@ export const initDrawingTrigger = () => {
       path.classList.remove('drawing--animate');
     }
   }
+
+  contactBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      let drawing = document.querySelector('.js-drawing');
+      if (drawing.offsetTop === 0) drawing = document.querySelector('.js-drawing-browser');
+      const path = drawing.querySelector('.js-path');
+      setTimeout(function(){ path.classList.add('drawing--animate'); }, 500);
+    });
+  })
 
   window.addEventListener('scroll', debounce(checkDraw));
 };
