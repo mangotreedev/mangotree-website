@@ -1,12 +1,12 @@
 export const initLandingTransitions = () => {
   const logo = document.querySelector(".js-background-logo");
   const title = document.querySelector(".js-primary-title");
-  const defineBtn = document.querySelector(".js-define-btn");
+  const defineBtns = document.querySelectorAll(".js-define-btn");
   let fallenMango = false;
 
   function triggerDefine() {
     if (window.scrollY >= window.innerHeight * .10) {
-      defineBtn.click();
+      defineBtns.forEach((btn) => btn.click());
       document.removeEventListener('scroll', triggerDefine);
     }
   }
