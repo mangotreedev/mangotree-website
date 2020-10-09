@@ -1,7 +1,17 @@
 export const initLandingTransitions = () => {
   const logo = document.querySelector(".js-background-logo");
   const title = document.querySelector(".js-primary-title");
+  const defineBtn = document.querySelector(".js-define-btn");
   let fallenMango = false;
+
+  function triggerDefine() {
+    if (window.scrollY >= window.innerHeight * .10) {
+      defineBtn.click();
+      document.removeEventListener('scroll', triggerDefine);
+    }
+  }
+
+  document.addEventListener('scroll', triggerDefine);
 
   document.addEventListener('scroll', () => {
     if (window.scrollY >= title.getBoundingClientRect().bottom && logo.classList.contains('js-logo-active')) {
