@@ -5,7 +5,8 @@ export const initLandingTransitions = () => {
   let fallenMango = false;
 
   function triggerDefine() {
-    if (window.scrollY >= window.innerHeight * .10) {
+    const notTriggered = !(document.querySelector('.define-btn--disabled'));
+    if (window.scrollY >= window.innerHeight * .10 && notTriggered) {
       defineBtns.forEach((btn) => btn.click());
       document.removeEventListener('scroll', triggerDefine);
     }
