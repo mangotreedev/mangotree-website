@@ -8,12 +8,14 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 100;
+  z-index: -10;
+  top: 0;
   pointer-events: none;
 
   &.video-modal__active {
     opacity: 1;
     pointer-events: all;
+    z-index: 100;
   }
 
   .modal-close-icon {
