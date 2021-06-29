@@ -67,3 +67,9 @@ a {
 .yellow {
   color: $yellow;
 }
+
+.wide-text {
+  line-height: 180%;
+  letter-spacing: 0.08rem;
+  font-size: $base-size;
+}
