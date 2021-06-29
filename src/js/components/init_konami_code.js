@@ -38,12 +38,14 @@ export const initKonamiCode = () => {
     console.log("🎉 Enter the Konami Code to see something cool 🎉")
     flashlight.addEventListener('click', () => {
       flashlight.style.pointerEvents = 'none';
+      document.querySelector('.js-browser-konami-code').style.zIndex = "5";
       const konamiNodes = document.querySelectorAll('.js-browser-konami-code span');
       const tl = gsap.timeline();
       tl.to(konamiNodes, { autoAlpha: 1, display: 'inline', stagger: 0.3 });
       tl.to(konamiNodes, 3, { autoAlpha: 1, display: 'none'});
       tl.eventCallback("onComplete", () => {
         flashlight.style.pointerEvents = 'all';
+        document.querySelector('.js-browser-konami-code').style.zIndex = "-1";
       })
     });
 
