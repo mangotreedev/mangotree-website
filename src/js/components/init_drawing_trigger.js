@@ -32,14 +32,16 @@ export const initDrawingTrigger = () => {
     }
   }
 
-  contactBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      let drawing = document.querySelector('.js-drawing');
-      if (drawing.offsetTop === 0) drawing = document.querySelector('.js-drawing-browser');
-      const path = drawing.querySelector('.js-path');
-      setTimeout(function(){ path.classList.add('drawing--animate'); }, 500);
-    });
-  })
+  if (document.querySelector('.js-drawing') || document.querySelector('.js-drawing-browser')) {
+    contactBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        let drawing = document.querySelector('.js-drawing');
+        if (drawing.offsetTop === 0) drawing = document.querySelector('.js-drawing-browser');
+        const path = drawing.querySelector('.js-path');
+        setTimeout(function(){ path.classList.add('drawing--animate'); }, 500);
+      });
+    })
 
-  window.addEventListener('scroll', debounce(checkDraw));
+    window.addEventListener('scroll', debounce(checkDraw));
+  }
 };
