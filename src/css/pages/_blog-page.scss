@@ -1,0 +1,26 @@
+.blog-page {
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+}
+
+.blog-page__header {
+  margin: 2rem 0;
+}
+
+.all-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .all-posts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .all-posts {
+    grid-template-columns: 1fr;
+  }
+}

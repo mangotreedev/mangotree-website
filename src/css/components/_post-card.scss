@@ -1,28 +1,22 @@
-.recent-posts {
-  display: flex;
-  justify-content: space-between;
-
-  .recent-posts__primary {
-    width: calc(60% - 1.5vw);
-  }
-  .recent-posts__secondary {
-    width: calc(40% - 1.5vw);
-
-    .post-card:first-child {
-      margin-bottom: 1.5rem;
-    }
-  }
+.post-card p {
+  margin: 0;
 }
 
-.post-card {
-  & > img {
+.post-card__image-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 25vh;
+  min-height: 11rem;
+  border-radius: 2px;
+  img {
     width: 100%;
-    height: 25vh;
+    height: 100%;
     object-fit: cover;
-    border-radius: 2px;
-  }
-  p {
-    margin: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
@@ -40,9 +34,10 @@
 
   img {
     border-radius: 50%;
-    height: 2.5rem;
+    height: 2rem;
     margin-right: 1rem;
   }
+
   p {
     color: var(--secondary);
   }
@@ -56,18 +51,54 @@
   }
 }
 
-.recent-posts__primary {
-  .post-card > img {
-    height: auto;
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+}
+
+@media only screen and (max-width: 1150px) {
+  /* For tablets or larger: */
+  .post-card__title h3 {
+    font-size: $base-size * 1.5;
+    line-height: 144.2%;
   }
-  .post-card__title {
+}
+
+@media only screen and (min-width: 768px) {
+  .recent-posts {
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    align-items: flex-end;
+
+    .recent-posts__primary {
+      width: calc(60% - 1.5vw);
+
+
+      .post-card > .post-card__image-wrapper {
+        height: 46vh;
+      }
+    }
+    .recent-posts__secondary {
+      width: calc(40% - 1.5vw);
+
+      .post-card:first-child {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
-  h3 {
-    line-height: 1.5rem;
-    margin: 0;
+}
+
+@media only screen and (min-width: 1150px) {
+  /* For tablets or larger: */
+  .recent-posts__primary {
+    .post-card__title {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    h3 {
+      line-height: 1.5rem;
+      margin: 0;
+    }
   }
 }
