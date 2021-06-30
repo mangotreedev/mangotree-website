@@ -24,6 +24,10 @@ module.exports = {
       filename: "blog.html",
       template: "./src/blog.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "intro-tailwindcss.html",
+      template: "./src/intro-tailwindcss.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
