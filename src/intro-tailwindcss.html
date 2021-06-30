@@ -83,7 +83,65 @@
       </ul>
     </div>
 
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <a href="#">SHARE <i class="fas fa-share-alt"></i></a>
+          <a href="#"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/tailwindcss.png" alt="TailwindCSS" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>A SMALL INTRO TO TAILWINDCSS</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/c_fill,g_face,h_100,w_100/v1624953892/nico-proto.jpg" alt="nico avatar">
+              <p class="p_size_s">Written by Nico Proto</p>
+            </div>
+            <div class="post-content__header-info-left">
+              <p class="p_size_s">Feb 20 · 7 min read</p>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+        </div>
 
+        <div class="post-content__body">
+          <h3>Intro</h3>
+          <p>In this small intro, I will help you understand how to think in TailwindCSS. We’ll go through a small theory intro 🤓(sorry in advance) and will jump next to a more hands-on 👋 exercise to practice what we learned.</p>
+
+          <h3>Why use Tailwind?</h3>
+          <ul>
+            <li><strong>Simple and specific:</strong> Most of the utilities included have specific functionality and don’t add extra styling to them (contrary to Bootstrap).</li>
+            <li><strong>Highly customizable:</strong> Although it has a default configuration, we can simply override it in the <code>tailwind.config.js</code> file.</li>
+            <li><strong>Can be optimized:</strong> We can use PurgeCSS in production to remove any classes we don’t use from Tailwind, only loading utilities we use.</li>
+            <li><strong>Easy to write:</strong> As soon as you get used to it, it becomes super fast to write your CSS classes; you can also group classes into components by using <code>@apply</code>.</li>
+            <li><a href="https://dev.to/joserfelix/why-use-tailwind-css-for-your-next-project-39hp">other reasons</a></li>
+          </ul>
+
+          <script src="https://gist.github.com/nicoproto/220a82b8763c7a149589c723bfeebbcf.js"></script>
+
+
+          <h3>Some comments before we start</h3>
+          <ul>
+            <li>TailwindCSS doesn’t have JavaScript included, it is pure CSS. So if we want to make things dynamic we need to write our own JavaScript.</li>
+            <li>I will assume you know the basics of CSS 😄.</li>
+            <li>We won’t go through the installation of TailwindCSS, for that feel free to check their <a href="https://tailwindcss.com/docs/installation">installation guide</a>.</li>
+            <li>File locations are considered for Ruby on Rails.</li>
+          </ul>
+
+          <h3>Configuration file</h3>
+          <p>TailwindCSS configuration lives in a file called <code>tailwind.config.js</code>. In this file, we can customize every TailwindCSS variable.</p>
+
+          <h3>How TailwindCSS works</h3>
+          <ul>
+            <li><strong> Utility Classes:</strong> As with most frameworks, TailwindCSS uses utility classes to style HTML elements; its naming convention is super intuitive (<code>text-center</code>, <code>font-bold</code>, etc.).</li>
+            <li><strong> Prefixes:</strong> We can add prefixes on different classes to make them work conditionally on different breakpoints or states.
+For example: <code>hover:font-bold</code> will change the font of the element to bold when hovered.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
 
