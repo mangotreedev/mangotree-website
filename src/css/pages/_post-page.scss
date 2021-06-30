@@ -93,5 +93,21 @@
   code {
     background-color: rgba(242, 242, 242, 1);
     padding: 2px 4px;
+    font-size: $base-size;
+  }
+
+  .code-block {
+    background-color: rgba(242, 242, 242, 1);
+    padding: 1.5rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+
+    code {
+      padding: 0;
+    }
+
+    span {
+      padding-left: 2rem;
+    }
   }
 }

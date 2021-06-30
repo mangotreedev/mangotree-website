@@ -136,9 +136,40 @@
           <h3>How TailwindCSS works</h3>
           <ul>
             <li><strong> Utility Classes:</strong> As with most frameworks, TailwindCSS uses utility classes to style HTML elements; its naming convention is super intuitive (<code>text-center</code>, <code>font-bold</code>, etc.).</li>
-            <li><strong> Prefixes:</strong> We can add prefixes on different classes to make them work conditionally on different breakpoints or states.
-For example: <code>hover:font-bold</code> will change the font of the element to bold when hovered.</li>
+            <li><strong> Prefixes:</strong> We can add prefixes on different classes to make them work conditionally on different breakpoints or states. <br>For example: <code>hover:font-bold</code> will change the font of the element to bold when hovered.</li>
           </ul>
+
+          <h3>Prefixes</h3>
+          <p><strong>Responsive Design <a href="https://tailwindcss.com/docs/responsive-design">(see docs)</a></strong></p>
+          <p>On TailwindCSS classes we can add a <strong>breakpoint prefix</strong> which will make it work conditionally at different breakpoints.</p>
+          <p><strong>Usage</strong></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="md:w-92 lg:w-40"&gt;
+              <br>
+               <span></span>[...]
+              <br>
+              &lt;div class="sm:text-center lg:text-left"&gt;
+            </code>
+          </div>
+
+          <h3>Hover, Focus & other states</h3>
+          <p>As with the <strong>responsive design</strong>, we can use prefixes to style different states of our elements.</p>
+
+          <p><strong>Usage</strong></p>
+          <div class="code-block">
+            <code>
+              &lt;button class="bg-purple-600 hover:bg-purple-800"&gt;
+              <br>
+               <span></span>Sign up
+              <br>
+              &lt;/button&gt;
+            </code>
+          </div>
+
+
+
+
         </div>
       </div>
     </div>
