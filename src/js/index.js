@@ -17,6 +17,7 @@ import { initPortfolioParallax } from "./components/init_portfolio_parallax";
 import { initDesignText } from "./components/init_design_text";
 import { initSkillsFloat } from "./components/init_skills_float";
 import { initVideoModal } from "./components/init_video_modal";
+import { initShareDropdown } from "./components/init_share_dropdown";
 
 // Set up of singular scroll magic controller
 var scrollMagicController = new ScrollMagic.Controller();
@@ -31,6 +32,7 @@ initKonamiCode();
 initLandingTransitions();
 initHideNavbar();
 initVideoModal();
+initShareDropdown();
 
 //Bundled team transitions for browser
 teamTransition.oneToTwo();
