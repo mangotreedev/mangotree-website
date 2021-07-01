@@ -1,10 +1,20 @@
 .blog-page {
-  margin-top: 15vh;
+  margin-top: 12vh;
   margin-bottom: 5vh;
+  margin-left: auto;
+  padding: 0 4vw;
+
+  .primary-title {
+    justify-content: flex-end;
+  }
 }
 
 .blog-page__header {
   margin: 2rem 0;
+
+  span {
+    display: none;
+  }
 }
 
 .all-posts {
@@ -22,5 +32,22 @@
 @media only screen and (max-width: 768px) {
   .all-posts {
     grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .blog-page {
+    padding: 0;
+  }
+
+  .blog-page__header span {
+    display: inline-block;
+  }
+  .primary-title {
+    justify-content: flex-end;
+  }
+  .blog-page {
+    margin-top: 15vh;
   }
 }
