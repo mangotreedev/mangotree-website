@@ -11,7 +11,8 @@ export const initShareDropdown = () => {
       const shareMenuHight = shareMenu.getBoundingClientRect().height;
       const btnYPos = btn.getBoundingClientRect().y;
 
-      if (window.innerHeight < (btnYPos + shareMenuHight)) {
+
+      if (window.innerHeight < (btnYPos + shareMenuHight * 1.1)) {
         shareMenu.classList.add("top");
       }
       document.addEventListener("click", closeMenu)
