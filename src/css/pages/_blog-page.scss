@@ -39,14 +39,17 @@
   /* For tablets or larger: */
   .blog-page {
     padding: 0;
+
+    .primary-title {
+      justify-content: flex-end;
+    }
   }
 
   .blog-page__header span {
     display: inline-block;
   }
-  .primary-title {
-    justify-content: flex-end;
-  }
+
+
   .blog-page {
     margin-top: 15vh;
   }
