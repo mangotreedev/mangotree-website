@@ -84,111 +84,7 @@
           <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
         </div>
       </div>
-      <div class="post-content">
-        <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/tailwindcss.png" alt="TailwindCSS" class="post-content__banner">
-        <div class="post-content__header">
-          <h2>A SMALL INTRO TO TAILWINDCSS</h2>
-          <div class="post-content__header-info">
-            <div class="post-content__header-info-left">
-              <img src="https://res.cloudinary.com/nico1711/image/upload/c_fill,g_face,h_100,w_100/v1624953892/nico-proto.jpg" alt="nico avatar">
-              <p class="p_size_s"><span>Written by </span>Nico Proto</p>
-            </div>
-            <div class="post-content__header-info-right">
-              <p class="p_size_s">Feb 20 · 7 min read</p>
-              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
-            </div>
-          </div>
-        </div>
 
-        <div class="post-content__body">
-          <h3>Intro</h3>
-          <p>In this small intro, I will help you understand how to think in TailwindCSS. We’ll go through a small theory intro 🤓(sorry in advance) and will jump next to a more hands-on 👋 exercise to practice what we learned.</p>
-
-          <h3>Why use Tailwind?</h3>
-          <ul>
-            <li><strong>Simple and specific:</strong> Most of the utilities included have specific functionality and don’t add extra styling to them (contrary to Bootstrap).</li>
-            <li><strong>Highly customizable:</strong> Although it has a default configuration, we can simply override it in the <code>tailwind.config.js</code> file.</li>
-            <li><strong>Can be optimized:</strong> We can use PurgeCSS in production to remove any classes we don’t use from Tailwind, only loading utilities we use.</li>
-            <li><strong>Easy to write:</strong> As soon as you get used to it, it becomes super fast to write your CSS classes; you can also group classes into components by using <code>@apply</code>.</li>
-            <li><a href="https://dev.to/joserfelix/why-use-tailwind-css-for-your-next-project-39hp">other reasons</a></li>
-          </ul>
-
-          <script src="https://gist.github.com/nicoproto/220a82b8763c7a149589c723bfeebbcf.js"></script>
-
-
-          <h3>Some comments before we start</h3>
-          <ul>
-            <li>TailwindCSS doesn’t have JavaScript included, it is pure CSS. So if we want to make things dynamic we need to write our own JavaScript.</li>
-            <li>I will assume you know the basics of CSS 😄.</li>
-            <li>We won’t go through the installation of TailwindCSS, for that feel free to check their <a href="https://tailwindcss.com/docs/installation">installation guide</a>.</li>
-            <li>File locations are considered for Ruby on Rails.</li>
-          </ul>
-
-          <h3>Configuration file</h3>
-          <p>TailwindCSS configuration lives in a file called <code>tailwind.config.js</code>. In this file, we can customize every TailwindCSS variable.</p>
-
-          <h3>How TailwindCSS works</h3>
-          <ul>
-            <li><strong> Utility Classes:</strong> As with most frameworks, TailwindCSS uses utility classes to style HTML elements; its naming convention is super intuitive (<code>text-center</code>, <code>font-bold</code>, etc.).</li>
-            <li><strong> Prefixes:</strong> We can add prefixes on different classes to make them work conditionally on different breakpoints or states. <br>For example: <code>hover:font-bold</code> will change the font of the element to bold when hovered.</li>
-          </ul>
-
-          <h3>Prefixes</h3>
-          <p><strong>Responsive Design <a href="https://tailwindcss.com/docs/responsive-design">(see docs)</a></strong></p>
-          <p>On TailwindCSS classes we can add a <strong>breakpoint prefix</strong> which will make it work conditionally at different breakpoints.</p>
-          <p><strong>Usage</strong></p>
-          <div class="code-block">
-            <code>
-              &lt;div class="md:w-92 lg:w-40"&gt;
-              <br>
-               <span></span>[...]
-              <br>
-              &lt;div class="sm:text-center lg:text-left"&gt;
-            </code>
-          </div>
-
-          <h3>Hover, Focus & other states</h3>
-          <p>As with the <strong>responsive design</strong>, we can use prefixes to style different states of our elements.</p>
-
-          <p><strong>Usage</strong></p>
-          <div class="code-block">
-            <code>
-              &lt;button class="bg-purple-600 hover:bg-purple-800"&gt;
-              <br>
-               <span></span>Sign up
-              <br>
-              &lt;/button&gt;
-            </code>
-          </div>
-
-          <img src="https://media1.giphy.com/media/wtNOUuCzFKcaA/giphy.gif?cid=ecf05e470m7wxz0dtjfakcbwgi8pdl9j2v8pay7re7uwjzu8&rid=giphy.gif" alt="orangutan dancing" class="content__body-gif">
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="nonmobile-body">
-    <div class="browser-navbar js-browser-navbar">
-      <ul class="browser-navbar__links-list">
-        <li><a href="/#browser-skills">SKILLS</a></li>
-        <li><a href="/#browser-team">OUR TEAM</a></li>
-        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
-        <li><a href="/resources.html">RESOURCES</a></li>
-        <li><a href="/blog.html">BLOG</a></li>
-        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
-        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
-      </ul>
-    </div>
-
-    <div class="post-container">
-      <div class="post-sidebar__wrapper">
-        <div class="post-sidebar">
-          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
-          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
-        </div>
-      </div>
       <div class="post-content">
         <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/tailwindcss.png" alt="TailwindCSS" class="post-content__banner">
         <div class="post-content__header">
@@ -266,8 +162,744 @@
             </code>
           </div>
 
-          <img src="https://media1.giphy.com/media/wtNOUuCzFKcaA/giphy.gif?cid=ecf05e470m7wxz0dtjfakcbwgi8pdl9j2v8pay7re7uwjzu8&rid=giphy.gif" alt="orangutan dancing" class="content__body-gif">
+          <h3>Utility Classes</h3>
 
+          <p>Writing <strong>TailwindCSS</strong> utility classes keeps the same structure among most CSS properties. We’ll go through some examples to clarify how the structure works, but feel free to find any specific utility class on their amazing <a href="https://tailwindcss.com/docs">documentation</a>.</p>
+
+          <h3>Fonts</h3>
+          <p><strong><a href="https://tailwindcss.com/docs/font-family">Font Family</a></strong> → <code>font-family</code> → <code>font-{type}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;p class="font-sans ..."&gt;
+              <br>
+              &lt;p class="font-serif ..."&gt;
+              <br>
+              &lt;p class="font-mono ..."&gt;
+            </code>
+          </div>
+
+
+          <p>
+            Note: <code>font-sans</code>, <code>font-serif</code> and <code>font-mono</code> are variables that we can change in our config file to the <code>font-family</code> of our choice.
+          </p>
+
+          <p><strong><a href="https://tailwindcss.com/docs/font-size">Font Size</a></strong> → <code>font-size</code> → <code>text-{size}</code></p>
+
+          <div class="code-block">
+            <code>
+              &lt;p class="text-xs ..."&gt;The quick brown fox ...&lt;/p&gt;
+              <br>
+              &lt;p class="text-xl ..."&gt;The quick brown fox ...&lt;/p&gt;
+            </code>
+          </div>
+
+          <p><strong><a href="https://tailwindcss.com/docs/font-weight">Font Weight</a></strong> → <code>font-weight</code> → <code>font-{weight}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;p class="font-bold ..."&gt;The quick brown fox ...&lt;/p&gt;
+              <br>
+              &lt;p class="font-thin ..."&gt;The quick brown fox ...&lt;/p&gt;
+            </code>
+          </div>
+
+          <p><strong><a href="https://tailwindcss.com/docs/text-align">Text Align</a></strong> → <code>text-align</code> → <code>text-{alignment}</code></p>
+
+          <div class="code-block">
+            <code>
+              &lt;p class="text-left ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt; <br>
+              &lt;p class="text-center ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+            </code>
+          </div>
+
+
+          <h3>Container</h3>
+
+          <p>The container class will fix the element width depending on the current breakpoint.</p>
+          <p><a href="https://tailwindcss.com/docs/container"><strong>Container</strong></a> → <code>width</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="container"&gt;
+                <br>
+                <span></span>&lt;!-- ... --&gt;
+                <br>
+              &lt;/div&gt;
+            </code>
+          </div>
+          <h3>Margin & Padding</h3>
+
+          <p><a href="https://tailwindcss.com/docs/margin"><strong>Margin</strong></a> → <code>margin</code> → <code>m{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="mt-8 ..."&gt;...&lt;/div&gt;
+              <br>
+              &lt;div class="m-5 ..."&gt;...&lt;/div&gt;
+            </code>
+          </div>
+          <p>Left + Right → <code>mx</code></p>
+          <p>Top + Down → <code>my</code></p>
+          <p><a href="https://tailwindcss.com/docs/padding"><strong>Padding</strong></a> → <code>padding</code> → <code>p{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="pb-3 ..."&gt;...&lt;/div&gt;
+              <br>
+              &lt;div class="py-2 ..."&gt;...&lt;/div&gt;
+            </code>
+          </div>
+          <p>Left + Right → <code>px</code></p>
+          <p>Top + Down → <code>py</code></p>
+
+          <h3>Colors</h3>
+
+          <p>
+            The color class utilities allow us to use the same kind of syntax to style different properties.
+            <code>{property}-{color}-{value}</code>
+          </p>
+          <div class="code-block">
+            <code>
+              &lt;p class="text-purple-600 ..."&gt;...&lt;/p&gt;
+              <br>
+              &lt;button class="bg-green-500 ..."&gt;Button&lt;/button&gt;
+              <br>
+              &lt;input class="border-2 border-red-500 ..."&gt;
+            </code>
+          </div>
+
+          <h3>Width and Height</h3>
+          <p><a href="https://tailwindcss.com/docs/height"><strong>Height</strong></a> → height → <code>h{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="h-12 ..."&gt;&lt;/div&gt;
+              <br>
+              &lt;div class="h-16 ..."&gt;&lt;/div&gt;
+            </code>
+          </div>
+          <p><a href="https://tailwindcss.com/docs/width"><strong>Width</strong></a> → width → <code>w{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="w-20 ..."&gt;&lt;/div&gt;
+              <br>
+              &lt;div class="w-28 ..."&gt;&lt;/div&gt;
+            </code>
+          </div>
+
+          <h3>Display</h3>
+
+          <p>No rocket science here, just classes that apply different display properties.</p>
+          <p><code>flex</code> → <code>display: flex</code></p>
+          <p><code>inline-block</code> → <code>display: inline-block</code></p>
+          <p><code>hidden</code> → <code>display: none</code></p>
+
+
+          <h3>Creating components (<a href="https://tailwindcss.com/docs/extracting-components">see more</a>)</h3>
+
+          <p>Sometimes when repeating classes over and over on the same elements (buttons, avatars, etc.), it’s better to refactor our code creating components that help us to update and reuse our code.</p>
+          <p><strong>TailwindCSS</strong> includes the <code>@apply</code> directive that extracts common utility patterns to CSS component classes.</p>
+          <div class="code-block">
+            <code>
+              <strong>.btn-indigo</strong> {
+                <br>
+                <span></span>@apply py-2 px-4 bg-indigo-500 text-white font-semibold rounded-lg
+                <br>
+                <span></span> shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2
+                <br>
+                <span></span> focus:ring-indigo-400 focus:ring-opacity-75;
+                <br>
+              }
+            </code>
+          </div>
+          <div class="code-block">
+            <code>
+              &lt;button class="btn-indigo"&gt;
+              <br>
+              <span></span>Click me
+              <br>
+              &lt;/button&gt;
+            </code>
+          </div>
+          <p>TailwindCSS also recommends wrapping the styles where we use <code>@apply</code> with <code>@layer components { }</code> so it can recognize that those styles belong to the <code>components</code>(<a href="https://tailwindcss.com/docs/extracting-components">performance and organization reasons</a>).</p>
+
+          <script src="https://gist.github.com/nicoproto/81d0c0c6c3c7b94309ad187967161fd9.js"></script>
+
+          <br>
+          <h3>Enough theory! Let’s create a Components Kitchen Sink</h3>
+          <p>Note: We will be working on an already created Ruby on Rails app with TailwindCSS using the amazing template <a href="https://github.com/mangotreedev/bamboosticks"><strong>BambooSticks</strong></a> 😉.</p>
+
+          <div class="content__img">
+            <img src="https://media4.giphy.com/media/l0HlQI7WEN5gmUzgQ/giphy.gif?cid=ecf05e47cq39icri33lux72q1undv7fswdxh5wkyl849re5d&rid=giphy.gif" alt="baby throwing book">
+            <p>Bye bye theory 👋</p>
+          </div>
+
+          <h3>Main Header</h3>
+          <p>Let’s start styling our main header.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625401142/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--main-header.png" alt="main header component">
+          </div>
+
+
+          <div class="code-block"><code>
+              &lt;h1 class="text-5xl font-semibold text-center"&gt;Kitchen Sink&lt;/h1&gt;
+            </code></div>
+          <p><strong>What utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>text-5xl</strong></code> → <code>font-size</code> and <code>line-height</code></li>
+            <li><code><strong>font-semibold</strong></code> → <code>font-weight</code></li>
+            <li><code><strong>text-center</strong></code> → <code>text-align</code></li>
+          </ul>
+
+
+          <h3>Container</h3>
+          <p>Now let’s add a simple container so we can center our components later.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625401798/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--container.png" alt="container component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/fc9b852170dd00b2507f7af76fb99718.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>container</strong></code> → <code>max-width</code> on breakpoint (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>)</li>
+            <li><code><strong>mx-auto</strong></code> → <code>margin-left</code> and <code>margin-right</code></li>
+            <li><code><strong>my-3</strong></code> → <code>margin-top</code> and <code>margin-bottom</code></li>
+          </ul>
+
+          <h3>Avatars</h3>
+          <p>Let’s now play with some image properties by creating avatars.</p>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625402086/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--avatars.png" alt="avatars components">
+            <p>Omg those guys are handsome</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/7ba4e7b9a6dde688168302202d154112.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>rounded-full</strong></code> → <code>border-radius</code> (same as <code>border-radius: 50%</code>) which will make all borders rounded. If the image is a square it will create a circle.</li>
+            <li><code><strong>h-24</strong></code> & <code><strong>w-24</strong></code> → <code>weight</code> and <code>height</code></li>
+            <li><code><strong>inline-block</strong></code> → <code>display</code></li>
+          </ul>
+
+          <h3>Buttons</h3>
+          <p>Ok, now let’s do a primary and secondary button.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403415/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--buttons.png" alt="buttons components">
+            <p>Both are called Benjamin… get it?</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/f2745cf9a90ca6fd87d5f0a275b752ee.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><strong><code>px-12</code> / <code>py-3</code></strong> → <code>padding-left</code> and <code>padding-right</code> / <code>padding-up</code> and <code>padding-bottom</code></li>
+            <li><code><strong>bg-yellow-400</strong></code> → <code>background-color</code></li>
+            <li><code><strong>border-yellow-400</strong></code> → <code>border-color</code></li>
+            <li><code><strong>hover:bg-yellow-300</strong></code> → <code>background-color</code> on <code>:hover</code></li>
+            <li><code><strong>focus:outline-none</strong></code> → <code>background-color</code> on <code>:focus</code></li>
+            <li><code><strong>text-white</strong></code> → <code>color</code></li>
+            <li><code><strong>rounded</strong></code> → <code>border-radius</code></li>
+            <li><code><strong>border</strong></code> → <code>border-width</code></li>
+            <li><code><strong>transition</strong></code> → <code>transition</code> (with a transition delay of 150ms)</li>
+            <li><code><strong>duration-300</strong></code> → <code>transition-duration</code></li>
+            <li><code><strong>inline-block</strong></code> → <code>display</code></li>
+          </ul>
+
+          <h3>Banner</h3>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403700/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--banner.png" alt="banner component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/9639cf1491cea333044f3db32620650a.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>bg-cover</strong></code> → <code>background-size</code></li>
+            <li><code><strong>flex</strong></code> → <code>display</code></li>
+            <li><code><strong>items-center</strong></code> → <strong>align-items</strong></li>
+            <li><code><strong>text-shadow</strong></code> → ❗This is a custom class I made, there is no <code>text-shadow</code> utility class on TailwindCSS❗</li>
+          </ul>
+
+          <h3>Category Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403898/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--category-card.png" alt="category card component">
+            <p>This card peels amazing…</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/5792da85d9f5f782d8d47ce6ebf06704.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>justify-center</strong></code> → <code>justify-content</code></li>
+            <li><code><strong>shadow-xl</strong></code> → <code>box-shadow</code></li>
+          </ul>
+
+          <h3>Product Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625404098/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--product-card.png" alt="product card component">
+          </div>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>object-cover</strong></code> → <code>object-fit</code></li>
+            <li><code><strong>flex-col</strong></code> → <code>flex-direction</code></li>
+            <li><code><strong>p-5</strong></code> → <code>padding</code></li>
+            <li><code><strong>rounded-l</strong></code> → <code>border-top-left-radius</code> and <code>border-bottom-left-radius</code></li>
+          </ul>
+
+          <h3>Party Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625404447/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--party-card.png" alt="party card component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/8756309d0a68c1a7c6ec1b2f8f637d99.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>rounded-t</strong></code> → <code>border-top-left-radius</code> and <code>border-top-right-radius</code></li>
+            <li><code><strong>w-full</strong></code> → <code>width: 100%</code></li>
+            <li><code><strong>items-end</strong></code> → <code>align-items</code></li>
+          </ul>
+
+          <h3>Extracting components</h3>
+          <p>All our refactoring will be in separate files called with the name of the specific component in the folder <code>app/javascript/stylesheets/components</code>.</p>
+
+          <h3>Buttons</h3>
+          <p>We will extract all the common classes from our buttons in the <code>.btn</code> class and create two specific classes (<code>.btn-main</code> and <code>.btn-ghost</code>) for the different versions of buttons we have.</p>
+
+          <script src="https://gist.github.com/nicoproto/c98ff19fa1158a5147b43a31d284a1eb.js"></script>
+
+          <p>And we are done! <strong>Congratulations!</strong></p>
+
+          <div class="content__img">
+            <img src="https://media0.giphy.com/media/czoS1CAP2YZBS/giphy.gif?cid=ecf05e47ifble8e03ncgxix990k1ivyuucuuoc7t0dgxq2y9&rid=giphy.gi" alt="dancing the office">
+          </div>
+
+          <p>👉🏻 <a href="https://github.com/nicoproto/tailwindcss-tutorial">Link to the Ruby on Rails application with all the components</a></p>
+
+          <!-- end of content -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="nonmobile-body">
+    <div class="browser-navbar js-browser-navbar">
+      <ul class="browser-navbar__links-list">
+        <li><a href="/#browser-skills">SKILLS</a></li>
+        <li><a href="/#browser-team">OUR TEAM</a></li>
+        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
+      </ul>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/tailwindcss.png" alt="TailwindCSS" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>A SMALL INTRO TO TAILWINDCSS</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/c_fill,g_face,h_100,w_100/v1624953892/nico-proto.jpg" alt="nico avatar">
+              <p class="p_size_s">Written by Nico Proto</p>
+            </div>
+            <div class="post-content__header-info-right">
+              <p class="p_size_s">Feb 20 · 7 min read</p>
+              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-content__body">
+          <h3>Intro</h3>
+          <p>In this small intro, I will help you understand how to think in TailwindCSS. We’ll go through a small theory intro 🤓(sorry in advance) and will jump next to a more hands-on 👋 exercise to practice what we learned.</p>
+
+          <h3>Why use Tailwind?</h3>
+          <ul>
+            <li><strong>Simple and specific:</strong> Most of the utilities included have specific functionality and don’t add extra styling to them (contrary to Bootstrap).</li>
+            <li><strong>Highly customizable:</strong> Although it has a default configuration, we can simply override it in the <code>tailwind.config.js</code> file.</li>
+            <li><strong>Can be optimized:</strong> We can use PurgeCSS in production to remove any classes we don’t use from Tailwind, only loading utilities we use.</li>
+            <li><strong>Easy to write:</strong> As soon as you get used to it, it becomes super fast to write your CSS classes; you can also group classes into components by using <code>@apply</code>.</li>
+            <li><a href="https://dev.to/joserfelix/why-use-tailwind-css-for-your-next-project-39hp">other reasons</a></li>
+          </ul>
+
+          <script src="https://gist.github.com/nicoproto/220a82b8763c7a149589c723bfeebbcf.js"></script>
+
+
+          <h3>Some comments before we start</h3>
+          <ul>
+            <li>TailwindCSS doesn’t have JavaScript included, it is pure CSS. So if we want to make things dynamic we need to write our own JavaScript.</li>
+            <li>I will assume you know the basics of CSS 😄.</li>
+            <li>We won’t go through the installation of TailwindCSS, for that feel free to check their <a href="https://tailwindcss.com/docs/installation">installation guide</a>.</li>
+            <li>File locations are considered for Ruby on Rails.</li>
+          </ul>
+
+          <h3>Configuration file</h3>
+          <p>TailwindCSS configuration lives in a file called <code>tailwind.config.js</code>. In this file, we can customize every TailwindCSS variable.</p>
+
+          <h3>How TailwindCSS works</h3>
+          <ul>
+            <li><strong> Utility Classes:</strong> As with most frameworks, TailwindCSS uses utility classes to style HTML elements; its naming convention is super intuitive (<code>text-center</code>, <code>font-bold</code>, etc.).</li>
+            <li><strong> Prefixes:</strong> We can add prefixes on different classes to make them work conditionally on different breakpoints or states. <br>For example: <code>hover:font-bold</code> will change the font of the element to bold when hovered.</li>
+          </ul>
+
+          <h3>Prefixes</h3>
+          <p><strong>Responsive Design <a href="https://tailwindcss.com/docs/responsive-design">(see docs)</a></strong></p>
+          <p>On TailwindCSS classes we can add a <strong>breakpoint prefix</strong> which will make it work conditionally at different breakpoints.</p>
+          <p><strong>Usage</strong></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="md:w-92 lg:w-40"&gt;
+              <br>
+               <span></span>[...]
+              <br>
+              &lt;div class="sm:text-center lg:text-left"&gt;
+            </code>
+          </div>
+
+          <h3>Hover, Focus & other states</h3>
+          <p>As with the <strong>responsive design</strong>, we can use prefixes to style different states of our elements.</p>
+
+          <p><strong>Usage</strong></p>
+          <div class="code-block">
+            <code>
+              &lt;button class="bg-purple-600 hover:bg-purple-800"&gt;
+              <br>
+               <span></span>Sign up
+              <br>
+              &lt;/button&gt;
+            </code>
+          </div>
+
+          <h3>Utility Classes</h3>
+
+          <p>Writing <strong>TailwindCSS</strong> utility classes keeps the same structure among most CSS properties. We’ll go through some examples to clarify how the structure works, but feel free to find any specific utility class on their amazing <a href="https://tailwindcss.com/docs">documentation</a>.</p>
+
+          <h3>Fonts</h3>
+          <p><strong><a href="https://tailwindcss.com/docs/font-family">Font Family</a></strong> → <code>font-family</code> → <code>font-{type}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;p class="font-sans ..."&gt;
+              <br>
+              &lt;p class="font-serif ..."&gt;
+              <br>
+              &lt;p class="font-mono ..."&gt;
+            </code>
+          </div>
+
+
+          <p>
+            Note: <code>font-sans</code>, <code>font-serif</code> and <code>font-mono</code> are variables that we can change in our config file to the <code>font-family</code> of our choice.
+          </p>
+
+          <p><strong><a href="https://tailwindcss.com/docs/font-size">Font Size</a></strong> → <code>font-size</code> → <code>text-{size}</code></p>
+
+          <div class="code-block">
+            <code>
+              &lt;p class="text-xs ..."&gt;The quick brown fox ...&lt;/p&gt;
+              <br>
+              &lt;p class="text-xl ..."&gt;The quick brown fox ...&lt;/p&gt;
+            </code>
+          </div>
+
+          <p><strong><a href="https://tailwindcss.com/docs/font-weight">Font Weight</a></strong> → <code>font-weight</code> → <code>font-{weight}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;p class="font-bold ..."&gt;The quick brown fox ...&lt;/p&gt;
+              <br>
+              &lt;p class="font-thin ..."&gt;The quick brown fox ...&lt;/p&gt;
+            </code>
+          </div>
+
+          <p><strong><a href="https://tailwindcss.com/docs/text-align">Text Align</a></strong> → <code>text-align</code> → <code>text-{alignment}</code></p>
+
+          <div class="code-block">
+            <code>
+              &lt;p class="text-left ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt; <br>
+              &lt;p class="text-center ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+            </code>
+          </div>
+
+
+          <h3>Container</h3>
+
+          <p>The container class will fix the element width depending on the current breakpoint.</p>
+          <p><a href="https://tailwindcss.com/docs/container"><strong>Container</strong></a> → <code>width</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="container"&gt;
+                <br>
+                <span></span>&lt;!-- ... --&gt;
+                <br>
+              &lt;/div&gt;
+            </code>
+          </div>
+          <h3>Margin & Padding</h3>
+
+          <p><a href="https://tailwindcss.com/docs/margin"><strong>Margin</strong></a> → <code>margin</code> → <code>m{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="mt-8 ..."&gt;...&lt;/div&gt;
+              <br>
+              &lt;div class="m-5 ..."&gt;...&lt;/div&gt;
+            </code>
+          </div>
+          <p>Left + Right → <code>mx</code></p>
+          <p>Top + Down → <code>my</code></p>
+          <p><a href="https://tailwindcss.com/docs/padding"><strong>Padding</strong></a> → <code>padding</code> → <code>p{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="pb-3 ..."&gt;...&lt;/div&gt;
+              <br>
+              &lt;div class="py-2 ..."&gt;...&lt;/div&gt;
+            </code>
+          </div>
+          <p>Left + Right → <code>px</code></p>
+          <p>Top + Down → <code>py</code></p>
+
+          <h3>Colors</h3>
+
+          <p>
+            The color class utilities allow us to use the same kind of syntax to style different properties.
+            <code>{property}-{color}-{value}</code>
+          </p>
+          <div class="code-block">
+            <code>
+              &lt;p class="text-purple-600 ..."&gt;...&lt;/p&gt;
+              <br>
+              &lt;button class="bg-green-500 ..."&gt;Button&lt;/button&gt;
+              <br>
+              &lt;input class="border-2 border-red-500 ..."&gt;
+            </code>
+          </div>
+
+          <h3>Width and Height</h3>
+          <p><a href="https://tailwindcss.com/docs/height"><strong>Height</strong></a> → height → <code>h{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="h-12 ..."&gt;&lt;/div&gt;
+              <br>
+              &lt;div class="h-16 ..."&gt;&lt;/div&gt;
+            </code>
+          </div>
+          <p><a href="https://tailwindcss.com/docs/width"><strong>Width</strong></a> → width → <code>w{direction}-{size}</code></p>
+          <div class="code-block">
+            <code>
+              &lt;div class="w-20 ..."&gt;&lt;/div&gt;
+              <br>
+              &lt;div class="w-28 ..."&gt;&lt;/div&gt;
+            </code>
+          </div>
+
+          <h3>Display</h3>
+
+          <p>No rocket science here, just classes that apply different display properties.</p>
+          <p><code>flex</code> → <code>display: flex</code></p>
+          <p><code>inline-block</code> → <code>display: inline-block</code></p>
+          <p><code>hidden</code> → <code>display: none</code></p>
+
+
+          <h3>Creating components (<a href="https://tailwindcss.com/docs/extracting-components">see more</a>)</h3>
+
+          <p>Sometimes when repeating classes over and over on the same elements (buttons, avatars, etc.), it’s better to refactor our code creating components that help us to update and reuse our code.</p>
+          <p><strong>TailwindCSS</strong> includes the <code>@apply</code> directive that extracts common utility patterns to CSS component classes.</p>
+          <div class="code-block">
+            <code>
+              <strong>.btn-indigo</strong> {
+                <br>
+                <span></span>@apply py-2 px-4 bg-indigo-500 text-white font-semibold rounded-lg
+                <br>
+                <span></span> shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2
+                <br>
+                <span></span> focus:ring-indigo-400 focus:ring-opacity-75;
+                <br>
+              }
+            </code>
+          </div>
+          <div class="code-block">
+            <code>
+              &lt;button class="btn-indigo"&gt;
+              <br>
+              <span></span>Click me
+              <br>
+              &lt;/button&gt;
+            </code>
+          </div>
+          <p>TailwindCSS also recommends wrapping the styles where we use <code>@apply</code> with <code>@layer components { }</code> so it can recognize that those styles belong to the <code>components</code>(<a href="https://tailwindcss.com/docs/extracting-components">performance and organization reasons</a>).</p>
+
+          <script src="https://gist.github.com/nicoproto/81d0c0c6c3c7b94309ad187967161fd9.js"></script>
+
+          <br>
+          <h3>Enough theory! Let’s create a Components Kitchen Sink</h3>
+          <p>Note: We will be working on an already created Ruby on Rails app with TailwindCSS using the amazing template <a href="https://github.com/mangotreedev/bamboosticks"><strong>BambooSticks</strong></a> 😉.</p>
+
+          <div class="content__img">
+            <img src="https://media4.giphy.com/media/l0HlQI7WEN5gmUzgQ/giphy.gif?cid=ecf05e47cq39icri33lux72q1undv7fswdxh5wkyl849re5d&rid=giphy.gif" alt="baby throwing book">
+            <p>Bye bye theory 👋</p>
+          </div>
+
+          <h3>Main Header</h3>
+          <p>Let’s start styling our main header.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625401142/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--main-header.png" alt="main header component">
+          </div>
+
+
+          <div class="code-block"><code>
+              &lt;h1 class="text-5xl font-semibold text-center"&gt;Kitchen Sink&lt;/h1&gt;
+            </code></div>
+          <p><strong>What utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>text-5xl</strong></code> → <code>font-size</code> and <code>line-height</code></li>
+            <li><code><strong>font-semibold</strong></code> → <code>font-weight</code></li>
+            <li><code><strong>text-center</strong></code> → <code>text-align</code></li>
+          </ul>
+
+
+          <h3>Container</h3>
+          <p>Now let’s add a simple container so we can center our components later.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625401798/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--container.png" alt="container component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/fc9b852170dd00b2507f7af76fb99718.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>container</strong></code> → <code>max-width</code> on breakpoint (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>2xl</code>)</li>
+            <li><code><strong>mx-auto</strong></code> → <code>margin-left</code> and <code>margin-right</code></li>
+            <li><code><strong>my-3</strong></code> → <code>margin-top</code> and <code>margin-bottom</code></li>
+          </ul>
+
+          <h3>Avatars</h3>
+          <p>Let’s now play with some image properties by creating avatars.</p>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625402086/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--avatars.png" alt="avatars components">
+            <p>Omg those guys are handsome</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/7ba4e7b9a6dde688168302202d154112.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>rounded-full</strong></code> → <code>border-radius</code> (same as <code>border-radius: 50%</code>) which will make all borders rounded. If the image is a square it will create a circle.</li>
+            <li><code><strong>h-24</strong></code> & <code><strong>w-24</strong></code> → <code>weight</code> and <code>height</code></li>
+            <li><code><strong>inline-block</strong></code> → <code>display</code></li>
+          </ul>
+
+          <h3>Buttons</h3>
+          <p>Ok, now let’s do a primary and secondary button.</p>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403415/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--buttons.png" alt="buttons components">
+            <p>Both are called Benjamin… get it?</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/f2745cf9a90ca6fd87d5f0a275b752ee.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><strong><code>px-12</code> / <code>py-3</code></strong> → <code>padding-left</code> and <code>padding-right</code> / <code>padding-up</code> and <code>padding-bottom</code></li>
+            <li><code><strong>bg-yellow-400</strong></code> → <code>background-color</code></li>
+            <li><code><strong>border-yellow-400</strong></code> → <code>border-color</code></li>
+            <li><code><strong>hover:bg-yellow-300</strong></code> → <code>background-color</code> on <code>:hover</code></li>
+            <li><code><strong>focus:outline-none</strong></code> → <code>background-color</code> on <code>:focus</code></li>
+            <li><code><strong>text-white</strong></code> → <code>color</code></li>
+            <li><code><strong>rounded</strong></code> → <code>border-radius</code></li>
+            <li><code><strong>border</strong></code> → <code>border-width</code></li>
+            <li><code><strong>transition</strong></code> → <code>transition</code> (with a transition delay of 150ms)</li>
+            <li><code><strong>duration-300</strong></code> → <code>transition-duration</code></li>
+            <li><code><strong>inline-block</strong></code> → <code>display</code></li>
+          </ul>
+
+          <h3>Banner</h3>
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403700/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--banner.png" alt="banner component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/9639cf1491cea333044f3db32620650a.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>bg-cover</strong></code> → <code>background-size</code></li>
+            <li><code><strong>flex</strong></code> → <code>display</code></li>
+            <li><code><strong>items-center</strong></code> → <strong>align-items</strong></li>
+            <li><code><strong>text-shadow</strong></code> → ❗This is a custom class I made, there is no <code>text-shadow</code> utility class on TailwindCSS❗</li>
+          </ul>
+
+          <h3>Category Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625403898/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--category-card.png" alt="category card component">
+            <p>This card peels amazing…</p>
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/5792da85d9f5f782d8d47ce6ebf06704.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>justify-center</strong></code> → <code>justify-content</code></li>
+            <li><code><strong>shadow-xl</strong></code> → <code>box-shadow</code></li>
+          </ul>
+
+          <h3>Product Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625404098/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--product-card.png" alt="product card component">
+          </div>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>object-cover</strong></code> → <code>object-fit</code></li>
+            <li><code><strong>flex-col</strong></code> → <code>flex-direction</code></li>
+            <li><code><strong>p-5</strong></code> → <code>padding</code></li>
+            <li><code><strong>rounded-l</strong></code> → <code>border-top-left-radius</code> and <code>border-bottom-left-radius</code></li>
+          </ul>
+
+          <h3>Party Card</h3>
+
+          <div class="content__img">
+            <img src="https://res.cloudinary.com/nico1711/image/upload/v1625404447/MangoTree%20Website/articles/a-small-intro-to-tailwindcss--party-card.png" alt="party card component">
+          </div>
+
+          <script src="https://gist.github.com/nicoproto/8756309d0a68c1a7c6ec1b2f8f637d99.js"></script>
+
+          <p><strong>What new utilities did we use?</strong></p>
+          <ul>
+            <li><code><strong>rounded-t</strong></code> → <code>border-top-left-radius</code> and <code>border-top-right-radius</code></li>
+            <li><code><strong>w-full</strong></code> → <code>width: 100%</code></li>
+            <li><code><strong>items-end</strong></code> → <code>align-items</code></li>
+          </ul>
+
+          <h3>Extracting components</h3>
+          <p>All our refactoring will be in separate files called with the name of the specific component in the folder <code>app/javascript/stylesheets/components</code>.</p>
+
+          <h3>Buttons</h3>
+          <p>We will extract all the common classes from our buttons in the <code>.btn</code> class and create two specific classes (<code>.btn-main</code> and <code>.btn-ghost</code>) for the different versions of buttons we have.</p>
+
+          <script src="https://gist.github.com/nicoproto/c98ff19fa1158a5147b43a31d284a1eb.js"></script>
+
+          <p>And we are done! <strong>Congratulations!</strong></p>
+
+          <div class="content__img">
+            <img src="https://media0.giphy.com/media/czoS1CAP2YZBS/giphy.gif?cid=ecf05e47ifble8e03ncgxix990k1ivyuucuuoc7t0dgxq2y9&rid=giphy.gi" alt="dancing the office">
+          </div>
+
+          <p>👉🏻 <a href="https://github.com/nicoproto/tailwindcss-tutorial">Link to the Ruby on Rails application with all the components</a></p>
+
+          <!-- end of content -->
         </div>
       </div>
     </div>

@@ -83,15 +83,24 @@
 }
 
 .post-content__body {
+  margin-bottom: 3rem;
+
   li::marker {
     color: var(--primary);
   }
+
   a {
     text-decoration: underline;
   }
+
+  p {
+    word-break: break-word;
+  }
+
   p, li {
     @extend .wide-text;
   }
+
   ul {
     padding-left: 2rem;
   }
@@ -121,13 +130,24 @@
     span {
       padding-left: 2rem;
     }
+
   }
 
-  .content__body-gif {
-    margin: 3rem auto;
-    display: block;
-    border-radius: 2px;
-    max-width: 100%;
+  .content__img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    img {
+      display: block;
+      border-radius: 0.125rem;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 0.75rem;
+      text-align: center;
+    }
   }
 }
 
