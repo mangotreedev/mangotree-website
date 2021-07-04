@@ -25,7 +25,7 @@ module.exports = {
       template: "./src/blog.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/intro-tailwindcss.html",
+      filename: "./blog/intro-tailwindcss",
       template: "./src/articles/intro-tailwindcss.html",
     }),
     new MiniCssExtractPlugin({
