@@ -67,7 +67,7 @@
   img {
     border-radius: 50%;
     height: 2rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   p span {
     display: none;
@@ -179,7 +179,11 @@
 
   .post-content__header-info-left {
     p span {
-      display: block;
+      display: inline-block;
+    }
+
+    img {
+      margin-right: 1rem;
     }
   }
 }
