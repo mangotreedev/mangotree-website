@@ -149,6 +149,39 @@
       text-align: center;
     }
   }
+
+  // Added when using the markdown package
+  markdown {
+    white-space: pre-line;
+
+    &.js-parsed {
+      white-space: initial;
+    }
+
+    code {
+      background-color: none;
+      max-width: 100%;
+      overflow: scroll;
+    }
+
+    pre code {
+      display: inline-block;
+    }
+  }
+
+  markdown p img {
+    display: block;
+    border-radius: 0.125rem;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  pre {
+    background-color: rgba(242, 242, 242, 1);
+    padding: 1.5rem;
+    border-radius: 2px;
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
