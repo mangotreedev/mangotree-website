@@ -18,6 +18,7 @@ import { initDesignText } from "./components/init_design_text";
 import { initSkillsFloat } from "./components/init_skills_float";
 import { initVideoModal } from "./components/init_video_modal";
 import { initShareDropdown } from "./components/init_share_dropdown";
+import { initMarkdown } from "./components/init_markdownit";
 
 // Set up of singular scroll magic controller
 var scrollMagicController = new ScrollMagic.Controller();
@@ -33,6 +34,7 @@ initLandingTransitions();
 initHideNavbar();
 initVideoModal();
 initShareDropdown();
+initMarkdown();
 
 //Bundled team transitions for browser
 teamTransition.oneToTwo();
