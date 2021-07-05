@@ -89,6 +89,10 @@
     color: var(--primary);
   }
 
+  h3 {
+    margin: 2rem 0;
+  }
+
   a {
     text-decoration: underline;
   }
@@ -107,6 +111,10 @@
 
   li {
     margin-bottom: 1rem;
+  }
+
+  .gist {
+    margin: 2rem 0;
   }
 
   code {
@@ -168,6 +176,9 @@
       display: inline-block;
     }
   }
+  p > img + p > em {
+    color: blue;
+  }
 
   markdown p img {
     display: block;
@@ -180,7 +191,7 @@
     background-color: rgba(242, 242, 242, 1);
     padding: 1.5rem;
     border-radius: 2px;
-    margin: 0;
+    margin: 1rem 0;
   }
 }
 
