@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Optimze Snippet -->
+  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MTK326C"></script>
+  <!-- End Google Optimze Snippet -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SQ86FP');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Sign Up with LinkedIn on Rails</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="An agency at the cross section of design & development. We use lean design and agile development to help entrepreneurs build the right tech products.">
+
+  <meta name="author" content="MangoTree Dev">
+  <meta name="keywords"
+    content="Design Agency, Tech, Lean Design, Innovation, Web Development, Startups, Marketing">
+  <link rel="icon" type="image/png"
+    href="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_32/v1599284743/__Full_Colour_-_Icon_Only_qq727e.png">
+
+  <!--  Social media meta tags -->
+  <meta property="og:title" content="MangoTree Dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mangotree.dev" />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/nico1711/image/upload/c_scale,w_1200/v1601000951/website_preview.png" />
+  <meta property="og:description"
+    content="An agency at the cross section of design & development. We use lean design and agile development to help entrepreneurs build the right tech products." />
+  <meta property="og:site_name" content="MangoTree Dev" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SQ86FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="responsive-overlay">
+    <div class="responsive-overlay__phone-container">
+      <div class="phone-container__phone-item">
+        <i class="fa fa-repeat"></i>
+      </div>
+      <p>Rotate your device!</p>
+    </div>
+  </div>
+
+  <div class="share-dropdown js-share-menu">
+    <li><i class="fas fa-link"></i></li>
+    <li><i class="fab fa-linkedin"></i></li>
+    <li><i class="fab fa-twitter"></i></li>
+  </div>
+
+  <div class="mobile-body">
+    <div class="burger-icon js-navbar-icon">
+      <div class="burger-icon__middle"></div>
+    </div>
+
+    <div class="navbar-menu">
+      <img class="navbar-menu__logo" src="https://res.cloudinary.com/nico1711/image/upload/v1598498149/__Black_Outline_-_Icon_Only_pzxuwn.png" alt="">
+      <ul class="navbar-menu__links-list js-links-list">
+        <li><a href="/#skills">SKILLS</a></li>
+        <li><a href="/#team">OUR TEAM</a></li>
+        <li><a href="/#portfolio">PORTFOLIO</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/#contact" class="js-contact-btn">CONTACT</a></li>
+        <li><a href="#" class="js-navbar-dark">DARK MODE</a></li>
+      </ul>
+      <a href="mailto:hello@mangotree.dev" class="navbar-menu__contact">
+        <i class="far fa-envelope"></i>
+        hello@mangotree.dev
+      </a>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/linkedin-post.jpg" alt="Linkedin Logo" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>SIGN UP WITH LINKEDIN ON RAILS</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/c_fill,g_face,h_100,w_100/v1624953892/nico-proto.jpg" alt="nico avatar">
+              <p class="p_size_s"><span>Written by</span> Nico Proto</p>
+            </div>
+            <div class="post-content__header-info-right">
+              <p class="p_size_s">Oct 19 · 6 min read</p>
+              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-content__body">
+          <markdown>
+            ### Intro
+
+            After a lot of tutorials that broke in the middle of the process, stackoverflowing (I guess this works if Googling is a word now) weird bugs, and 16 cups of coffee I decided to write this tutorial with the hope to make someone’s work easier.
+
+            I will be using the ruby gem [OmniAuth LinkedIn OAuth2](https://github.com/decioferreira/omniauth-linkedin-oauth2) in a **Ruby on Rails** application with [Devise](https://github.com/heartcombo/devise) authentication.
+
+            *Note: My actual setup is* **Rails** *6.0.3.4 and* **Ruby** *2.6.5*
+
+            ### LinkedIn Setup
+
+            First of all, to log in with LinkedIn we first need a LinkedIn app, to get one, follow these steps:
+
+            1 - Go to [LinkedIn Developers](https://www.linkedin.com/developers), sign in, and click on “**Create app**”
+
+            *Note: This app needs to be associated with a company page, if you don’t have one, create it [here](https://business.linkedin.com/es-es/marketing-solutions/linkedin-pages).*
+
+            2 - Fill up the form and follow the steps to **verify** the app. You should get to this step where they ask you to send a **Verification URL** to the Page Admin you are creating the app to 👇🏻
+
+            ![](https://cdn-images-1.medium.com/max/2000/1*5GKCnBzD12TuASB4s1EsQQ.png)
+
+            *Note: The verification process should not take more than a few minutes.*
+
+            3 - Now that you have a verified App, under the **Products** tab, select “**Sign In with LinkedIn”.**
+
+            ![](https://cdn-images-1.medium.com/max/2000/1*5_P6yHpQiVk8G_RVTh5wXw.png)
+
+            4 - You’ll see a **“Review in progress”** message, refresh your page after a few minutes until the message disappears.
+
+            5 - Go to the **“Auth”** tab to get your **Authentication keys (both Client ID and Client Secret)**, we will use them later.
+
+            ![](https://cdn-images-1.medium.com/max/3032/1*pCHvZNjW8dCU2SekAM-Vgg.png)
+
+            6 - Last but not least, we need to tell our LinkedIn application the **URL** to **redirect the user** after they successfully logged with **LinkedIn.** So let’s update the **Authorized redirect URLs for our app** to our development URL:
+
+            ![](https://cdn-images-1.medium.com/max/2892/0*LUWMh3qGEes5Jlc5)
+
+            ### Rails Setup
+
+            Because we want to focus on adding [OAuth2](https://github.com/decioferreira/omniauth-linkedin-oauth2) to our application (and there are a billion tutorials on how to create a Rails app with Devise out there), we’ll begin with a basic Rails template that already has the **Devise** setup:
+
+            ```bash
+            rails new --database postgresql -m
+            ```
+
+            *Note: If you want, you can create your own app from scratch and follow the setup for Devise [here](https://github.com/heartcombo/devise).*
+
+            ### Rails Configuration
+
+            Let’s start by adding our **Authentication keys** using [Rails Credential](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336) built-in feature (I’m using Visual Code).
+
+            ```
+            EDITOR='code --wait' rails credentials:edit
+            ```
+
+            You need to add your keys this way:
+            ```yaml
+            linkedin:
+            &nbsp;&nbsp;api_id: 86***********af
+            &nbsp;&nbsp;api_key: ns***********LQ
+            ```
+
+            *Note: Remember this is a Yaml file, so you need to respect the indentation, the* **api_id** *and* **api_key** *are indented* **one** **tab** *to the right.*
+
+            Second, we will add the [OmniAuth](https://github.com/decioferreira/omniauth-linkedin-oauth2) gem into our **Gemfile**
+            ```ruby
+            gem "omniauth", "~> 1.9.1"
+            gem "omniauth-linkedin-oauth2"
+            ```
+            and bundle it
+            ```
+            bundle install
+            ```
+            *Note: We are using this version of OmniAuth because the newer version is not compatible with Devise yet. [See more](https://github.com/heartcombo/devise/pull/5327).*
+
+            Now, we need to tell **Devise** that we are going to use **OmniAuth** with LinkedIn and where to find our **Authentication keys.**
+
+            So go to your ‘config/initializers/devise.rb’ file and **add**:
+            ```ruby
+            [...]
+            config.omniauth :linkedin, Rails.application.credentials[:linkedin][:api_id], Rails.application.credentials[:linkedin][:api_key]
+            [...]
+            ```
+            After that, let’s allow our **User** model (created by **Devise**) to log in through **OmniAuth**, and set the provider as **LinkedIn**:
+            ```ruby
+            class User < ApplicationRecord
+              [...]
+              &nbsp;&nbsp;devise :omniauthable, omniauth_providers: %i[linkedin]
+              [...]
+            end
+            ```
+            *Note: You need to add that line, don’t replace the previous devise options.*
+
+            Remember the **URL** we told our **LinkedIn** **app** to go after we successfully login through LinkedIn? Let’s prepare our application to handle that route.
+
+            Let’s go to our ‘config/routes.rb’ file and add:
+            ```ruby
+            devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+            ```
+            *Note: The ‘devise_for :users’ should already be there, add the **controllers** part only.*
+
+            This will create the next route:
+            ```
+            Prefix: user_linkedin_omniauth_callback
+            Verb: GET|POST
+            URI Pattern: /users/auth/linkedin/callback(.:format)
+            Controller#Action: users/omniauth_callbacks#linkedin
+            ```
+            By default, our **User** created by **Devise** only has the attributes **email** and **password.** That’s not enough if we want to take advantage of the information provided by **LinkedIn**, so let’s add some attributes to our users with a migration:
+            ```
+            rails g migration AddProviderToUsers provider uid first_name last_name picture_url
+            ```
+            This will create the following migration file:
+            ```ruby
+            class AddProviderToUsers < **ActiveRecord::Migration[6.0]
+            &nbsp;&nbsp;def change
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :provider, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :uid, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :first_name, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :last_name, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :picture_url, :string
+            &nbsp;&nbsp;end
+            end
+            ```
+            Now we can run the migration:
+            ```
+            rails db:migrate
+            ```
+            So our user model has all the attributes needed, let’s add two methods in our **User** model (‘app/models/user.rb’) to manage the data provided by LinkedIn:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/cd0016270a696dd168bffa2aa9e06750.js"></script>
+
+          <markdown>
+
+            *Note: The* **first method** *is redefining Device* ‘**new_with_session**’ *method for our User model and the* **second method** *tries to find an existing user logged in with LinkedIn credentials (a combination of* **uid** *and* **provider**) *and if it doesn’t find one, it will create a new user with the information provided by LinkedIn.*
+
+            Ok, so our User model is ready now, the next step is to create the controller that will handle the callback route we created in our app.
+            ```
+            mkdir app/controllers/users
+            touch app/controllers/users/omniauth_callbacks_controller.rb
+            ```
+            Now let’s add the method that will be called when redirecting from LinkedIn.
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/37f4435eab102d2d7eb1146f89494f00.js"></script>
+
+          <markdown>
+
+            Almost done, now it’s time to test it! Let’s update our template navbar to show the image of the user.
+
+            On your `_navbar.html.erb` file, update the placeholder image from:
+
+            ```ruby
+            image_tag 'placeholder_url'
+            ```
+            to:
+            ```ruby
+            image_tag current_user.picture_url || 'your_placeholder_url'
+            ```
+
+            And that’s it! Now you can try to log in by clicking on the navbar ‘login’ link and then selecting the option ‘Sign in with LinkedIn’.
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*AEfIxQRAPv7epfUU.gif)
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*RmXuscVg7DT1teeR.gif)
+
+            ### **Optional:** **Edit LinkedIn user’s profile without a password**
+
+            Just in case you didn’t notice yet, Users created through this process can’t edit their profile. **Why?** Because they don’t have a **confirmation** password. In case you need your users to update their first_name or last_name, let’s fix that.
+
+            To accomplish this, we will need to get our hands dirty into the depths of Devise Controllers and Views.
+
+            First, let’s add the fields **first_name** and **last_name** in our ‘app/views/devise/registrations/edit.html.erb’ file so we can see them on our edit profile page:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/36f96e8e4dfd86d440a20ab928531661.js"></script>
+
+          <markdown>
+            *Note: We also added an* **if** *statement to check if the current_user has a provider, if so, we don’t show the password fields.*
+
+            Now we are going to rewrite **Devise’s Registration Controller**, so first we are going to generate it:
+            ```
+            rails generate devise:controllers "" -c=registrations
+            ```
+            Now, we’ll tell our Devise routes to use this new controller by updating our ‘route.rb’ file:
+            ```ruby
+            devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
+            ```
+            And let’s replace the content of that ‘registrations_controller.rb’ so it looks like this:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/220a82b8763c7a149589c723bfeebbcf.js"></script>
+
+          <markdown>
+
+
+            *Note: Long story short, we are telling* **Devise** *that if the* **User** *that’s trying to update their profile has logged through* **LinkedIn** *(their* **provider** *attribute is* **not** **blank**) *we should update without requesting the password.*
+
+            **Finally**, we need to allow the new attributes to go through the **devise_parameter_sanitizer** (security reasons) and we can do that by adding this to our ‘application_controller.rb’ file:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/1910568a36bdfaae6671864d77500895.js"></script>
+
+          <markdown>
+
+            And that’s it! You are now able to update your first_name and last_name fields even if you signed up through LinkedIn.
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*OQBghqW_ceEuhF8l.gif)
+
+            ### What about production?
+
+            In production, we just need to configure our Rails Credentials Master Key in the hosting provider we use. For example, if you are using [Heroku](https://www.heroku.com/):
+            ```
+            heroku config:set RAILS_MASTER_KEY=30**************************354d
+            ```
+            Also, we should update our callback **URL** from the **LinkedIn app** to:
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*s_HY97GTWKmSTO0T)
+          </markdown>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="nonmobile-body">
+    <div class="browser-navbar js-browser-navbar">
+      <ul class="browser-navbar__links-list">
+        <li><a href="/#browser-skills">SKILLS</a></li>
+        <li><a href="/#browser-team">OUR TEAM</a></li>
+        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
+      </ul>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1624953488/linkedin-post.jpg" alt="Linkedin Logo" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>SIGN UP WITH LINKEDIN ON RAILS</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/c_fill,g_face,h_100,w_100/v1624953892/nico-proto.jpg" alt="nico avatar">
+              <p class="p_size_s"><span>Written by</span> Nico Proto</p>
+            </div>
+            <div class="post-content__header-info-right">
+              <p class="p_size_s">Oct 19 · 6 min read</p>
+              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-content__body">
+          <markdown>
+            ### Intro
+
+            After a lot of tutorials that broke in the middle of the process, stackoverflowing (I guess this works if Googling is a word now) weird bugs, and 16 cups of coffee I decided to write this tutorial with the hope to make someone’s work easier.
+
+            I will be using the ruby gem [OmniAuth LinkedIn OAuth2](https://github.com/decioferreira/omniauth-linkedin-oauth2) in a **Ruby on Rails** application with [Devise](https://github.com/heartcombo/devise) authentication.
+
+            *Note: My actual setup is* **Rails** *6.0.3.4 and* **Ruby** *2.6.5*
+
+            ### LinkedIn Setup
+
+            First of all, to log in with LinkedIn we first need a LinkedIn app, to get one, follow these steps:
+
+            1 - Go to [LinkedIn Developers](https://www.linkedin.com/developers), sign in, and click on “**Create app**”
+
+            *Note: This app needs to be associated with a company page, if you don’t have one, create it [here](https://business.linkedin.com/es-es/marketing-solutions/linkedin-pages).*
+
+            2 - Fill up the form and follow the steps to **verify** the app. You should get to this step where they ask you to send a **Verification URL** to the Page Admin you are creating the app to 👇🏻
+
+            ![](https://cdn-images-1.medium.com/max/2000/1*5GKCnBzD12TuASB4s1EsQQ.png)
+
+            *Note: The verification process should not take more than a few minutes.*
+
+            3 - Now that you have a verified App, under the **Products** tab, select “**Sign In with LinkedIn”.**
+
+            ![](https://cdn-images-1.medium.com/max/2000/1*5_P6yHpQiVk8G_RVTh5wXw.png)
+
+            4 - You’ll see a **“Review in progress”** message, refresh your page after a few minutes until the message disappears.
+
+            5 - Go to the **“Auth”** tab to get your **Authentication keys (both Client ID and Client Secret)**, we will use them later.
+
+            ![](https://cdn-images-1.medium.com/max/3032/1*pCHvZNjW8dCU2SekAM-Vgg.png)
+
+            6 - Last but not least, we need to tell our LinkedIn application the **URL** to **redirect the user** after they successfully logged with **LinkedIn.** So let’s update the **Authorized redirect URLs for our app** to our development URL:
+
+            ![](https://cdn-images-1.medium.com/max/2892/0*LUWMh3qGEes5Jlc5)
+
+            ### Rails Setup
+
+            Because we want to focus on adding [OAuth2](https://github.com/decioferreira/omniauth-linkedin-oauth2) to our application (and there are a billion tutorials on how to create a Rails app with Devise out there), we’ll begin with a basic Rails template that already has the **Devise** setup:
+
+            ```bash
+            rails new --database postgresql -m
+            ```
+
+            *Note: If you want, you can create your own app from scratch and follow the setup for Devise [here](https://github.com/heartcombo/devise).*
+
+            ### Rails Configuration
+
+            Let’s start by adding our **Authentication keys** using [Rails Credential](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336) built-in feature (I’m using Visual Code).
+
+            ```
+            EDITOR='code --wait' rails credentials:edit
+            ```
+
+            You need to add your keys this way:
+            ```yaml
+            linkedin:
+            &nbsp;&nbsp;api_id: 86***********af
+            &nbsp;&nbsp;api_key: ns***********LQ
+            ```
+
+            *Note: Remember this is a Yaml file, so you need to respect the indentation, the* **api_id** *and* **api_key** *are indented* **one** **tab** *to the right.*
+
+            Second, we will add the [OmniAuth](https://github.com/decioferreira/omniauth-linkedin-oauth2) gem into our **Gemfile**
+            ```ruby
+            gem "omniauth", "~> 1.9.1"
+            gem "omniauth-linkedin-oauth2"
+            ```
+            and bundle it
+            ```
+            bundle install
+            ```
+            *Note: We are using this version of OmniAuth because the newer version is not compatible with Devise yet. [See more](https://github.com/heartcombo/devise/pull/5327).*
+
+            Now, we need to tell **Devise** that we are going to use **OmniAuth** with LinkedIn and where to find our **Authentication keys.**
+
+            So go to your ‘config/initializers/devise.rb’ file and **add**:
+            ```ruby
+            [...]
+            config.omniauth :linkedin, Rails.application.credentials[:linkedin][:api_id], Rails.application.credentials[:linkedin][:api_key]
+            [...]
+            ```
+            After that, let’s allow our **User** model (created by **Devise**) to log in through **OmniAuth**, and set the provider as **LinkedIn**:
+            ```ruby
+            class User < ApplicationRecord
+              [...]
+              &nbsp;&nbsp;devise :omniauthable, omniauth_providers: %i[linkedin]
+              [...]
+            end
+            ```
+            *Note: You need to add that line, don’t replace the previous devise options.*
+
+            Remember the **URL** we told our **LinkedIn** **app** to go after we successfully login through LinkedIn? Let’s prepare our application to handle that route.
+
+            Let’s go to our ‘config/routes.rb’ file and add:
+            ```ruby
+            devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+            ```
+            *Note: The ‘devise_for :users’ should already be there, add the **controllers** part only.*
+
+            This will create the next route:
+            ```
+            Prefix: user_linkedin_omniauth_callback
+            Verb: GET|POST
+            URI Pattern: /users/auth/linkedin/callback(.:format)
+            Controller#Action: users/omniauth_callbacks#linkedin
+            ```
+            By default, our **User** created by **Devise** only has the attributes **email** and **password.** That’s not enough if we want to take advantage of the information provided by **LinkedIn**, so let’s add some attributes to our users with a migration:
+            ```
+            rails g migration AddProviderToUsers provider uid first_name last_name picture_url
+            ```
+            This will create the following migration file:
+            ```ruby
+            class AddProviderToUsers < **ActiveRecord::Migration[6.0]
+            &nbsp;&nbsp;def change
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :provider, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :uid, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :first_name, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :last_name, :string
+              &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :picture_url, :string
+            &nbsp;&nbsp;end
+            end
+            ```
+            Now we can run the migration:
+            ```
+            rails db:migrate
+            ```
+            So our user model has all the attributes needed, let’s add two methods in our **User** model (‘app/models/user.rb’) to manage the data provided by LinkedIn:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/cd0016270a696dd168bffa2aa9e06750.js"></script>
+
+          <markdown>
+
+            *Note: The* **first method** *is redefining Device* ‘**new_with_session**’ *method for our User model and the* **second method** *tries to find an existing user logged in with LinkedIn credentials (a combination of* **uid** *and* **provider**) *and if it doesn’t find one, it will create a new user with the information provided by LinkedIn.*
+
+            Ok, so our User model is ready now, the next step is to create the controller that will handle the callback route we created in our app.
+            ```
+            mkdir app/controllers/users
+            touch app/controllers/users/omniauth_callbacks_controller.rb
+            ```
+            Now let’s add the method that will be called when redirecting from LinkedIn.
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/37f4435eab102d2d7eb1146f89494f00.js"></script>
+
+          <markdown>
+
+            Almost done, now it’s time to test it! Let’s update our template navbar to show the image of the user.
+
+            On your `_navbar.html.erb` file, update the placeholder image from:
+
+            ```ruby
+            image_tag 'placeholder_url'
+            ```
+            to:
+            ```ruby
+            image_tag current_user.picture_url || 'your_placeholder_url'
+            ```
+
+            And that’s it! Now you can try to log in by clicking on the navbar ‘login’ link and then selecting the option ‘Sign in with LinkedIn’.
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*AEfIxQRAPv7epfUU.gif)
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*RmXuscVg7DT1teeR.gif)
+
+            ### **Optional:** **Edit LinkedIn user’s profile without a password**
+
+            Just in case you didn’t notice yet, Users created through this process can’t edit their profile. **Why?** Because they don’t have a **confirmation** password. In case you need your users to update their first_name or last_name, let’s fix that.
+
+            To accomplish this, we will need to get our hands dirty into the depths of Devise Controllers and Views.
+
+            First, let’s add the fields **first_name** and **last_name** in our ‘app/views/devise/registrations/edit.html.erb’ file so we can see them on our edit profile page:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/36f96e8e4dfd86d440a20ab928531661.js"></script>
+
+          <markdown>
+            *Note: We also added an* **if** *statement to check if the current_user has a provider, if so, we don’t show the password fields.*
+
+            Now we are going to rewrite **Devise’s Registration Controller**, so first we are going to generate it:
+            ```
+            rails generate devise:controllers "" -c=registrations
+            ```
+            Now, we’ll tell our Devise routes to use this new controller by updating our ‘route.rb’ file:
+            ```ruby
+            devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
+            ```
+            And let’s replace the content of that ‘registrations_controller.rb’ so it looks like this:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/220a82b8763c7a149589c723bfeebbcf.js"></script>
+
+          <markdown>
+
+
+            *Note: Long story short, we are telling* **Devise** *that if the* **User** *that’s trying to update their profile has logged through* **LinkedIn** *(their* **provider** *attribute is* **not** **blank**) *we should update without requesting the password.*
+
+            **Finally**, we need to allow the new attributes to go through the **devise_parameter_sanitizer** (security reasons) and we can do that by adding this to our ‘application_controller.rb’ file:
+
+          </markdown>
+
+          <script src="https://gist.github.com/nicoproto/1910568a36bdfaae6671864d77500895.js"></script>
+
+          <markdown>
+
+            And that’s it! You are now able to update your first_name and last_name fields even if you signed up through LinkedIn.
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*OQBghqW_ceEuhF8l.gif)
+
+            ### What about production?
+
+            In production, we just need to configure our Rails Credentials Master Key in the hosting provider we use. For example, if you are using [Heroku](https://www.heroku.com/):
+            ```
+            heroku config:set RAILS_MASTER_KEY=30**************************354d
+            ```
+            Also, we should update our callback **URL** from the **LinkedIn app** to:
+
+            ![](https://cdn-images-1.medium.com/max/2000/0*s_HY97GTWKmSTO0T)
+          </markdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="browser-konami-code js-browser-konami-code">
+      <p>
+        <span>PRESS</span>
+        <span>↑</span>
+        <span>↑</span>
+        <span>↓</span>
+        <span>↓</span>
+        <span>&larr;</span>
+        <span>&rarr;</span>
+        <span>←</span>
+        <span>→</span>
+        <span>b</span>
+        <span>a</span>
+        <span>FOR</span>
+        <span>A</span>
+        <span>SURPRISE</span>
+        <span>!</span>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="video-modal js-video-modal">
+    <div class="modal-close-icon js-modal-close">
+    </div>
+    <div class='embed-container'>
+      <iframe frameborder='0'
+        webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+  </div>
+
+  <!-- ADDING HIGHLIGHT JS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+
+  <!-- ADDING FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/721627a3c7.js" crossorigin="anonymous"></script>
+
+  <!-- ADDING GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+  <!-- ADDING SCROLLMAGIC.IO -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+</body>
+</html>
+
+

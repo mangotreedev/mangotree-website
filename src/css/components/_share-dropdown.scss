@@ -1,0 +1,44 @@
+.share-dropdown {
+  display: none;
+  position: absolute;
+  background-color: var(--background);
+  padding: 0.7em;
+  border-radius: 2rem;
+  top: 115%;
+  right: -1rem;
+  width: max-content;
+  list-style: none;
+  text-align: left;
+  box-shadow: 0 0 2px var(--primary);
+
+  &.active {
+    display: block;
+  }
+
+  &.top {
+    bottom: 115%;
+    top: auto;
+  }
+
+  i {
+    margin: 0 !important;
+    font-size: $base-size * 1.5;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+  a {
+    margin: 0 !important;
+  }
+}
+
+p.share-btn {
+  margin: 0;
+}
+.share-btn {
+  position: relative;
+  cursor: pointer;
+}

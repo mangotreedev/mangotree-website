@@ -20,6 +20,18 @@ module.exports = {
       filename: "404.html",
       template: "./src/404.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "blog.html",
+      template: "./src/blog.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/intro-tailwindcss",
+      template: "./src/articles/intro-tailwindcss.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/sign-up-linkedin-rails",
+      template: "./src/articles/sign-up-linkedin-rails.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional

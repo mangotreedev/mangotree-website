@@ -1,0 +1,56 @@
+.blog-page {
+  margin-top: 12vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  padding: 0 4vw;
+
+  .primary-title {
+    justify-content: flex-end;
+  }
+}
+
+.blog-page__header {
+  margin: 2rem 0;
+
+  span {
+    display: none;
+  }
+}
+
+.all-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .all-posts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .all-posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .blog-page {
+    padding: 0;
+
+    .primary-title {
+      justify-content: flex-end;
+    }
+  }
+
+  .blog-page__header span {
+    display: inline-block;
+  }
+
+
+  .blog-page {
+    margin-top: 15vh;
+  }
+}

@@ -1,5 +1,6 @@
 .navbar-menu {
   position: fixed;
+  top: 0;
   width: 100vw;
   height: 0vh;
   background-color: var(--background);
@@ -12,7 +13,7 @@
     opacity: 1;
     z-index: 2;
     height: 100vh;
-    padding-top: 20vh;
+    // padding-top: 5vh;
   }
 
   .navbar-menu__logo {
@@ -20,7 +21,7 @@
     height: 3rem;
     position: absolute;
     top: 2vh;
-    left: 4vw;
+    left: 1.5em;
     transition: opacity 0.5s ease-in-out;
   }
   &.navbar-menu--active .navbar-menu__logo {
@@ -34,6 +35,7 @@
     padding-left: 1.5em;
     transition: opacity 0.5s ease-in-out;
     transition-delay: 0.5s;
+    margin-top: 15vh;
 
     li {
       margin-bottom: 1em;
@@ -55,7 +57,7 @@
     font-size: $base-size * 1.5;
     margin: 0;
     position: absolute;
-    top: 85vh;
+    bottom: 10vh;
     width: 100vw;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;

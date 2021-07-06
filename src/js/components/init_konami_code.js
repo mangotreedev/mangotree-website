@@ -10,8 +10,12 @@ export const initKonamiCode = () => {
     document.documentElement.style.setProperty("--background", "#101010");
     document.documentElement.style.setProperty("--primary", "#F9F9F9");
     // Swap the mango
-    document.querySelector(".landing-page__right img").src = "https://res.cloudinary.com/nico1711/image/upload/c_scale,h_350/v1599485051/__White_Outline_Full_Colour_-_Icon_Only_rzmtlr.png"
-    document.querySelector(".navbar-menu__logo").src = "https://res.cloudinary.com/nico1711/image/upload/v1600699086/__White_Outline_-_Icon_Only_zd9scc.png"
+    if (document.querySelector(".landing-page__right img")) {
+      document.querySelector(".landing-page__right img").src = "https://res.cloudinary.com/nico1711/image/upload/c_scale,h_350/v1599485051/__White_Outline_Full_Colour_-_Icon_Only_rzmtlr.png"
+    }
+    if (document.querySelector(".landing-page__right img")) {
+      document.querySelector(".navbar-menu__logo").src = "https://res.cloudinary.com/nico1711/image/upload/v1600699086/__White_Outline_-_Icon_Only_zd9scc.png"
+    }
     // Add glow to flashlight
     let flickers = 0;
     let interval = setInterval(() => {
@@ -34,12 +38,14 @@ export const initKonamiCode = () => {
     console.log("🎉 Enter the Konami Code to see something cool 🎉")
     flashlight.addEventListener('click', () => {
       flashlight.style.pointerEvents = 'none';
+      document.querySelector('.js-browser-konami-code').style.zIndex = "5";
       const konamiNodes = document.querySelectorAll('.js-browser-konami-code span');
       const tl = gsap.timeline();
       tl.to(konamiNodes, { autoAlpha: 1, display: 'inline', stagger: 0.3 });
       tl.to(konamiNodes, 3, { autoAlpha: 1, display: 'none'});
       tl.eventCallback("onComplete", () => {
         flashlight.style.pointerEvents = 'all';
+        document.querySelector('.js-browser-konami-code').style.zIndex = "-1";
       })
     });
 

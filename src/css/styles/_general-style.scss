@@ -30,11 +30,11 @@ body {
 h1, h2, h3 { margin: 0 };
 
 h1 {
-  font-size: $base-size * 4.575;
+  font-size: $base-size * 2.34375;
 }
 
 h2 {
-  font-size: $base-size * 2.34375;
+  font-size: $base-size * 1.875;
 }
 
 h3 {
@@ -66,4 +66,20 @@ a {
 
 .yellow {
   color: $yellow;
+}
+
+.wide-text {
+  line-height: 180%;
+  letter-spacing: 0.08rem;
+  font-size: $base-size;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: $base-size * 4.575;
+  }
+
+  h2 {
+    font-size: $base-size * 2.34375;
+  }
 }
