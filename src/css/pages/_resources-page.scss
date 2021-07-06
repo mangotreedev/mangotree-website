@@ -1,0 +1,30 @@
+.resources-page {
+  margin-top: 12vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  padding: 0 4vw;
+
+  .primary-title {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets or larger: */
+  .resources-page {
+    padding: 0;
+
+    .primary-title {
+      justify-content: flex-end;
+    }
+  }
+
+  .resources-page__header span {
+    display: inline-block;
+  }
+
+
+  .resources-page {
+    margin-top: 15vh;
+  }
+}

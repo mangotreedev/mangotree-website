@@ -20,6 +20,17 @@
   }
 }
 
+.post-card__featured {
+  .post-card__image-wrapper {
+    height: 50vh;
+  }
+
+  .post-card__title p {
+    margin: 1rem 0;
+  }
+}
+
+
 .post-card__header {
   display: flex;
   width: 100%;
