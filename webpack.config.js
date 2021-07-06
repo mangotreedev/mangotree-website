@@ -32,6 +32,10 @@ module.exports = {
       filename: "./blog/sign-up-linkedin-rails",
       template: "./src/articles/sign-up-linkedin-rails.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "resources.html",
+      template: "./src/resources.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
