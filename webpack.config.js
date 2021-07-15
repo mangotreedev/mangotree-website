@@ -36,6 +36,10 @@ module.exports = {
       filename: "resources.html",
       template: "./src/resources.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "./resources/bamboosticks",
+      template: "./src/resources/bamboosticks.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
