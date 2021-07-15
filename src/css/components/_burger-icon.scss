@@ -48,4 +48,8 @@
   &::after { top: $base-size; }
 }
 
-
+@media only screen and (min-width: 600px) {
+  .burger-icon {
+    display: none;
+  }
+}
