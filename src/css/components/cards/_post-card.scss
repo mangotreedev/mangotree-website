@@ -22,7 +22,7 @@
 
 .post-card__featured {
   .post-card__image-wrapper {
-    height: 50vh;
+    height: 25vh;
   }
 
   .post-card__title p {
@@ -93,6 +93,12 @@
       .post-card:first-child {
         margin-bottom: 1.5rem;
       }
+    }
+  }
+
+  .post-card__featured {
+    .post-card__image-wrapper {
+      height: 50vh;
     }
   }
 }

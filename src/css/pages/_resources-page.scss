@@ -11,7 +11,7 @@
 
 .all-resources {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 2rem;
 }
 
@@ -32,5 +32,32 @@
 
   .resources-page {
     margin-top: 15vh;
+  }
+}
+
+
+@media only screen and (min-width: 1150px) {
+  .all-resources {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .all-resources {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .all-resources {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .all-resources {
+    grid-template-columns: 1fr;
   }
 }
