@@ -30,15 +30,40 @@
       transform: scale(1.05);
     }
   }
+
   a {
     margin: 0 !important;
+  }
+
+  li {
+    position: relative;
   }
 }
 
 p.share-btn {
   margin: 0;
 }
+
 .share-btn {
   position: relative;
   cursor: pointer;
+}
+
+.share-dropdown__tooltip {
+  position: absolute;
+  right: 200%;
+  width: max-content;
+  top: 25%;
+  background: #f9f9f9;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.125rem;
+  box-shadow: 0 0 2px var(--primary);
+
+  &.active {
+    opacity: 1;
+  }
 }

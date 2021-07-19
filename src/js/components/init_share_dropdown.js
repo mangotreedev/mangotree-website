@@ -24,5 +24,22 @@ export const initShareDropdown = () => {
     shareMenu.classList.remove("active");
     shareMenu.classList.remove("top");
   }
+
+  shareMenu.querySelector(".js-copy-link").addEventListener("click", (event) => {
+    const tempElement = document.createElement('input')
+    document.body.appendChild(tempElement);
+    tempElement.value = window.location.href;
+    tempElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempElement);
+
+    const tooltip = event.currentTarget.nextElementSibling;
+    setTimeout(() => {
+      tooltip.classList.add("active");
+      setTimeout(() => {
+        tooltip.classList.remove("active");
+      }, 2500)
+    }, 100);
+  })
 }
 

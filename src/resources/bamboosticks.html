@@ -50,9 +50,21 @@
   </div>
 
   <div class="share-dropdown js-share-menu">
-    <li><i class="fas fa-link"></i></li>
-    <li><i class="fab fa-linkedin"></i></li>
-    <li><i class="fab fa-twitter"></i></li>
+    <li>
+      <i class="fas fa-link js-copy-link"></i>
+      <p class="share-dropdown__tooltip">Link copied!</p>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL))" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out%20-%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL));" >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+
   </div>
 
   <div class="page-content">
