@@ -52,6 +52,10 @@ module.exports = {
       filename: "./blog/passing-referral-codes-in-rails",
       template: "./src/articles/passing-referral-codes-in-rails.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/custom-and-vanity-urls-rails",
+      template: "./src/articles/custom-and-vanity-urls-rails.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
