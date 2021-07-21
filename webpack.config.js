@@ -29,6 +29,10 @@ module.exports = {
       template: "./src/articles/intro-tailwindcss.html",
     }),
     new HtmlWebpackPlugin({
+      filename: "./blog/tinderellas-data-chart-bars",
+      template: "./src/articles/tinderellas-data-chart-bars.html",
+    }),
+    new HtmlWebpackPlugin({
       filename: "./blog/sign-up-linkedin-rails",
       template: "./src/articles/sign-up-linkedin-rails.html",
     }),
