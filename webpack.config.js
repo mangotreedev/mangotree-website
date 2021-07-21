@@ -48,6 +48,10 @@ module.exports = {
       filename: "./blog/algolia-autocomplete-predictions-rails",
       template: "./src/articles/algolia-autocomplete-predictions-rails.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/passing-referral-codes-in-rails",
+      template: "./src/articles/passing-referral-codes-in-rails.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
