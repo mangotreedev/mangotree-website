@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Optimze Snippet -->
+  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MTK326C"></script>
+  <!-- End Google Optimze Snippet -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SQ86FP');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Algolia Autocomplete Predictions with Rails</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="An agency at the cross section of design & development. We use lean design and agile development to help entrepreneurs build the right tech products.">
+
+  <meta name="author" content="MangoTree Dev">
+  <meta name="keywords"
+    content="Design Agency, Tech, Lean Design, Innovation, Web Development, Startups, Marketing">
+  <link rel="icon" type="image/png"
+    href="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_32/v1599284743/__Full_Colour_-_Icon_Only_qq727e.png">
+
+  <!--  Social media meta tags -->
+  <meta property="og:title" content="MangoTree Dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mangotree.dev" />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/nico1711/image/upload/c_scale,w_1200/v1601000951/website_preview.png" />
+  <meta property="og:description"
+    content="An agency at the cross section of design & development. We use lean design and agile development to help entrepreneurs build the right tech products." />
+  <meta property="og:site_name" content="MangoTree Dev" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SQ86FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="responsive-overlay">
+    <div class="responsive-overlay__phone-container">
+      <div class="phone-container__phone-item">
+        <i class="fa fa-repeat"></i>
+      </div>
+      <p>Rotate your device!</p>
+    </div>
+  </div>
+
+  <div class="share-dropdown js-share-menu">
+    <li>
+      <i class="fas fa-link js-copy-link"></i>
+      <p class="share-dropdown__tooltip">Link copied!</p>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL))" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out%20-%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL));" >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+
+  </div>
+
+  <div class="page-content">
+    <div class="burger-icon js-navbar-icon">
+      <div class="burger-icon__middle"></div>
+    </div>
+
+    <div class="navbar-menu">
+      <img class="navbar-menu__logo" src="https://res.cloudinary.com/nico1711/image/upload/v1598498149/__Black_Outline_-_Icon_Only_pzxuwn.png" alt="">
+      <ul class="navbar-menu__links-list js-links-list">
+        <li><a href="/#skills">SKILLS</a></li>
+        <li><a href="/#team">OUR TEAM</a></li>
+        <li><a href="/#portfolio">PORTFOLIO</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/#contact" class="js-contact-btn">CONTACT</a></li>
+        <li><a href="#" class="js-navbar-dark">DARK MODE</a></li>
+      </ul>
+      <a href="mailto:hello@mangotree.dev" class="navbar-menu__contact">
+        <i class="far fa-envelope"></i>
+        hello@mangotree.dev
+      </a>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1626872922/MangoTree%20Website/articles/algolia-autocomplete-predictions-rails.png" alt="Algolia autocomplete" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>Algolia Autocomplete Predictions with Rails</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/v1626803393/MangoTree%20Website/sy-rashid-profile.jpg" alt="sy avatar">
+              <p class="p_size_s"><span>Written by</span> Sy Rashid</p>
+            </div>
+            <div class="post-content__header-info-right">
+              <p class="p_size_s">Jan 20 · 10 min read</p>
+              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-content__body">
+          <markdown>
+            We’re finally able to answer the age old quandary: “When I jump I …”
+
+            ![](https://miro.medium.com/max/1378/1*OR7eVrhOCa7ISw1oGugaNA.png)
+
+            If you’ve got 10 minutes, this is a great [watch](https://www.youtube.com/watch?v=Cxqca4RQd_M&ab_channel=CollegeHumor)
+
+            [Full Codebase Here](https://github.com/syrashid/algolia-autocomplete-predictions) 👈 🐱
+
+            ### An Introduction
+
+            Software today is truly a thing of wonder. The devices in our pockets and their features would have had us burned at the stake or heralded as demigods in a past life. Unless, you are one of a few select operators who still use AN ORIGINAL Motorola Razr, in which case, you are still a demigod in my book.
+
+            ![](https://miro.medium.com/max/660/0\*hht6MbeCAY8a76V-.gif)
+
+            Sadly though, because of how common place these devices and software features are; the magic is often lost on us. We assume, because we see them everywhere and how well designed they are, they must be simple to code or implement. (A principle known as [magic](https://en.wikipedia.org/wiki/Magic_(programming)) 🧙‍♂️ in computer programming)
+
+            > Any sufficiently advanced technology is indistinguishable from magic.
+            >
+            > _\-Arthur C. Clarke_
+
+            Today, I want to explore one of these features we see commonly; one that I very much took for granted (like the nimrod I am). I want to explore Autocomplete Prediction. For those unfamiliar, it’s what most of us use everyday when we type something into google.
+
+            ![](https://miro.medium.com/max/1026/0\*nt38V4sJsPbNO-p3.gif)
+
+            In my mind, this always seemed like such a trivial thing. So trivial, that when I was first asked how to implement it in a rails app, I responded with a scoff and said it’d take me no time at all (how very wrong I was… 🤦🏽‍♂️).
+
+            And like any good ruby developer I went off to find that one gem or package that would have me hailed as the next Dijkstra by my friends and peers when I unveiled my autocomplete feature. Now if you’re reading this article, you can probably guess, I found no such gem. 😭
+
+            So, with my tail between my legs, I set off to try and figure out how one does autocomplete predictions in a rails application. Through my initial research, it became readily apparent the tool of choice would be Algolia, a SaaS company that is the gold standard for providing search services; some would describe them as the bee’s knees. 🐝
+
+            ![](https://miro.medium.com/max/1400/0\*oQqTiDlABQlMmI3h.png)
+
+            Before we get too deep into what Algolia is; let’s go ahead and set up an application for us to use with Algolia.
+
+            ### The Setup
+
+
+            Our app will be simple enough, we simply need a model with a few attributes to search along. These attributes are what we’ll display in our predictions as our user searches.
+
+            [Full Codebase Here](https://github.com/syrashid/algolia-autocomplete-predictions) 👈 🐱
+
+            For the app generation, I’ll be using [BambooSticks](https://github.com/mangotreedev/bamboosticks) 🎍, a decision-tree template for rails apps that we use at MangoTree anytime we’re kicking off a project. I’m using it here because it configures bootstrap, sets up [Stimulus](https://stimulus.hotwire.dev/), and arranges our preferred js & css folder structure.
+
+            ![](https://miro.medium.com/max/1400/1\*GevulCAwXIdvhnfiCMMqkg.gif)
+
+            Great, we’re on our way. After dropping in the faker gem, and generating our Poke’mon model (with name, location, and move attributes), I went ahead and created 500 instances of Poke’mon to populate my database.
+
+            ![](https://miro.medium.com/max/1400/1\*0edVH\_5KHdb9EoeeBLyXuw.png)
+
+            From there, I created a simple home page that would act as my root\_path and the screen that would house my search bar.
+
+            ![](https://miro.medium.com/max/1400/1\*Rf6cxrCWo\_TyNerPZ-RjeQ.png)
+
+            Ok, we’re off to a good start.
+
+            ![](https://miro.medium.com/max/1000/0\*w5RgQxINoHhM7oWU.gif)
+
+            Now, let’s talk about Algolia. There is an assumption here, that if you’re looking at an article about setting up Algolia with a Rails app, you probably know what it is.
+
+            But just in case you don’t, Algolia is a powerful SaaS that helps you implement search and then improve upon it thru analytics. Just as you would utilize tools like pg\_search or Elasticsearch to implement search in your application, Algolia is the gold standard for search implementation, and has built some incredible out of the box developer tools for you to build an incredible search experience. (As a side note I am not sponsored by Algolia in any way, I just really like their product 💸 However, if anyone at Algolia is feeling a little generous, hit your boy up, 37 to 43 tacos per meal ain’t cheap 🌮)
+
+            So with that little “I ❤️ Algolia” diary session behind us, let’s go ahead and set everything up.
+
+            We’ll follow a three step process to get everything working together.
+
+            1.  Set up an account on Algolia and index your data
+            2.  Connect with algoliasearch to communicate with the Algolia API
+            3.  Implement autocomplete.js for the dropdown prediections
+
+            ### Setting up Algolia & Indexing Your Data
+
+
+            Fortunately, getting started is as simple as signing up (no credit card necessary), and if you decide to move forward they operate on a pay-as-you-go model. The more search requests or records you index (more on this later), the more you pay.
+
+            Once, you’ve set yourself up with an account let’s go ahead and grab three important pieces of information we’ll need from your dashboard. Your application id, your search-only API key, and your admin API key (These are located under the ‘API Keys’ tab on the left hand column). To make sure we keep our keys secret I’ll be using dotenv-rails to manage my API keys. I’ve tossed them into my .env file with the following naming convention.
+
+            ![](https://miro.medium.com/max/1400/1\*utHGYro3i\_Py-y50TgOGXQ.png)
+
+            Mind you, I’m calling my admin key the ALGOLIA\_INDEX\_KEY.
+
+            To set up the API client that will allow us to interact with Algolia’s client-side Search API, we need to follow the setup on [algoliasearch-rails](https://github.com/algolia/algoliasearch-rails) (a gem provided by the Algolia team). I’ve provided step by step directions, but please refer to their documentation as well for more information.
+
+            *   Add the algoliasearch-rails gem to your gemfile and bundle install
+
+            ![](https://miro.medium.com/max/1400/1\*-MfA38Mrjrt5ElbXKOVzcg.png)
+
+            *   Set up your algoliasearch.rb configuration file
+
+            ![](https://miro.medium.com/max/1400/1\*Q0LGj0hifEzo--BahOSyZA.png)
+
+            *   Set up the model(s) you want to search
+
+            ![](https://miro.medium.com/max/1400/1\*7MCP1oYAoQvFFnSFioyxDg.png)
+
+            Now it’s time to index our data, a phrase we’ve brought up over and over again but have yet to clarify.
+
+            ![](https://miro.medium.com/max/1000/0\*gckiUPWUwvMasuY5.gif)
+
+            When we speak about indexing our data, we create a secondary data structure that allows us to quickly retrieve records. This secondary data structure consists of keys (aka values we want to look up) that we build through providing information from our records.
+
+            For our purpose, we are choosing to index along all fields of our Poke’mon model, but this does not have to be the case, and in fact, should be avoided if possible. We only want to index on data that is relevant to our user’s search experience, no more. (You can choose what to index on by modifying the algoliasearch block in your model’s code)
+
+            Pretty decent explanation here 👉 [On Database Indexes](https://www.essentialsql.com/what-is-a-database-index/)
+
+            A good metaphor to think thru is how you quickly navigate a book through the use of an index. Does the index need to be there for you to locate chapters?
+
+            > No.
+
+            But does it make it easier at the cost of an extra page or two?
+
+            > Absolutely.
+
+            And what do we ‘expose’ in our index?
+
+            > Just the chapter title and number.
+
+            So for us, when we start off with Algolia, we need to create an index for our data to actually give us something to search against through Algolia’s Search API. Otherwise, there’s nothing to search against in their servers. Fortunately, we only need to do this one time. From there, the gem uses Rails’ callbacks to trigger indexing on our model anytime changes are made.
+
+            So drum roll 🥁 please as we index our data for the first and only time!
+
+            ![](https://miro.medium.com/max/1400/1\*K2r1HpvfzglE4IQHWwgrLg.gif)
+
+            Wow, that was easy 👏.
+
+            And to make sure the records were passed through, check your dashboard and verify you see the number of records you just indexed; in my case I see 500.
+
+            ![](https://miro.medium.com/max/1400/1\*zzs4jqEObD-Nmpc-3ufOpw.png)
+
+            Next we need to tell Algolia specifically what to allow users to search against through their API. In our case, I am allowing users to search against my model’s name, location, and move. These are added for specific indices under the configuration tab.
+
+            ![](https://miro.medium.com/max/1400/1\*D4vbWrwAfOwwHNjmyLiwfg.png)
+
+            Great, we’re done with setting up our data in Algolia. On to step 2, connecting to the algoliasearch API from our client-side browser.
+
+            ### Connect with algoliasearch
+
+
+            To do this, the first thing we’ll need to do is add the package to our project. As I’m using yarn, I’ve used the following command:
+
+            > yarn add algoliasearch
+
+            Now let’s see if we can get a request to the API from our browser. To do this, we’ll use a little bit of [Stimulus](https://stimulus.hotwire.dev/) magic ✨ . (Note that [Stimulus](https://stimulus.hotwire.dev/) was setup for us through [BambooSticks](https://github.com/mangotreedev/bamboosticks), install it manually as needed)
+
+            Below you can see the code for our Stimulus controller and how we’ve modified our markup to work with Stimulus.
+
+            ![](https://miro.medium.com/max/1400/1\*BqOouOhwvpXfF8KEt8p\_8A.png)
+
+            Stimulus Controller Code
+
+            ![](https://miro.medium.com/max/1400/1\*s-hNXm3Mcy9UbkuZcGPQEA.png)
+
+            HTML Markup with matching Stimulus data attributes
+
+            The two important things to notice are, we’ve embedded our search key and Algolia id in our input bar through data attributes. We do this so our Stimulus controller has access to our keys when it makes an API request. The second thing to note is how we access those data attributes in our controller by making our input element a Stimulus target.
+
+            At this point, you should see something getting printed in your console. If not, chances are you didn’t restart your server after you installed the algoliasearch package.
+
+            This means, whenever Stimulus finds the search controller and connects, it immediately makes a request to the Algolia API looking for charmander in the Poke’mon index we’ve created. Whew, almost done now!
+
+            ![](https://miro.medium.com/max/1000/0\*WN5StDX\_tOCfSMMI.gif)
+
+            ### Implement Autocomplete.js
+
+
+            The final step involves adding Algolia’s autocomplete package. Same as before we’ll use yarn to perform the deed and then import into our Stimulus controller.
+
+            > _yarn add autocomplete.js_
+
+            To then actually call the autocomplete function we’ll need to do two things.
+
+            The first is to write a compatibility function between algoliasearch v4 and autocomplete. As of writing this, out of the box, algoliasearch v4 is not compatible with autocomplete, but I’m sure that’ll change soon.
+
+            In the autocomplete documentation you can see an example of this compatibility function or use the one I have below:
+
+            ![](https://miro.medium.com/max/1400/1\*Z6KxI5yuhrqYd3Lv07s6sQ.png)
+
+            With our compatibility function in hand we can go ahead and call the autocomplete function on our search-input like so:
+
+            ![](https://miro.medium.com/max/1400/1\*xXbGbyd5rdgj-H22uU-5Mg.png)
+
+            Feel free to tweak as needed but the main places to watch are commented in the code below. If you have any further questions make sure to leave a comment.
+
+            With this all together, and a server restart (remember those new packages we added!) we should start seeing results dropping down as we type in our autocomplete!
+
+            ![](https://miro.medium.com/max/1400/1\*XELTqDwP-fUVLVnXSRHDrA.gif)
+
+            WWWHHHHEEEEEE!!!! We did it, it only took a few handfuls of hair and a minor mental breakdown, but we did it!
+
+            ![](https://miro.medium.com/max/996/0\*SjR2PNHqXhMSHPcR.gif)
+
+            Alas, this doesn’t look the prettiest so I went ahead and added a little css styling 💄 which can be found in [\_searchbar.scss](https://github.com/syrashid/algolia-autocomplete-predictions/blob/master/app/assets/stylesheets/components/_searchbar.scss) to really bring this together.
+
+            ![](https://miro.medium.com/max/1400/1\*fAQWuzd3H8oDm60yYX8goQ.gif)
+
+            And just like that we’re done! 🎉
+
+            To recap, we’ve set up algolia autocomplete predictions for our rails applications using a little bit of help from Stimulus. If you have any questions or get stuck, please don’t hesitate to reach out or comment below.
+
+            To see the full code base please find it below:
+
+            [Full Codebase Here](https://github.com/syrashid/algolia-autocomplete-predictions) 👈 🐱
+          </markdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="browser-navbar js-browser-navbar">
+      <ul class="browser-navbar__links-list">
+        <li><a href="/#browser-skills">SKILLS</a></li>
+        <li><a href="/#browser-team">OUR TEAM</a></li>
+        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
+      </ul>
+    </div>
+
+    <div class="browser-konami-code js-browser-konami-code">
+      <p>
+        <span>PRESS</span>
+        <span>↑</span>
+        <span>↑</span>
+        <span>↓</span>
+        <span>↓</span>
+        <span>&larr;</span>
+        <span>&rarr;</span>
+        <span>←</span>
+        <span>→</span>
+        <span>b</span>
+        <span>a</span>
+        <span>FOR</span>
+        <span>A</span>
+        <span>SURPRISE</span>
+        <span>!</span>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="video-modal js-video-modal">
+    <div class="modal-close-icon js-modal-close">
+    </div>
+    <div class='embed-container'>
+      <iframe frameborder='0'
+        webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+  </div>
+
+  <!-- ADDING HIGHLIGHT JS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+
+  <!-- ADDING FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/721627a3c7.js" crossorigin="anonymous"></script>
+
+  <!-- ADDING GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+  <!-- ADDING SCROLLMAGIC.IO -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+</body>
+</html>
+
+
