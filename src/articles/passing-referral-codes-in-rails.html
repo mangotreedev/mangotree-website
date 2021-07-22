@@ -124,7 +124,7 @@
             1.  We need custom or vanity urls for our invite links to groups.
             2.  We need a way to link these urls to create a group membership for users (signed in and signed out) as well as people who don’t have accounts yet.
 
-            Part one can be found here 👉 [Custom & Vanity URLs with Rails](https://medium.com/custom-vanity-urls-with-rails-5f45a2a78a38)
+            Part one can be found here 👉 [Custom & Vanity URLs with Rails](blog/passing-referral-codes-in-rails)
 
             The second part will be how do we pass information from the invitation link to create a membership in a group, regardless of whether or not they have an account, or if they are signed in.
 
@@ -140,7 +140,7 @@
 
             A three model application that has users (through devise) and groups they can join. These users join groups through a join table; memberships, to set up a nice n:n relationship.
 
-            A few points to take note of is we’ll be using [Devise](https://github.com/heartcombo/devise) to set up our user model and provide authentication for our application. And the invite tokens in groups have already been set up in [part one ☝️](https://medium.com/custom-vanity-urls-with-rails-5f45a2a78a38) of this series.
+            A few points to take note of is we’ll be using [Devise](https://github.com/heartcombo/devise) to set up our user model and provide authentication for our application. And the invite tokens in groups have already been set up in [part one ☝️](blog/passing-referral-codes-in-rails) of this series.
 
             Our two main models, groups and users, will look something like this.
 
