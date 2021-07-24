@@ -9,7 +9,7 @@
   display: flex;
   align-items: flex-end;
 
-  & > p.resource-card__title {
+  & p.resource-card__title {
     position: absolute;
     left: 10%;
     bottom: 5%;
@@ -30,7 +30,74 @@
     z-index: 10;
     margin: 0;
   }
+}
 
+.flipable-resource-card {
+  display: none;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  perspective: 600px;
+
+  & p.resource-card__title {
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+  }
+
+  img {
+    transition: opacity 1s;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    height: 15%;
+  }
+
+  .arrow-right {
+    transition: opacity 1s;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    margin: 0;
+  }
+}
+
+.flipable-resource-card.is-flipped {
+  transform: rotateY(180deg);
+
+  .card__face--front img, .card__face--front .arrow-right {
+    opacity: 0;
+  }
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.125rem;
+}
+
+.card__face--front {
+  background: $black;
+}
+
+.card__face--back {
+  background: $yellow;
+  transform: rotateY(180deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p.wide-text {
+    padding: 0 1.5rem;
+  }
 }
 
 .resource-card__overlay {
@@ -63,5 +130,15 @@
   p {
     color: $white;
     padding: 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flipable-resource-card {
+    display: block;
+  }
+
+  .resource-card {
+    display: none;
   }
 }
