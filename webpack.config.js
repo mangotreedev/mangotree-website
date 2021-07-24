@@ -56,6 +56,10 @@ module.exports = {
       filename: "./blog/custom-and-vanity-urls-rails",
       template: "./src/articles/custom-and-vanity-urls-rails.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "./resources/gradient-hover-effect",
+      template: "./src/resources/gradient-hover-effect.html",
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional

@@ -48,6 +48,10 @@
   margin: 2rem 0;
 }
 
+.post-content__header:first-child h2 {
+  margin: 0;
+}
+
 .post-content__header-info {
   display: flex;
   width: 100%;
