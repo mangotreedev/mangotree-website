@@ -64,15 +64,25 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  /* For mobile: */
-}
 
 @media only screen and (max-width: 1150px) {
   /* For tablets or larger: */
   .post-card__title h3 {
     font-size: $base-size * 1.5;
     line-height: 144.2%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile: */
+  .post-card__title h3 {
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: $base-size;
+  }
+  .recent-posts .post-card {
+    margin-bottom: 3rem;
   }
 }
 
