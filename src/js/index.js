@@ -22,7 +22,9 @@ import { initMarkdown } from "./components/init_markdownit";
 import { initFlippableCard } from "./components/init_flippable_card";
 
 // Set up of singular scroll magic controller
-var scrollMagicController = new ScrollMagic.Controller();
+if (document.querySelector('.js-portfolio-card')) {
+  var scrollMagicController = new ScrollMagic.Controller();
+}
 
 initDrawingTrigger();
 initDefineBtn();
