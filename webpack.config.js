@@ -43,6 +43,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "./resources/bamboosticks.html",
       template: "./src/resources/bamboosticks.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./blog/algolia-autocomplete-predictions-rails.html",
