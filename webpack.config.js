@@ -27,14 +27,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "./blog/intro-tailwindcss.html",
       template: "./src/articles/intro-tailwindcss.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./blog/tinderellas-data-chart-bars.html",
       template: "./src/articles/tinderellas-data-chart-bars.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./blog/sign-up-linkedin-rails.html",
       template: "./src/articles/sign-up-linkedin-rails.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "resources.html",
@@ -48,22 +51,27 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "./blog/algolia-autocomplete-predictions-rails.html",
       template: "./src/articles/algolia-autocomplete-predictions-rails.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./blog/passing-referral-codes-in-rails.html",
       template: "./src/articles/passing-referral-codes-in-rails.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./blog/custom-and-vanity-urls-rails.html",
       template: "./src/articles/custom-and-vanity-urls-rails.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./resources/gradient-hover-effect.html",
       template: "./src/resources/gradient-hover-effect.html",
+      minify: false,
     }),
     new HtmlWebpackPlugin({
       filename: "./resources/flippable-card.html",
       template: "./src/resources/flippable-card.html",
+      minify: false,
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
