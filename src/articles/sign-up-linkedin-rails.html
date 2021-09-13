@@ -114,6 +114,7 @@
         </div>
 
         <div class="post-content__body">
+
           <markdown>
             ### Intro
 
@@ -199,7 +200,7 @@
             ```
             After that, let’s allow our **User** model (created by **Devise**) to log in through **OmniAuth**, and set the provider as **LinkedIn**:
             ```ruby
-            class User < ApplicationRecord
+            class User &lt; ApplicationRecord
               [...]
               &nbsp;&nbsp;devise :omniauthable, omniauth_providers: %i[linkedin]
               [...]
@@ -228,7 +229,7 @@
             ```
             This will create the following migration file:
             ```ruby
-            class AddProviderToUsers < **ActiveRecord::Migration[6.0]
+            class AddProviderToUsers &lt; **ActiveRecord::Migration[6.0]
             &nbsp;&nbsp;def change
               &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :provider, :string
               &nbsp;&nbsp;&nbsp;&nbsp;add_column :users, :uid, :string
@@ -243,7 +244,6 @@
             rails db:migrate
             ```
             So our user model has all the attributes needed, let’s add two methods in our **User** model (‘app/models/user.rb’) to manage the data provided by LinkedIn:
-
           </markdown>
 
           <script src="https://gist.github.com/nicoproto/cd0016270a696dd168bffa2aa9e06750.js"></script>
