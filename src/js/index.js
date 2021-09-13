@@ -19,9 +19,12 @@ import { initSkillsFloat } from "./components/init_skills_float";
 import { initVideoModal } from "./components/init_video_modal";
 import { initShareDropdown } from "./components/init_share_dropdown";
 import { initMarkdown } from "./components/init_markdownit";
+import { initFlippableCard } from "./components/init_flippable_card";
 
 // Set up of singular scroll magic controller
-var scrollMagicController = new ScrollMagic.Controller();
+if (document.querySelector('.js-portfolio-card')) {
+  var scrollMagicController = new ScrollMagic.Controller();
+}
 
 initDrawingTrigger();
 initDefineBtn();
@@ -35,6 +38,7 @@ initHideNavbar();
 initVideoModal();
 initShareDropdown();
 initMarkdown();
+initFlippableCard();
 
 //Bundled team transitions for browser
 teamTransition.oneToTwo();

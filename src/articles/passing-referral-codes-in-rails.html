@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Optimze Snippet -->
+  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MTK326C"></script>
+  <!-- End Google Optimze Snippet -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SQ86FP');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Passing Referral Codes or Invite Links w/ Devise in Rails</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="Tutorial in how to pass Referral Codes or Invite Links w/ Devise in Rails">
+
+  <meta name="author" content="MangoTree Dev">
+  <meta name="keywords"
+    content="rails invite link, rails referral code, referral code devise, invite link devise">
+  <link rel="icon" type="image/png"
+    href="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_32/v1599284743/__Full_Colour_-_Icon_Only_qq727e.png">
+
+  <!--  Social media meta tags -->
+  <meta property="og:title" content="MangoTree Dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mangotree.dev" />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/nico1711/image/upload/v1626876398/MangoTree%20Website/articles/passing-referral-codes-in-rails.jpg" />
+  <meta property="og:description"
+    content="Tutorial in how to pass Referral Codes or Invite Links w/ Devise in Rails" />
+  <meta property="og:site_name" content="MangoTree Dev" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SQ86FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="responsive-overlay">
+    <div class="responsive-overlay__phone-container">
+      <div class="phone-container__phone-item">
+        <i class="fa fa-repeat"></i>
+      </div>
+      <p>Rotate your device!</p>
+    </div>
+  </div>
+
+  <div class="share-dropdown js-share-menu">
+    <li>
+      <i class="fas fa-link js-copy-link"></i>
+      <p class="share-dropdown__tooltip">Link copied!</p>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL))" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out%20-%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL));" >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+
+  </div>
+
+  <div class="page-content">
+    <div class="burger-icon js-navbar-icon">
+      <div class="burger-icon__middle"></div>
+    </div>
+
+    <div class="navbar-menu">
+      <img class="navbar-menu__logo" src="https://res.cloudinary.com/nico1711/image/upload/v1598498149/__Black_Outline_-_Icon_Only_pzxuwn.png" alt="">
+      <ul class="navbar-menu__links-list js-links-list">
+        <li><a href="/#skills">SKILLS</a></li>
+        <li><a href="/#team">OUR TEAM</a></li>
+        <li><a href="/#portfolio">PORTFOLIO</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/#contact" class="js-contact-btn">CONTACT</a></li>
+        <li><a href="#" class="js-navbar-dark">DARK MODE</a></li>
+      </ul>
+      <a href="mailto:hello@mangotree.dev" class="navbar-menu__contact">
+        <i class="far fa-envelope"></i>
+        hello@mangotree.dev
+      </a>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/blog.html"><span>←</span> BACK TO BLOG</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <img src="https://res.cloudinary.com/nico1711/image/upload/v1626876398/MangoTree%20Website/articles/passing-referral-codes-in-rails.jpg" alt="Referral codes rails gif" class="post-content__banner">
+        <div class="post-content__header">
+          <h2>Passing Referral Codes or Invite Links w/ Devise in Rails</h2>
+          <div class="post-content__header-info">
+            <div class="post-content__header-info-left">
+              <img src="https://res.cloudinary.com/nico1711/image/upload/v1626803393/MangoTree%20Website/sy-rashid-profile.jpg" alt="sy avatar">
+              <p class="p_size_s"><span>Written by</span> Sy Rashid</p>
+            </div>
+            <div class="post-content__header-info-right">
+              <p class="p_size_s">Dec 20 · 9 min read</p>
+              <p class="js-share-btn share-btn"><i class="fas fa-share-alt"></i></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-content__body">
+          <markdown>
+            Because who doesn’t want 20% off their Flat Tummy Tea subscription ☕️
+
+            ![](https://miro.medium.com/max/800/0*WIX69en7x0Krj4zB.gif)
+
+            Welcome to part two of a mini-series I started on helping a student setup invitation links for users to join groups in their Rails project. The basic premise involved two main parts to solve.
+
+            1.  We need custom or vanity urls for our invite links to groups.
+            2.  We need a way to link these urls to create a group membership for users (signed in and signed out) as well as people who don’t have accounts yet.
+
+            Part one can be found here 👉 [Custom & Vanity URLs with Rails](blog/passing-referral-codes-in-rails)
+
+            The second part will be how do we pass information from the invitation link to create a membership in a group, regardless of whether or not they have an account, or if they are signed in.
+
+            Now you might be saying, “Hey! You pulled a shenanigan on me, and got me here by putting referral code in the title!”
+
+            To which I would say fair enough, but I promise, the logic will essentially be the same. I’m not saying this is the only way, just one fun way I found to pass information through Devise. All you’ll need to do to translate invitation link into referral code is CTRL+F and a little bit of imagination!
+
+            ![](https://miro.medium.com/max/996/0\*CdtuJ6\_umup-V2ur.gif)
+
+            So to start off, let’s get a grounding on what exactly we’re building. The db schema below 👇 hopefully clarifies this.
+
+            ![](https://miro.medium.com/max/1400/1\*AyNFjKnI8OOZdxMLO4ZiUA.png)
+
+            A three model application that has users (through devise) and groups they can join. These users join groups through a join table; memberships, to set up a nice n:n relationship.
+
+            A few points to take note of is we’ll be using [Devise](https://github.com/heartcombo/devise) to set up our user model and provide authentication for our application. And the invite tokens in groups have already been set up in [part one ☝️](blog/passing-referral-codes-in-rails) of this series.
+
+            Our two main models, groups and users, will look something like this.
+
+            ![](https://miro.medium.com/max/1400/1\*O1vibQ4Pl1F8oFGfDRA\_BQ.png)
+
+            ###### Our Group Model
+
+            ![](https://miro.medium.com/max/1400/1\*Rm44uj3HNWysR5jCeenQQA.png)
+
+            ###### Our User Model
+
+            So with our models set up, it’s on to the task of how do we actually generate these memberships for users in any type of scenario? We’ll cover these in the following sequence…
+
+            1.  A user has an account and is signed in
+            2.  A non-user doesn’t have an account (so they must register first)
+            3.  A user has an account but isn’t signed in (so they must sign in first)
+
+            ### Scenario 1: A user has an account and is signed in
+
+
+            Well, the first scenario seems simple enough, we just need to pass the url to create a new membership. If they’re signed in, go ahead and create a membership for the group with the current user.
+
+            Let’s take a quick peek to see how our routes are setup.
+
+            ![](https://miro.medium.com/max/1400/1\*0LSA3XdlqH3WzUpIc9j-mQ.png)
+
+            Nothing too wild, just a nested route for memberships, so we have access to the correct group while creating memberships using our invite token.
+
+            To provide these invite links to our users we’ve set up a little copy input field on our index for groups. As this article isn’t on front end, if you’re curious to see how this is done, please check out the repo for the project [here](https://github.com/syrashid/regeneratable-token-invitation-links) 👈
+
+            ![](https://miro.medium.com/max/1400/1\*xSc2t8mPr90vlOJOItFufg.png)
+
+            ###### The Invite Link is actually the new membership route
+
+            Cool, so now we have a way for one user to pass their invite link (the new\_group\_membership route) to another user. So let’s imagine they do exactly that, they copy the invite link and pass it to another user. The route format is below
+
+            ![](https://miro.medium.com/max/1400/1\*WLK0yXcfmf66KQ8IanXRlA.png)
+
+            In more practical terms it would look something like this
+
+            > /groups/AKSv69pM8ZsfpZ22GnXYob2A/memberships/new
+
+            In our membership#new action our logic for the first part 👇
+
+            ![](https://miro.medium.com/max/1400/1\*3oNrCkE3r0xWa\_3KbTcnrQ.png)
+
+            If the user is signed in, redirect them to the create membership action. Here in the create action, we first find the group we’re creating a membership for thanks to our nested route (which provides us params\[:group\_invite\_token\]). We then use the first\_or\_create method to create a membership if non exists for that unique combo of user and group, otherwise do nothing except return the existing membership. After, we route our user back to the root\_path, which for us is the user’s dashboard with all of the groups they belong to.
+
+            First part, done! 🎉
+
+            Time for the next part, what happens when the user isn’t signed in?
+
+            ![](https://miro.medium.com/max/996/0\*qPZwYb22ZmUHwbKZ)
+
+            ### A non-user doesn’t have an account
+
+
+            This is where we’ll start to get a bit tricky and play around with the default forms and controllers devise provides us. To make the logic flow a little bit easier we’ll solve for the issue of what happens when a person doesn’t yet have an account and needs to register first.
+
+            If you recall from our MembershipsController above we had an else in our new action, this is exactly where that else block comes in. We will make the assumption that if they are not signed in, chances are they need to register for an account as opposed to signing in. (Don’t worry we’ll still deal with that as well, and we could flip this if we wanted, this is purely a UX design decision)
+
+            ![](https://miro.medium.com/max/1400/1\*Mee8CENa\_AGWeUUHJ6-ubg.png)
+
+            Ok, so what are we doing here? We are redirecting our user to the devise sign up action, otherwise known as the new\_user\_registration\_path. If you ever need a quick refresher remember you can always run
+
+            > rails routes | grep user
+            >
+            > OR
+            >
+            > rails routes -g user
+
+            The key here is to pass the param :invite\_token to the path so we can use it in our sign up form.
+
+            This is where the fun really begins, because now we need to not only modify the controllers given to us by devise, but the views as well. To start off let’s review how to modify controllers with devise. This [stack overflow](https://stackoverflow.com/questions/3546289/override-devise-registrations-controller) answer does a great job but we’ll do a quick recap.
+
+            First, we need to generate a registrations controller in our application, namespaced the same as devise, see below 👇
+
+            ![](https://miro.medium.com/max/1400/1\*vBHyt9J57cnv8Qic1ouWbA.png)
+
+            In this controller we can now go ahead and implement the logic we need. In our case, we want to create an instance variable with the group to embed in our form to use later in the create action. From there, proceed as usual with the parent super call.
+
+            To make sure devise actually picks up this controller we need to explicitly mention it in our routes.
+
+            ![](https://miro.medium.com/max/1400/1\*wZ1W8UsnhFzDRR1l\_MjW-g.png)
+
+            As, you can see, we’re going to do the same for sessions later on. But for now just focus on the registration portion.
+
+            From here, we need to embed the group invite\_token in the view so it can be passed to our create action above. To do this we’ll run the command
+
+            > rails generate devise:views
+
+            Once done, we can modify the new registrations form and embed the following line. (Mind I’m using simple form, thus the syntax)
+
+            ![](https://miro.medium.com/max/1400/1\*m7\_7\_4PxF3X1MyD\_BGmyHw.png)
+
+            The goal here is to pass the invite\_token to our create action when a user hits submit upon sign up.
+
+            ![](https://miro.medium.com/max/1400/1\*YKaSlkj7dfx7ymug\_F-qAg.png)
+
+            In this create action, we’ll go through the process of creating our user as usual with the super call, but once that is complete, we will check whether or not there is that :invite\_token in our params. If so, and the resource (the user instance) is valid, we can go ahead and generate a membership for them. Fortunately, devise will then take care of the rest for us to redirect the user to the appropriate path. If you want to override that redirect feel free to do so here.
+
+            All right, part two is now complete! 🎊
+
+            Last but not least, the final part, when a user has an account but isn’t signed in.
+
+            ![](https://miro.medium.com/max/996/0\*rqQ3bVNSbc6ra86J.gif)
+
+            ### A user has an account but isn’t signed in
+
+
+            Fortunately, we’re going to use a lot of the same tricks as the last part.
+
+            So to kick off, we’ll be setting up our sessions controller this time instead of our registrations controller. But the question is, how do we get our user to that sign in page, and how do we persist that information on the :invite\_token?
+
+            For example, let’s go through the case of a user passing a group invite link to another user. As they are not signed in, they are redirected to the sign up page. The user at this time would naturally try and sign in instead of sign up as they already have an account. This behavior is accounted for by devise with these buttons at the bottom of the sign up page.
+
+            ![](https://miro.medium.com/max/1004/1\*qVQTBc-aYf8CfI2YaMA-kw.png)
+
+            To persist the :invite\_token information we’ll go ahead and embed that into the login button as well which we can find in the shared partial created by devise called \_links.html.erb
+
+            ![](https://miro.medium.com/max/1400/1\*NxUXT9CFR9l9FY0kK-Bpfw.png)
+
+            This pattern of passing the invite\_token as a params in a path is the same as we saw before, but instead of in the controller, we’re passing the param in the view. Now, if the user decides to click login while there is the instance variable @group present, they will also be taking along the param for :invite\_token as well.
+
+            From here the logic is almost identical to before. First, we modify the sessions controller as mentioned before.
+
+            ![](https://miro.medium.com/max/1400/1\*axBH760rjMv1Z9jL0BiqBQ.png)
+
+            Second, we make sure to explicitly mention it in the routes for devise.
+
+            ![](https://miro.medium.com/max/1400/1\*wZ1W8UsnhFzDRR1l\_MjW-g.png)
+
+            Third, in the new action we find the instance of group associated to the invite token to embed in the new form for sessions, NOT registration (remember we’re signing in aka creating a new session; not signing up aka creating a new registration).
+
+            ![](https://miro.medium.com/max/1400/1\*m7\_7\_4PxF3X1MyD\_BGmyHw.png)
+
+            Fourth, in our shared links partial we can modify the sign up link as well to make it come full circle and connect.
+
+            ![](https://miro.medium.com/max/1400/1\*RDtER3VwCvAWdYNPTpI1cg.png)
+
+            And finally in our sessions controller, in the create action we can go ahead and generate a new membership for our current user if one doesn’t already exist, and proceed thru our normal create action afterwards.
+
+            ![](https://miro.medium.com/max/1400/1\*22\_hm3q4xvzxvW\_c-41zAA.png)
+
+            That’s all she wrote, we’re done folks. 🥳
+
+            ![](https://miro.medium.com/max/960/0\*fr56Zm9Qc8s2-2zZ.gif)
+
+            As a quick recap, we just covered how to use a custom invitation link to create memberships through Devise through multiple scenarios. The same logic could also be applied to a referral code as well, you’ll just need to tinker with a few variables. Again, not the only way to do it, but a fun way to do it with Devise.
+
+            If you have any questions, critiques, or feedback please don’t hesitate to reach out through my LinkedIn below or simply leave a comment.
+
+            If you want to see the code base please find it here on [GitHub](https://github.com/syrashid/regeneratable-token-invitation-links) 👈
+
+            _As a fun note, also added a little functionality for users to be able to regenerate invite links for groups whenever they want with a bit of stimulus and some bootstrap toasts._
+          </markdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="browser-navbar js-browser-navbar">
+      <ul class="browser-navbar__links-list">
+        <li><a href="/#browser-skills">SKILLS</a></li>
+        <li><a href="/#browser-team">OUR TEAM</a></li>
+        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
+      </ul>
+    </div>
+
+    <div class="browser-konami-code js-browser-konami-code">
+      <p>
+        <span>PRESS</span>
+        <span>↑</span>
+        <span>↑</span>
+        <span>↓</span>
+        <span>↓</span>
+        <span>&larr;</span>
+        <span>&rarr;</span>
+        <span>←</span>
+        <span>→</span>
+        <span>b</span>
+        <span>a</span>
+        <span>FOR</span>
+        <span>A</span>
+        <span>SURPRISE</span>
+        <span>!</span>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ADDING HIGHLIGHT JS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+
+  <!-- ADDING FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/721627a3c7.js" crossorigin="anonymous"></script>
+
+  <!-- ADDING GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+</body>
+</html>
