@@ -25,15 +25,15 @@ module.exports = {
       template: "./src/blog.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/intro-tailwindcss",
+      filename: "./blog/intro-tailwindcss.html",
       template: "./src/articles/intro-tailwindcss.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/tinderellas-data-chart-bars",
+      filename: "./blog/tinderellas-data-chart-bars.html",
       template: "./src/articles/tinderellas-data-chart-bars.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/sign-up-linkedin-rails",
+      filename: "./blog/sign-up-linkedin-rails.html",
       template: "./src/articles/sign-up-linkedin-rails.html",
     }),
     new HtmlWebpackPlugin({
@@ -41,27 +41,27 @@ module.exports = {
       template: "./src/resources.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./resources/bamboosticks",
+      filename: "./resources/bamboosticks.html",
       template: "./src/resources/bamboosticks.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/algolia-autocomplete-predictions-rails",
+      filename: "./blog/algolia-autocomplete-predictions-rails.html",
       template: "./src/articles/algolia-autocomplete-predictions-rails.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/passing-referral-codes-in-rails",
+      filename: "./blog/passing-referral-codes-in-rails.html",
       template: "./src/articles/passing-referral-codes-in-rails.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./blog/custom-and-vanity-urls-rails",
+      filename: "./blog/custom-and-vanity-urls-rails.html",
       template: "./src/articles/custom-and-vanity-urls-rails.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./resources/gradient-hover-effect",
+      filename: "./resources/gradient-hover-effect.html",
       template: "./src/resources/gradient-hover-effect.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "./resources/flippable-card",
+      filename: "./resources/flippable-card.html",
       template: "./src/resources/flippable-card.html",
     }),
     new MiniCssExtractPlugin({
