@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Optimze Snippet -->
+  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MTK326C"></script>
+  <!-- End Google Optimze Snippet -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SQ86FP');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Gradient Hover Effect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="Animate a linear gradient background on a button when you hover on it, only with CSS.">
+
+  <meta name="author" content="MangoTree Dev">
+  <meta name="keywords"
+    content="css gradient background animation, css gradient transition, linear gradient animation, css gradient animation">
+  <link rel="icon" type="image/png"
+    href="https://res.cloudinary.com/nico1711/image/upload/c_scale,h_32/v1599284743/__Full_Colour_-_Icon_Only_qq727e.png">
+
+  <!--  Social media meta tags -->
+  <meta property="og:title" content="Gradient Hover Effect - MangoTree Dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mangotree.dev" />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/nico1711/image/upload/c_scale,w_1200/v1601000951/website_preview.png" />
+  <meta property="og:description"
+    content="Animate a linear gradient background on a button when you hover on it, only with CSS." />
+  <meta property="og:site_name" content="MangoTree Dev" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SQ86FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="responsive-overlay">
+    <div class="responsive-overlay__phone-container">
+      <div class="phone-container__phone-item">
+        <i class="fa fa-repeat"></i>
+      </div>
+      <p>Rotate your device!</p>
+    </div>
+  </div>
+
+  <div class="share-dropdown js-share-menu">
+    <li>
+      <i class="fas fa-link js-copy-link"></i>
+      <p class="share-dropdown__tooltip">Link copied!</p>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL))" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out%20-%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL));" >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+
+  </div>
+
+  <div class="page-content">
+    <div class="burger-icon js-navbar-icon">
+      <div class="burger-icon__middle"></div>
+    </div>
+
+    <div class="navbar-menu">
+      <img class="navbar-menu__logo" src="https://res.cloudinary.com/nico1711/image/upload/v1598498149/__Black_Outline_-_Icon_Only_pzxuwn.png" alt="">
+      <ul class="navbar-menu__links-list js-links-list">
+        <li><a href="/#skills">SKILLS</a></li>
+        <li><a href="/#team">OUR TEAM</a></li>
+        <li><a href="/#portfolio">PORTFOLIO</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/#contact" class="js-contact-btn">CONTACT</a></li>
+        <li><a href="#" class="js-navbar-dark">DARK MODE</a></li>
+      </ul>
+      <a href="mailto:hello@mangotree.dev" class="navbar-menu__contact">
+        <i class="far fa-envelope"></i>
+        hello@mangotree.dev
+      </a>
+    </div>
+
+    <div class="post-container">
+      <div class="post-sidebar__wrapper">
+        <div class="post-sidebar">
+          <p class="js-share-btn share-btn">SHARE <i class="fas fa-share-alt"></i></p>
+          <a href="/resources.html"><span>←</span> BACK TO RESOURCES</a>
+        </div>
+      </div>
+
+      <div class="post-content">
+
+        <div class="post-content__header">
+          <h2>GRADIENT HOVER EFFECT</h2>
+        </div>
+
+        <div class="post-content__body">
+          <markdown>
+            ### Context
+
+            We all love a good linear gradient, right? We use it in our logo so of course we love it too.
+
+            A linear gradient can be easily done with just applying the `linear-gradient` property on an element. But what happens if we want to add a hover effect on it? Using most property transitions wouldn't generate any problem but there's one that it's a bit tricky so... of course we'll try that.
+
+            Let's say that we want a button that looks like this:
+
+            ![](https://res.cloudinary.com/nico1711/image/upload/v1626976955/MangoTree%20Website/resources/gradient-hover-effect--button.png)
+
+            And what we want to do is to animate it smoothly into this:
+
+            ![](https://res.cloudinary.com/nico1711/image/upload/v1626976955/MangoTree%20Website/resources/gradient-hover-effect--button-hovered.png)
+
+            ### Problem
+
+            The first thing we could try is to just change the `linear-gradient` when the button is hovered. Well... this it's not going to work. Why? Because `linear-gradient` is not a property that can be animated ([see all animated properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)).
+
+            ### Solution
+
+            To make this work, we will create a layer on top of the button with the opposite gradient and we will animate the `opacity` of that element when we hover on the button.
+
+            The best approach for this would be to add a `:after` pseudo element, with the same dimensions of the button.
+
+            See it in action 👇🏻
+          </markdown>
+          <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="LYWMjJm" data-user="nicoproto" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/nicoproto/pen/LYWMjJm">
+            Button gradient - SCSS</a> by Nico Proto (<a href="https://codepen.io/nicoproto">@nicoproto</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="browser-navbar js-browser-navbar">
+      <ul class="browser-navbar__links-list">
+        <li><a href="/#browser-skills">SKILLS</a></li>
+        <li><a href="/#browser-team">OUR TEAM</a></li>
+        <li><a href="/#browser-portfolio">PORTFOLIO</a></li>
+        <li><a href="/resources.html">RESOURCES</a></li>
+        <li><a href="/blog.html">BLOG</a></li>
+        <li><a href="/#browser-contact" class="js-contact-btn">CONTACT</a></li>
+        <li class="js-flashlight browser-navbar__flashlight"><a href="#browser-landing">🔦</a></li>
+      </ul>
+    </div>
+
+    <div class="browser-konami-code js-browser-konami-code">
+      <p>
+        <span>PRESS</span>
+        <span>↑</span>
+        <span>↑</span>
+        <span>↓</span>
+        <span>↓</span>
+        <span>&larr;</span>
+        <span>&rarr;</span>
+        <span>←</span>
+        <span>→</span>
+        <span>b</span>
+        <span>a</span>
+        <span>FOR</span>
+        <span>A</span>
+        <span>SURPRISE</span>
+        <span>!</span>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ADDING HIGHLIGHT JS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+
+  <!-- ADDING FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/721627a3c7.js" crossorigin="anonymous"></script>
+
+  <!-- ADDING GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+</body>
+</html>
+
+

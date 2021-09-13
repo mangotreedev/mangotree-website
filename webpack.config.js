@@ -29,8 +29,40 @@ module.exports = {
       template: "./src/articles/intro-tailwindcss.html",
     }),
     new HtmlWebpackPlugin({
+      filename: "./blog/tinderellas-data-chart-bars",
+      template: "./src/articles/tinderellas-data-chart-bars.html",
+    }),
+    new HtmlWebpackPlugin({
       filename: "./blog/sign-up-linkedin-rails",
       template: "./src/articles/sign-up-linkedin-rails.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "resources.html",
+      template: "./src/resources.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./resources/bamboosticks",
+      template: "./src/resources/bamboosticks.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/algolia-autocomplete-predictions-rails",
+      template: "./src/articles/algolia-autocomplete-predictions-rails.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/passing-referral-codes-in-rails",
+      template: "./src/articles/passing-referral-codes-in-rails.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./blog/custom-and-vanity-urls-rails",
+      template: "./src/articles/custom-and-vanity-urls-rails.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./resources/gradient-hover-effect",
+      template: "./src/resources/gradient-hover-effect.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "./resources/flippable-card",
+      template: "./src/resources/flippable-card.html",
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output

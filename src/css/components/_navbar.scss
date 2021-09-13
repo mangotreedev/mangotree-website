@@ -73,9 +73,14 @@
   }
 }
 
+.browser-navbar {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets or larger: */
   .browser-navbar {
+    display: block;
     text-align: end;
     position: fixed;
     right: 2vw;
