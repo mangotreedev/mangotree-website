@@ -6,7 +6,7 @@
   align-items: center;
   display: grid;
   grid-gap: 3vw;
-  grid-template-columns: 12vw repeat(7, $base-size * 13);
+  grid-template-columns: 12vw repeat(10, $base-size * 13);
   grid-template-rows: minmax(80px, 1fr);
 
   overflow-x: scroll;

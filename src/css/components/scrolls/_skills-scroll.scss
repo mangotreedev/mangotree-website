@@ -56,9 +56,9 @@
 }
 
 .skills-scroll-wrapper--custom {
-  grid-template-columns: 20px 50px 240px 1080px 20px;
+  grid-template-columns: 20px 50px 240px 1235px 20px;
   .skills-scroll-wrapper__background {
-    width: 1400px;
+    width: 1565px;
   }
 }
 
@@ -75,9 +75,9 @@
 }
 
 .skills-scroll-wrapper--dynamic {
-  grid-template-columns: 32px 2650px 210px 125px 20px;
+  grid-template-columns: 32px 2830px 210px 125px 20px;
   .skills-scroll-wrapper__background {
-    width: 3024px;
+    width: 3200px;
   }
   .skills-scroll-wrapper__item-summary p {
     text-align: left;
